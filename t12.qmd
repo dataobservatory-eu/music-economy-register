@@ -555,7 +555,6 @@ SKCMDb is technically stored in a MariaDB database extended for graph format wit
 ***If your work involved human subjects,** please include a statement here confirming that the relevant informed consent was obtained from those subjects, if the research was carried out in accordance with the Declaration of Helsinki, and if it includes the **Ethical committee approval and the protocol***
 :::
 
-This depends on the publication, but I think we can follow this guides, because this is not a problematic dataset, as there were no human or animal subjects involved.
 
 ## Acknowledgements
 
