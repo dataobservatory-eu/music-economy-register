@@ -1,0 +1,35 @@
+# Appendix: How to use our registers {#sec-appendix-how .unnnumbered}
+
+## How to access our registers? {.unnnumbered}
+
+### Human use {.unnnumbered}
+
+Please use for learning purposes our demo.
+
+-   [Tutorial](https://opencollections.net/documents/tutorials/SKCMDb-import.html): SKCMDb import, 2024.05.21.
+
+-   [Tutorial](https://opencollections.net/documents/tutorials/wikibase_persons_tutorial.html#/title-slide): Manual editing of persons' data in the shared register.
+
+![Please review our <a href="https://opencollections.net/documents/tutorials/wikibase_persons_tutorial.html#/title-slide">tutorial slides</a>.](png/names/reprexbase_tutorial_birth_name_2x1.png){width="100%" fig-align="center"}
+
+#### Examples: Persons, Corporate Bodies (Institutions & Companies) and Groups (Formal & Informal)
+
+-   [composers in Slovakia](https://reprexbase.eu/demo/index.php?title=Item:Q203 "Item:Q203"): people who have composed music on the territory of the modern Slovak Republic, or composers of Slovakian origin. For example, [Iris Szeghy](https://reprexbase.eu/demo/index.php?title=Item:Q168 "Item:Q168") has a data profile, which also connects here to the name authorities of ISNI (used on streaming platforms and in the future in collective management), VIAF (used by library catalogue systems), and of course, to her [entry](https://hc.sk/en/o-slovenskej-hudbe/osobnost-detail/37-iris-szeghy/%7Cbibliographic) on the Slovak Music Center database. This way we want to cretea an interoperable register that allows the identification of composers and avoid ambiguity in royalty payments or attributions. Her body of work is also connected to his name.
+
+-   [musical groups in Slovakia](https://reprexbase.eu/demo/index.php?title=Item:Q204 "Item:Q204"): musical groups on the territory of the modern Slovak Republic, or of performers of Slovakian origin. This is very important for rights management, because most uses of music is the use of sound recordings, which are manifestations of the compositions, and they are often identified by the performer, and not composer. To improve findability, we place the musical groups into subcollections, for example, [choirs in Slovakia](https://reprexbase.eu/demo/index.php?title=Item:Q205 "Item:Q205").
+
+-   [music publishers in Slovakia](https://reprexbase.eu/demo/index.php?title=Item:Q201 "Item:Q201"): [music pubilshing organisations](https://reprexbase.eu/demo/index.php?title=Item:Q97 "Item:Q97") (for example [Hudobný Fond](https://reprexbase.eu/demo/index.php?title=Item:Q97 "Item:Q97")) and [music publishing companies](https://reprexbase.eu/demo/index.php?title=Item:Q69 "Item:Q69") (for example [A-Tempo Verlag s.r.o. Slovakia](https://reprexbase.eu/demo/index.php?title=Item:Q83 "Item:Q83")) that are registered with SOZA to collect royalties from Slovakia. The creation of the register of publishers is essential to monitor the market and create reliable statistics on the music industry.
+
+### API Access {.unnnumbered}
+
+## Who can access our registers? {.unnnumbered}
+
+We are creating shared registers to support parallel registration processes for different business, research, or governance uses. We utilise the novel data (sharing) space concept to harmonise data among registers and make some public registers available.
+
+The answer to who can use these registers is "it depends on the use." The natural persons register heavily relies on the collective management society's membership and representation register in a given country (in our example, Slovakia.) This register can only be used for purposes that directly benefit the membership of such organisations. However, we encourage the membership to give us explicit consent to use their personal data for other purposes.
+
+The use of our corporate body and primarily legal person (enterprise) registers is generally not restricted to any business, academic or policy research use, and they can support various applications like ethical recommender engines for streaming and background music or typically academic research and education.
+
+The register of musical works is the property of SOZA or CISAC, and again, it cannot be used for any purposes outside of collective rights management for authors. The use of such data requires a contract with SOZA or CISAC.
+
+The register of sound recordings and print music can be used for general purposes. We will demonstrate their use with improved public library services. The terms and conditions will be developed together with the first public use.

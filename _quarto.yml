@@ -3,7 +3,7 @@ project:
   output-dir: _book
 
 book:
-  title: "Open Music Registers"
+  title: "Open Music Registers: Economy & Business"
   subtitle: Coordinating regisers and registration processes for economic measurements
   author:
      - name: "Daniel Antal, CFA"
@@ -48,7 +48,7 @@ book:
                  url: https://reprex.nl/
   date: today
   doi: 10.5281/zenodo.14767717
-  repo-url: https://github.com/dataobservatory-eu/opencollections-manual
+  repo-url: https://github.com/dataobservatory-eu/music-economy-register
   repo-actions: [edit]
   downloads: [pdf, epub]
   chapters:
@@ -56,6 +56,7 @@ book:
     - glossary.qmd
     - ambition.qmd
     - t12.qmd
+    - surveying.qmd
     - references.qmd
   appendices: 
     - appendix-how_to_use.qmd

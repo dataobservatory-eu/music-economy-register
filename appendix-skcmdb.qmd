@@ -1,0 +1,75 @@
+# Appendix: SKCMDb Share Register {.unnnumbered}
+
+## SKCMDb music publishers {#sec-appendix-music-publishers .unnnumbered}
+
+The [music publishers in Slovakia](https://reprexbase.eu/demo/index.php?title=Item:Q201 "Item:Q201"): [music pubilshing organisations](https://reprexbase.eu/demo/index.php?title=Item:Q97 "Item:Q97") (for example [Hudobný Fond](https://reprexbase.eu/demo/index.php?title=Item:Q97 "Item:Q97")) and [music publishing companies](https://reprexbase.eu/demo/index.php?title=Item:Q69 "Item:Q69") (for example [A-Tempo Verlag s.r.o. Slovakia](https://reprexbase.eu/demo/index.php?title=Item:Q83 "Item:Q83")) that are registered with SOZA to collect royalties from Slovakia. The creation of the register of publishers is essential to monitor the market and create reliable statistics on the music industry.
+
+Data collected about them:
+
+|  |  |
+|----|----|
+| type of the business entity | e.g. v.o.s. - verejná obchodná spoločnosť a.k.a. public trading company |
+| Slovak Registration ID | identifier for an organization in Slovakia assigned by the Statistical Office of the Slovak Republic |
+| OpenCorporates ID | identifier for a corporation, in the OpenCorporates database |
+
+## SKCMDb music labels
+
+A short description of how we identified the music labels, where we placed them, and how this register can be used.
+
+|  |  |
+|----|----|
+| type of the entity | here: record label |
+| official webpage | URL of the website |
+| Wikidata QID | identifier on Wikidata |
+| MusicBrainz label ID | identifier for a label in the MusicBrainz open music encyclopedia |
+
+: Data collected about music publishers {tbl-colwidths="\[25,75\]"}
+
+## SKCMDb musicians in author, performer, producer roles
+
+A short description of how we identified the musicians, where we placed them, and how this register can be used. This will be more complex because of GDPR.
+
+Data collected about the persons; the ones with an asterisk are are confidential information:
+
+|  |  |
+|----|----|
+| full name |  |
+| aliases | artistic name etc. |
+| given name(s) | a name chosen for a person at birth that identifies and differentiates that person from others in the same family. Depending on the culture a person is born into, the given name can precede or follow a surname (i.e. family name). A given name may also be known as a forename, first name, or personal name. |
+| surname, family name | a name used as a family name that may precede or follow a given name, depending on the culture. |
+| date of birth\* | date of birth in Y-M-D format |
+| date of death | date of death in Y-M-D or YYYY format |
+| birth location\* | name of the city where the person was born |
+| death location | name of the city where the person died |
+| sex or gender\* | sex or gender identity of the person |
+| country of citizenship | the country that recognizes the subject as its citizen |
+| work location |  |
+| occupation |  |
+| notable works |  |
+| ISNI |  |
+| VIAF ID |  |
+| Wikidata QID |  |
+| Spotify artist ID |  |
+| MusicBrainz artist ID |  |
+| IPI Name Number | identifier for names of a composer, author and other relevant parties |
+
+: Data collected about musicians {tbl-colwidths="\[25,75\]"}
+
+## SKCMDb musical groups
+
+A short description of how we started the identification of the music groups, where we placed them, and how this register can be used. We need to make sure that the orchestras in KULT are all included.
+
+Data collected about the musical groups:
+
+|  |  |
+|----|----|
+| name of music group | official name of the musical group |
+| work location | location where the musical group is seated (if known) |
+| official webpage | official website of the musical group |
+| date of inception | when the musical group was established |
+| date of dissolvation | when the musical group dissolved |
+| founding member(s) | name(s) of the founding member(s) |
+| genre of music | played by the musical group. The genres are defined by a vocabulary |
+| musical group IDs | VIAF, ISNI, Spotify artist ID |
+
+: Data collected about musical groups {tbl-colwidths="\[25,75\]"}
