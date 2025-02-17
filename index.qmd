@@ -1,0 +1,113 @@
+![](png/skcmdb/banner_open_music_registers.png){fig-align="center"}
+
+**Registration** is the act or process of entering information about something or somebody in a bookkeeping or other record-keeping application. Most music organisations maintain a register or registry: a list of members, information files on rightsholders, or music sheets available for study or borrowing in a library. As music is distributed and documented increasingly online, musicians and their groups and associations must fill out registrations for various digital services almost every day. The amount of registered data becomes daunting and terrifying, and maintaining all these data is very tiring. As a result, the registers contain a lot of outdated data, and we see increasing illegal activities by private registry holders to find data about music entities in other systems and copy it without permission or supervision. With our innovation we would like to show how music organisation can reduce this burden, harmonise their registration processes, and create more useful and up-to-date registers.
+
+::: callout-note
+This document has been prepared by OpenMusE project partners as an account of work carried out within the framework of the EC-GA contract no 101095295 [@openmuse_2023].
+
+*The Open Music Europe project has received funding from the European Union’s Horizon Europe, research and innovation programme, under Grant Agreement No.* 101095295*. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.*
+
+Any dissemination of results must indicate that it reflects only the author’s view and that the Commission Agency is not responsible for any use that may be made of the information it contains.
+
+This is an early draft for internal discussion. It is not ready to be used or submitted for revision.
+:::
+
+The lack of cooperation results in poor digital services, high costs, and very high risks of data breaches. Our vision for a shared registration process entails a website where an artist can fill out one form all the necessary documents in a form and give appropriate GDPR consent for all essential services:
+
+-   [x] Register for rights management. This allows existing members to update or verify their data, and for non-members, it starts a membership or representation process.
+
+-   [x] When meeting the notability criteria, add the artist or artist group data to a national/regional music information services database.
+
+-   [x] Appear on open knowledge platforms like Wikipedia, Wikidata, or MusicBrainz.
+
+-   [x] A health check on all the data that the artist data needs to be represented on digital services, for example, on licensed streaming platforms.
+
+-   [x] Advice on the pros/cons of revealing information for visibility in autonomous systems (recommender algorithms of radios, streaming playlists, festival curation) and placing the selected information on open knowledge graphs where most digital services will automatically find the data.
+
+-   [x] Placing the artists' or groups' data into a satellite register would improve the country's statistical register and allow the creation of better music statistics.
+
+The resulting interoperable process should reduce parallel data entry, data verification, identity check, and save time and effort for both the artists and their service providers. The interoperability should increase the transparency and the level of informed consent regarding data handling, and allow the creation of better statistics, business, and music policy analysis. A similar procedure can be envisioned where the artist could review their data once a year, notify changes, and receive valuable, actionable feedback about how information travels about their work on the internet.
+
+![We use the European Interoperability Framework as a general conceptual guideline to create a multi-purpose, interoperable registration process.](png/eif/eif_4_layers_en_2x1.png){fig-align="center"}
+
+In our work, we follow the *European Interoperability Framework*, which has a well-established legal basis for public digital services; our novel approach is making public and private services interoperable in a way that can be replicated throughout Europe.
+
+To enable the four layers of interoperability, we must carefully analyse the jobs or processes where registered data is used and the legal possibilities of collecting, maintaining, modifying, exchanging, disseminating, and deleting the data. Our register is an extensive national case study. Technically, it is a critically important part of the Slovak Comprehensive Database and the data-sharing space that serves it.
+
+In the *Open Music Europe* project, we are creating a limited joint register that can be extended to newer data fields. We will also show its benefits for promoting the local repertoire, increasing the efficiency of rights management, and improving the quality of music market, policy, or academic research.
+
+::: callout-note
+### Target groups of this document {.unnumbered}
+
+-   [x] Decision makers of music organisations that would like to use a shared, joint registration process for various music rights management, music information, distribution, or research applications.
+-   [x] Decision makers who want to synchronize their services that require a strictly coordinated data exchange with other registers related to music agents (people, organisations) and entities (works, recordings, print.)
+-   [x] Data/IT specialist in these organisations to understand the organisational, semantic, and technical opportunities and challenges of using such a shared system.
+-   [x] Data stewards, data research managers of music research organisation and projects.
+:::
+
+At this point, our register serves services and potential research related to music's creative processes and production and uses of music about mechanical copying, licensing, and streaming. With various degrees of difficulty, it can be extended to public performance uses in order of difficulty and data resources needed to broadcast, transmit, live performances, and eventually public performances in any public space.
+
+We harmonise registers about living people and their corporate bodies (groups, associations and companies), musical works and their print, recorded and staged (concert) manifestations. Extending our system with labels that release sound recordings for commercial use is relatively easy. In the case of corporate bodies, we make the name, identifiers for connecting services, and, when applicable, web address available, regardless of whether they have a legal personality, except when the corporate body consists of one identifiable natural person.
+
+Our register is comprehensive for corporate bodies that publish music in Slovakia and for corporate bodies that perform classical music. It is not comprehensive but highly representative for corporate bodies that release sound recordings and for non-classical musical groups. We try to show which corporate bodies are active and inactive, although non-commercial and *not incorporated* corporate bodies oscillate between active and inactive stages.
+
+In the case of natural persons, we have a comprehensive register of persons and heirs who register original musical works or represent them. Furthermore, we have an increasingly representative but incomplete list of music performers and notable persons in other music roles, such as music conductors or essential educators. Adding performer or producer natural persons to the SKCMDb is technically easy. Because of the GDPR, only a small part of this register is public. We started working with two musicians as ambassadors who will help us persuade more artists to opt into our shared system.
+
+We connect to various state and international data authorities to maintain and extend these registers. Our natural person register is a subset of the non-public Slovak population register, and the list of legal persons is a subset of the partly public register of Slovak legal persons. we will also describe how the registers can be connected for maintenance.
+
+The @sec-ambition chapter gives a further description on the need, benefits and pitfalls of harmonising registration processes and creating harmonised registers. The @sec-appendix-how describes which registers are available and for what purposes. We provide manual and API level access to them. It is impossible to generalize who can access to what purposes our registers, it depends on the data and the use case.
+
+The @sec-methodology chapter describes our conceptual framework, data model, and the harmonisation of vocabularies around agency (who does something, like composing music); entities (the music works and their recorded or print manifestations) and processes (like registering, recording, releasing.) Then we turn to the problem of identifying the two entities types (agents and music entities or "things".) We discuss data protection and data integration. we provide a more technical overview of our chosen data model and interoperability solutions.
+
+In @sec-registers registers we describe in more detail our shared register, and the harmonised individual registers: the authors' registration system in SOZA and CISAC; the music information registration system of Hudobné centrum, and the public libraries; the world's most used encyclopedia, Wikipedia, and the worlds' largest open knowledge graph database, Wikidata. We describe connecting to important services like Spotify (whose private register, but publicly open register is more extensive than most public registers) or MusicBrainz. An important topic here is the connection of these voluntary and shared regiters to mandatory state registers, such as the national corporate registry, OpenCorporates, or the non-public national population register.
+
+In @sec-data-model chapter we describe the **Data Model** more formally, and show how our data can be used in collections, rights management, web applications, and in surveying. This chapter has more formal examples in @sec-appendix-mappings.
+
+In the **Namespaces and controlled vocabularies** we show how the vocabularies of registration processes need to be harmonised. We also deal with the most persistent and costly problem of registers, name ambiguity. Most work, recording, persons registers have multiple same-named entities. Because humans tend to name things instead of using unique identification numbers, the identification of identical titled works, recordings, prints and same-name persons is an ongoing task for any registrar.
+
+The @sec-further lays out further work in public performance, with explaining the challenges of registering entities of live performances.
+
+The **Glossary** contains entries from our controlled vocabulary, and other abbreviations, organisational names, that are relevant for our topic.
+
+```{=html}
+<!---
+
+
+A register is an updated, authoritative set of records. It can be consulted to establish facts of membership in an organisation (is the person a former or current member?), inventory status (is the sheet in the inventory, available for lending or lent out?), is the musical work still in a copyright protected term (do you have to pay a licensing fee to use it?)
+
+
+- Collective management organisations maintain a database with two, interconnected registration processes: musical works or sound recordings (title by title), and the rightsholders (authors, publishers, heirs of authors, labels) who can claim money after the use of the titles.
+
+- Libraries maintain a catalogue of all books and musical sheets (title by title), connected to at least the authors of the works.
+
+- Museums maintain an inventory book of all objects, for example, original sheet manuscripts, when possible, also connected to people, including authors, custodians.
+
+- Archives maintain databases which may contain documents (called records), including original manuscripts, legal statements of representation for a publisher, connecting documents to people and things.
+
+- Publishers, labels, digital distributors keep an inventory or library of the assets that they manage, for example, sound recordings of musical works, connected to people or companies (rightsholders.)
+
+- Statisticians maintain "statistical registers" to find out which musicians, music enterprises, or orchestras should be surveyed in data collection.
+
+### Functional tasks {.unnumbered}
+
+Avoiding name ambiguity: even though many people may be called Taylor Swift, the most famous Taylor Swift should receive royalties paid after her works. There are many works called "Symphony No. 2." and each composer should be attributed and paid for the use of his or her work. Name ambiguity is very much present in all rights management and collection systems, and avoiding or fixing it is a great cost.
+
+Handling alternative names, defining preferred names: artists often use pseudonyms, or join named groups (bands, orchestras, choirs), or change their legal name after marriage, divorce, or other reasons. Maintenance of alternative names is necessary for membership issues, invoicing, paying, and surveying in person, via telephone, online or mail.
+
+These tasks, often called as NERD (named-entity recognition and disambiguation) are necessary for registers about natural persons (musicians), legal persons (publishers, labels), corporate bodies like musical groups (orchestras) without legal personality, but also named (titled) entities such as musical works, sound recordings, musical sheets.
+
+Functionally, registers with named entities, i.e., persons, corporate bodies, geographical locations, and titled intellectual work, all benefit from the creation of namespace applications. A namespace is a special-purpose register that contains all known name variations of a person or a thing. As opposed to a membership register (which wants to establish who is a member), or a statistical register (which wants to establish who should be surveyed), namespaces do not contain any other knowledge about the entity but their name variations and identifiers.
+
+While each organisation has its legal duty and necessity to carry out its own registration processes and maintain an accurate register, they can benefit from a shared namespace. A shared namespace of Slovak musicians and companies does not establish if they are members of SOZA, if Hudobné centrum has a biographic entry on them, or Hudobny Fond sells their sheets, but helps each of these organisations to avoid name confusions.
+
+
+### Outputs {.unnumbered}
+
+We aim to create "satellite business registers", which can improve the granularity and improve the punctuality of statistical data collection. The creation of a satellite business register also helps to review, correct, or enrich existing institutional registers, catalogues, inventory books or other forms of authoritative record keeping.
+
+We aim to create musical work and sound recording registers for statistical data collection in streaming, and for better recommendations, or monitoring local content quotas.
+
+As an intermediate output, we are creating namespaces, i.e., a register or known name variations and identifiers of named entities.
+
+--->
+```

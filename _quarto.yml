@@ -1,0 +1,92 @@
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "Open Music Registers"
+  subtitle: Coordinating regisers and registration processes for economic measurements
+  author:
+     - name: "Daniel Antal, CFA"
+       orcid: 0000-0001-7513-6760
+       affiliations:
+               - name: Reprex
+                 address: "Saturnusstraat 14"
+                 city: The Hague
+                 state: Zuid-Holland
+                 country: The Netherlands
+                 postal-code: "2516 AH"
+                 url: https://reprex.nl/
+     - name: "Richard Demčák"
+       orcid: 0009-0007-0687-1201
+       affiliations:
+               - name: SOZA
+                 url: https://soza.sk/
+     - name: "Marián Jankovič"
+     - orcid: 0009-0003-6326-226X
+     - affiliations:
+               - name: SOZA
+               - url: https://soza.sk/
+     - name: "Anna Žilková"
+     - orcid: 0009-0007-5261-6930
+     - affiliations:
+               - name: Music Center Slovakia
+               - url: https://hc.sk/
+     - name: "Matej Grochal"
+     - orcid:
+     - affiliations:
+               - name: Wikimedia Foundation
+               - url:
+     - name: "Anna Márta Mester"
+       orcid: 0009-0008-2274-8163
+       affiliations:
+               - name: Reprex
+                 address: "Saturnusstraat 14"
+                 city: The Hague
+                 state: Zuid-Holland
+                 country: The Netherlands
+                 postal-code: "2516 AH"
+                 url: https://reprex.nl/
+  date: today
+  doi: 10.5281/zenodo.14767717
+  repo-url: https://github.com/dataobservatory-eu/opencollections-manual
+  repo-actions: [edit]
+  downloads: [pdf, epub]
+  chapters:
+    - index.qmd
+    - glossary.qmd
+    - ambition.qmd
+    - t12.qmd
+    - references.qmd
+  appendices: 
+    - appendix-how_to_use.qmd
+
+version: 0.1.2
+
+bibliography: 
+    - bib/administrativedata.bib
+    - bib/cm.bib
+    - bib/collections.bib
+    - bib/datamodels.bib
+    - bib/dataspace.bib
+    - bib/ddi.bib
+    - bib/identifiers.bib
+    - bib/ILO.bib
+    - bib/ISOdata.bib
+    - bib/metadata.bib
+    - bib/musicidentifiers.bib
+    - bib/nerd.bib
+    - bib/OpenMusE.bib
+    - bib/privatelyhelddata.bib
+    - bib/wikidata.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+  epub: default 
+  docx: 
+    reference-doc: docx/OpenMusE_simple_template.docx
+
+editor: visual
+

@@ -1,0 +1,72 @@
+# Glossary {#glossary .unnumbered}
+
+## Registers and their records
+
+`register`: A [register](#glossary) aims to be a complete list of the objects in a specific group of objects or population." [@anders_register-based_2007]
+
+## Standards & authority services
+
+`IČO`: The organisation identification number (IČO) is an identifier assigned to all types of legal entities, entrepreneurs and public authorities by the Statistical Office of the Slovak Republic. The Czech Republic's organisation identifier is also called IČO.
+
+`ISNI`: an ISO certified global standard number for identifying the millions of contributors to creative works and those active in their distribution.
+
+`OpenCorporates`: a public corporation database which sources data from national business registries.
+
+`VIAF`: The Virtual International Authority File (VIAF) is an international service that consolidates multiple name authority files into a single database. Their primary goal is to enhance the efficiency and usability of library authority files by linking and merging widely used authority records and making them accessible online.
+
+## Data protection
+
+`GDPR`: The General Data Protection Regulation (GDPR) is a legal framework made by the European Union that sets guidelines for the collection and processing of personal information from individuals who live in and outside of the European Union.
+
+## Data science terms
+
+`data`: reinterpretable representation of information in a formalized manner suitable for communication, interpretation, or processing Note 1 to entry: Data can be processed by humans or by automatic means. \[SOURCE: ISO/IEC 2382:2015, 2121272\] [@iso_20546_2019]
+
+`database`: collection of data organized according to a conceptual structure describing the characteristics of these data and the relationships among their corresponding entities, supporting one or more application areas. \[SOURCE: ISO/IEC 2382:2015, 2121413\] [@iso_20546_2019]
+
+`data cube`: A statistical data set created in a multi-dimensional space (e.g., time, geography, gender), or hyper-cube, indexed by those dimensions. The term cube shouldn't be taken literally, it is not meant to imply that there are exactly three dimensions.
+
+`data set or dataset`: identifiable collection of data available for access or download in one or more formats \[SOURCE: Adapted from ISO 19115-2:2009, 4.7\] Beware: various conceptual and information models use different dataset definitions. [@iso_20546_2019]
+
+`interoperability`: Ability of two or more systems or applications to exchange information and to mutually use the information that has been exchanged. \[SOURCE: ISO/IEC 19941:2017\] [@iso_19941_2017]
+
+`knowledge base`: database that contains inference rules and information about human experience and expertise in a domain. 1: In self-improving systems, the knowledge base additionally contains information resulting from the solution of previously encountered problems. The terms knowledge base and K-base are standardized by ISO/IEC \[ISO/IEC 2382-1:1993\]. [@iso_2382_2015]
+
+`knowledge representation`: process or result of encoding and storing knowledge in a knowledge base. Term and definition standardized by ISO/IEC \[ISO/IEC 2382-28:1995\]. [@iso_2382_2015]
+
+`knowledge graph`: a knowledge representation that uses a graph-structured data model to represent and operate on data.
+
+`persistent identifier (PID)`: unique identifier that ensures permanent access for a digital object by providing access to it independently of its physical location or current ownership. \[SOURCE: ISO 24619:2011, definition 3.2.4\] [@iso_5127_2017]
+
+`structured data`: data which are organized based on a pre-defined (applicable) set of rules\
+Note: The predefined set of rules governing the basis on which the data is structured needs to be clearly stated and made known. \[[@iso_20546_2019]\]
+
+## Organisations and abbreviations
+
+`SOZA`: SOZA (Slovenský ochranný zväz autorský pre práva k hudobným dielam, Slovak Performing and Mechanical Rights Society) is a legal entity, non-profit civic association of authors and publishers of musical works, association of natural persons and legal entities.
+
+`Hudobné Centrum`: Music Centre Slovakia is a music organisation with a mission to promote Slovak contemporaly music.
+
+`CISAC`: the International Confederation of Societies of Authors and Composers is the world’s leading network of authors’ societies. It protects the rights and promotes the interests of creators worldwide.
+
+## Data name abbreviations
+
+`ISRC`: International Standard Recording Code [@iso_isrc_2019]
+
+`ISNI`: International Standard Name Identifier [@camp_isni_2022]
+
+`DOI`: Digital Object Identifier
+
+`CIDOC-CRM`: International Committee for Documentation–Conceptual Reference Model [@cidoc_2024]
+
+`RiC`: Records in Contexts–Conceptual Model [@RiC-CM_1_0]
+
+`DCTERMS` or `DCMI`: Dublin Core Metadata Terms [@dublin_core_dcmi_2020]
+
+`RDFS`: Resource Description Framework Schema
+
+`EDM`: Europeana Data Model [@EDM_2017]
+
+`ESCO`: European Skills, Competences, Qualifications and Occupations [@papantoniou_esco_2023]
+
+`PROV-O`: Provenance ontology [@prov-o_2013]
