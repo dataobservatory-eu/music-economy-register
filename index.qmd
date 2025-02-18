@@ -14,7 +14,7 @@ Any dissemination of results must indicate that it reflects only the author’s 
 This is an early draft for internal discussion. It is not ready to be used or submitted for revision.
 :::
 
-The lack of cooperation results in poor digital services, high costs, and very high risks of data breaches. Our vision for a shared registration process entails a website where an artist can fill out one form all the necessary documents in a form and give appropriate GDPR consent for all essential services:
+The lack of cooperation results in poor digital services, high costs, and very high risks of data breaches. Our vision for a shared registration process entails a website where an artist can fill out all the necessary documents in a form and give appropriate GDPR consent for all essential services:
 
 -   [x] Register for rights management. This allows existing members to update or verify their data, and for non-members, it starts a membership or representation process.
 
@@ -30,7 +30,7 @@ The lack of cooperation results in poor digital services, high costs, and very h
 
 Such a register should be useful for the administration of revenues, particularly royalty revenues; making business analysis and plans for public and private services, and even for advocacy; or to research various aspects of music.
 
-This document focuses on what aspect of our open registers, registering agents with music occupations as natural persons, and economic and artistic activities of music corporate bodies, weather informal or formal.
+This document focuses on what aspect of our open registers, registering agents with music occupations as natural persons, and economic and artistic activities of music corporate bodies, weather informal or formal will find useful.
 
 @sec-ambition gives an overall overview of the idea of open music registers.
 
