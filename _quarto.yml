@@ -79,6 +79,7 @@ bibliography:
     - bib/OpenMusE.bib
     - bib/privatelyhelddata.bib
     - bib/wikidata.bib
+    - bib/esco_nace.bib
 
 format:
   html:

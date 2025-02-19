@@ -67,6 +67,8 @@ We record venues to experiment with the extension of the usability of our regist
 
 2-3 paragraphs will precede this, it will explain what data is already available about people and companies.
 
+[@icaew_appendix]
+
 <https://github.com/dataobservatory-eu/music-economy-register/issues/6>
 :::
 
@@ -189,13 +191,15 @@ The general rules that we follow:
 
 A very important aspect of human agents is their role or occupation in music. A role is a professional participation in music processes and activities, which, if habitual, becomes an occupation.
 
-::: callout-caution
 ## \#### ANNA
+
+ESCO (European Skills, Competences, Qualifications and Occupations) is the European multilingual classification of skills, competences and occupations (three pillars) for the EU labor market. Its aim is to aims making the labour market and education systems more transparent, and to help inter-EU moves. \[@esco_handbook\] The ESCO ontology is the taxonomy of ESCO. [@papantoniou_esco_2023]
+
+The UK has a slightly different version of ESCO in the form of SSC (Standard Skill Classification) which is adapted specifically for the UK job market. [@ssc_2023] While ESCO aims for interoperability across European countries, SSC is tailored specifically to UK policies and industries, reflecting national priorities rather than cross-border standardization.
 
 <https://github.com/dataobservatory-eu/music-economy-register/issues/2>
 
 <https://github.com/dataobservatory-eu/music-economy-register/issues/5>
-:::
 
 When we want to understand the relative economic, environmental or social weight of music activities and processes, we must be able to use a systematic taxonomy of such occupations and roles. The current international occupation taxonomy, ISCO and its European ESCO extension are not sufficiently detailed for understanding music.
 
@@ -365,13 +369,16 @@ The connection between the live music production (Amber Smith and Ambersmith Kft
 
 Concerts are very often organised by entities that are not for-profit businesses and do not have a NACE code. Non-profits use the *International Classification of Non-Profit Organizations (ICNPO)*, and the European Union uses various classification for pubic sector entities such as the municipality of the town of Nagymaros.
 
-::: callout-warning
 ## \#### ANNA
+
+The Statistical Classification of Economic Activities in the European Community, commonly referred to as NACE (for the French term "nomenclature statistique des activités économiques dans la Communauté européenne"), is the [industry standard classification system](https://en.wikipedia.org/wiki/Industry_classification) used in the European Union. The current version is revision 2 [@nace_rev2] and was established by Regulation (EC) No 1893/2006.[\[1\]](https://en.wikipedia.org/wiki/Statistical_Classification_of_Economic_Activities_in_the_European_Community#cite_note-1) It is the European implementation of the UN classification [ISIC](https://en.wikipedia.org/wiki/International_Standard_Industrial_Classification), revision 4.\
+Since 2022 the 2.1 revision \[@nace_2.1] of NACE is available, it is to be used for European statistics from 2025 onwards.
+
+The UK has a slightly different version of NACE called The United Kingdom Standard Industrial Classification of economic activities (UK SIC) [@uk_sic]. It is based entirely on NACE Rev. 2 up to the four-digit (class) level. However, where necessary, a fifth digit has been added forming subclasses of the four-digit classes in NACE Rev. 2. Hence, the UK SIC is a hierarchical five-digit classification framework.
 
 <https://github.com/dataobservatory-eu/music-economy-register/issues/3>
 
 <https://github.com/dataobservatory-eu/music-economy-register/issues/4>
-:::
 
 ### Business-to-business users of music
 
