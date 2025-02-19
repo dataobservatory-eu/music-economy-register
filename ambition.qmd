@@ -2,7 +2,7 @@
 
 When somebody follows a registration process and registers a new person or thing into the register itself, they identify the subject and add some essential facts about it to a consistent document. In the modern world, such a register is almost always supported by a spreadsheet table or a relational database. Maintaining parallel registries to newer and newer purposes, digital services is a tedious, error-prone, and worrying practice. Artists, their groups, associations must give out more and more structured data without a full oversight or control over the process.
 
-Our vision for a shared registration process entails a website where an artist can fill out all the necessary documents in a form and give appropriate GDPR consent for all essential services, and they can use this interface for maintenance and to some extend, withdrawal of data:
+Our vision for a shared registration process entails a website where an artist can fill out one form all the necessary documents in a form and give appropriate GDPR consent for all essential services, and they can use this interface for maintenance and to some extend, withdrawal of data:
 
 -   Register for rights management. This allows existing members to update or verify their data, and for non-members, it starts a membership or representation process.
 -   When meeting the notability criteria, add the artist or artist group data to a national/regional music information services database.
@@ -12,7 +12,7 @@ Our vision for a shared registration process entails a website where an artist c
 
 The resulting process should save time and effort for both the artists and their service providers, increase transparency and the level of informed consent regarding data handling, and allow the creation of better statistics, business, and music policy analysis. A similar procedure can be envisioned where the artist could review their data once a year, notify changes, and receive valuable, actionable feedback about how information travels about their work on the internet.
 
-If you are a self-releasing artist or an artist's manager, it is likely that you fill out every year many registration forms for all sorts of databases, web applications, rights protection, grant proposals, and other purposes. It is likely that you have forgotten many of them; and you most certainly do not go back to all of these forms that you used in the past 10 years for registering to a service. Yet, the data from those registration forms lives somewhere. It may be on the Internet, it may be found by others. There is a lot of outdated or incorrect data out there, beyond your control. It is a bit like space debris around the Earth: we have so many obsolete and broken satellites out there from the last 70 years that there is a high risk when you send up a new one, it will collide with an old. There is a growing need to find technology that connects these registers, gives back control to the artist or the artist management, and allows a single point of releasing authoritative, correct information.
+If you are a self-releasing artist or an artist's manager, it is likely that you fill out every year many registration forms for all sorts of databases, web applications, rights protection, grant proposals, and other purposes. It is likely that you have forgotten many of them; and you most certainly do not go back to all of these forms that you used in the past 10 years for registering to a service. Yet, the data from those registration forms lives somewhere. It may be on the Internet, it may be found others. There is a lot of outdated or incorrect data out there, beyond your control. It is a bit like space debris around the Earth: we have so many obsolete and broken satellites out there from the last 70 years that there is a high risk when you send up a new one, it will collide with an old. There is a growing need to find technology that connects these registers, gives back control to the artist or the artist management, and allows a single point of releasing authoritative, correct information.
 
 ![The composer Iris Szeghy was one of the first persons who allowed her data to be used in our shared register. With her example we show how the coordination or registration processes can lead to better music services for music users and researchers. See our presentation for the [International Association of Music Information Centers](https://reprex.nl/slides/20241121_iamic_vienna/).](png/skcmdb/iris_szeghy_identity.png){fig-align="center"}
 
@@ -22,12 +22,12 @@ Different music organisations register facts about various persons, their works,
 
 The parallel processes are usually largely manual, time-consuming, and error-prone. The person registering these facts may misspell a name or not recognise an ambiguous title that can refer to a different work or concert. After all, the most significant cost of a rights management agency is related to working with the registers to sort out all kinds of name and title ambiguity and find out who should be paid after specific music uses. Data entry and corrections are a large part of a librarian's work. Wouldn't it be easier if they were working in the same database?
 
-![Our systems allows a vertical data exchange, which allows that trusted, cooperating music organisations cross-check their data about artists and their works, recordings, releases, and then make them available for streaming providers, festival promoters, radio editors and other users.](png/omo/data_enrichment_dissemination.png){fig-align="center"}
+![Our systems allows a vertical data exchange, which allow that trusted, cooperating music organisations cross-check their data about artists and their works, recordings, releases, and then make them available for streaming providers, festival promoters, radio editors and other users.](png/omo/data_enrichment_dissemination.png){fig-align="center"}
 
 There are obvious benefits in harmonising registers, and it is a very current topic in legal, research, statistical, and business analytics data stewardships. However, the harmonisation of registration processes is more complex than it looks for data users unfamiliar with data management. In the past 20 years, many data centralisation programs have failed in music. It is beyond the scope of this report to explain why, but we recall here a few important lessons:
 
--   Different organisations work with the same facts but with different purposes and vocabulary and in other jobs and workflows. These differences then lead to very different and incompatible supporting data models.
--   The organisations often have a conflict of interest because they are targeting the same revenue sources, or the latecomers could free-ride on already occurred costs. Sharing work related data to data management is not easy. Because of the many facets of the music sector, the different jobs and workflows of a rights manager, librarian, talent manager, researcher, archivist, distributor, statistician, or publisher, harmonisation of data management processes are inherently very complex.
+-   Different organisations work with the same facts but with different purposes and vocabulary and in other jobs and workflows. these differences then lead to very different and incompatible supporting data models.
+-   The organisations often have a conflict of interest because they are targeting the same revenue sources, or the latecomers could free-ride on already occurred costs. haring work related to data management is not easy. Because of the many facets of the music sector, the different jobs and workflows of a rights manager, librarian, talent manager, researcher, archivist, distributor, statistician, or publisher, harmonisation of data management processes are inherently very complex.
 -   Because of these complexities, even seemingly simple processes, such as registering the authorship of new music works and connecting the use of such works in recordings or libraries, are difficult.
 
 ## Multi-purpose register
@@ -38,7 +38,7 @@ One of the most important lessons from the last 20 years of data centralisation 
 
 ## Data subjects or agents
 
-A statistical or data subject is an individual or a corporate body to whom the personal data relates. In our registration processes, we will deal with the various data subjects.
+A statistical or data subject is an individual or a corporate body to whom the personal data relates; but we will. In our registration processes, we will deal with the various data subjects.
 
 In our data model (described in another document) we call these actors agents. In various standard data models and their broader, IT-system-independent conceptualisations an agent is a person, group, or organization that takes action, creates, influences, or is responsible for something within a given context. We register agents in the context of music, with a special emphasis on agents who participate in another registration process: the registration of works, sound recordings, print music, or the first live performance of a work.
 
@@ -55,7 +55,7 @@ Methodologically, our data models call these subjects "actors" or "**agents**". 
 Our subjects are always human actors or agents; they are natural persons, or they are deceased natural persons. (We do not collect information on fictional characters.) Natural persons are subject to the General Data Protection Regulation (GDPR). Deceased persons may have heirs who inherited rights and are natural persons, too. GDPR no longer protects deceased persons; other moral rights or data protection may apply to them.
 
 |   | Subject | What is their role? |
-|-------------|-----------------------------------------------|-------------|
+|----|----|----|
 | author | Original authors of music and lyrics, and heirs of their rights. |  |
 | performer | Musicians, DJs and vocalists who interpret the compositions of authors. They may improvise in their performances. |  |
 | producer | Producers who organise the recorded fixation of interpreted music in a novel way that audiences can enjoy beyond a live performance. |  |
@@ -68,7 +68,7 @@ Our subjects are always human actors or agents; they are natural persons, or the
 Corporate bodies are groups of data subjects working together, often under a single name, like The Beatles or the Slovak Philharmonic. Managing corporate body data is challenging because membership in large bodies, like a philharmonic orchestra or a right collection agency, is changing almost daily.
 
 | Corporate bodies | What is their role? |
-|--------------|----------------------------------------------------------|
+|----|----|
 | publisher | Representatives of authors who publish copyright protected musical works, literary works, or other works about music. |
 | musical group | Ensembles, bands, orchestras, choirs and other groups of music performers who perform together in a studio or staged performance. |
 | labels | Music professionals who curate and release sound recordings of live and studio performances for the business-to-business (radio, streaming provider, film producer, etc.) and consumer end users (music audiences.) |
@@ -80,12 +80,17 @@ Corporate bodies are groups of data subjects working together, often under a sin
 
 It is easier to work with corporate bodies if they are incorporated and gain legal personhood or similar legal recognition in the jurisdiction of a state. Data protection is still applicable, but not GDPR. Transparency laws make some of their data public. What is challenging in a highly informal sector like music is that corporate bodies and legal persons do not overlap in most cases.
 
-| Legal persons | What is their role? |
-|---------------|---------------------------------------------------------|
-| Corporations | Incorporated social and business enterprises that provide long-term continuity and legal personality to music corporate bodies, such as music publishers, or operators of music venues. |
-| Public sector institutions | Municipal, regional, or state institutions that do not follow a company form, such as a granting agency. |
-| Associations | Associations of rightsholders, musicians, that perform a joint activity, for example, collecting royalties. |
-| Foundations | define |
++------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Legal persons                | What is their role?                                                                                                                                                                       |
++==============================+===========================================================================================================================================================================================+
+| Corporations                 | | Incorporated social and business enterprises that provide long-term continuity and legal personality to music corporate bodies, such as music publishers, or operators of music venues. |
++------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| | Public sector institutions | | Municipal, regional, or state institutions that do not follow a company form, such as a granting agency.                                                                                |
++------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| | Associations               | | Associations of rightsholders, musicians, that perform a joint activity, for example, collecting royalties.                                                                             |
++------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| | Foundations                | | define                                                                                                                                                                                  |
++------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : : Legal persons as agents {tbl-colwidths="\[25,75\]"}
 
@@ -96,9 +101,9 @@ Our primary interest is not necessarily in the data subject but in their music, 
 We are particularly interested in a parallel registration of works and the recorded fixations of their studio and staged performances intended for the public. (For example, we do not want to provide interoperability for recording information about rehearsals or liturgical uses of music for spiritual or faith-based communities.)
 
 | Subject | What is their role? |
-|---------------|--------------------------------------------------------|
+|----|----|
 | musical work | Composed of a combination of sounds, with or without accompanying text [@iso_iswc_2022] |
-| performance | The act or process of staging or presenting a play, concert, or other form of entertainment. |
+| performance |  |
 | live performance | The performance of music in front of a live audience. |
 | recorded performance | The performance of music, interpreted from a musical work or improvised, with the aim of creating a recording. |
 | sound recording | A recorded fixation, released for commercial or non-commercial use, an re-playable object from a recorded performance. |

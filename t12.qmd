@@ -60,7 +60,13 @@ In statistical terms, we are looking for incorporated business enterprises that 
 
 -   [x] Every music venue in the Slovak Music Centre database.
 
-We record venues to experiment with the extension of the usability of our registers.
+We must not forget that we design registers to support services. In this report, we focus on data collection services related to the economic aspects of music.
+
+If we want to measure the average, median, maximum or minimum net copyright royalty income of composers working in Slovakia, we must align our data in two ways. We must be able to point out every composer (or at least a well-designed subsample of every composer.) In other words, this identifies the data subject. Then, we want to measure their royalty income. In that case, we have to point out each of these composers' annual royalty accounts (if we have access to such an accounting system) or send them a questionnaire to report on their income.
+
+We must resolve two problems. First, we must be able to state who qualifies as a composer. Second, we must point out the data of these identified agents from a data source. It is good practice to identify the agents in the same way the data source will identify them.
+
+While this document focuses on the identification problem, we must consider the requirements of the possible data sources. When our agents are natural persons, access to their data will often be restricted and anonymised, leading to further complications. When we work with enterprise data, the data sources are likely to be a company house database, a database of tax returns (we will have only anonymised access to that), or a statistical source.
 
 ::: callout-note
 ## \#### ANNA
@@ -191,15 +197,9 @@ The general rules that we follow:
 
 A very important aspect of human agents is their role or occupation in music. A role is a professional participation in music processes and activities, which, if habitual, becomes an occupation.
 
-## \#### ANNA
+The *International Standard Classification of Occupations* (ISCO) is a four-level classification of occupation groups managed by the International Labour Organisation (ILO). Its structure follows a grouping by education level. The two latest versions of ISCO are ISCO-88 (dating from 1988) and ISCO-08 (dating from 2008). ISCO is implemented in a largely harmonised way all over the world with relatively small differences. The ESCO (European Skills, Competences, Qualifications and Occupations) is the EU's definition [@esco_handbook] , while the SSC (Standard Skill Classification) which is adapted specifically for the UK job market. [@ssc_2023].
 
-ESCO (European Skills, Competences, Qualifications and Occupations) is the European multilingual classification of skills, competences and occupations (three pillars) for the EU labor market. Its aim is to aims making the labour market and education systems more transparent, and to help inter-EU moves. \[@esco_handbook\] The ESCO ontology is the taxonomy of ESCO. [@papantoniou_esco_2023]
-
-The UK has a slightly different version of ESCO in the form of SSC (Standard Skill Classification) which is adapted specifically for the UK job market. [@ssc_2023] While ESCO aims for interoperability across European countries, SSC is tailored specifically to UK policies and industries, reflecting national priorities rather than cross-border standardization.
-
-<https://github.com/dataobservatory-eu/music-economy-register/issues/2>
-
-<https://github.com/dataobservatory-eu/music-economy-register/issues/5>
+The European Union recently published its ESCO taxonomy in an ontological form, [@papantoniou_esco_2023], which is already connected to two registers. We utilise this ontological form, because it can support any ISCO-originated taxonomy with a clear interoperability with registers. The ISCO (and its ESCO and SSC) implementations as taxonomies are hierarchical: on the top level, every UN member state applies them the same. Beyond a certain level of granularity, the EU and UK can diverge, or new applications can be built. We actually aim to build a divergent taxonomy that adds further granularity to the point where the EU and UK definitions are still aligned.
 
 When we want to understand the relative economic, environmental or social weight of music activities and processes, we must be able to use a systematic taxonomy of such occupations and roles. The current international occupation taxonomy, ISCO and its European ESCO extension are not sufficiently detailed for understanding music.
 
@@ -217,7 +217,9 @@ In fact, music producers deal with the release of recordings, and not with the p
 
 As human agents, in the ESCO definition: "musicians perform a vocal or musical part that can be recorded or played for an audience. They have know-how and practice of one or many instruments or using their voice. The musician can also write and transcribe music."
 
-Musicians either perform alone (solo) or in various groups. Creating a register of active groups is very challenging. NACE is not useful to find economic actors who make a living as musicians, but the 5-6 digit extensions of NACE for sole proprietors may be helpful. For example, in the relevant taxonomy for Hungarian sole proprietors, those sole proprietors of music whose main economic activity is have a code of `900102`, derived from NACE `9000`.
+So, if we want to measure consistently the economic activities of music professionals (as natural persons agents), we should come up with a description of habitual occupations or roles within these occupations that are understood the same way in the United Kingdom or Slovakia. This is beyond the scope of this document, but in the background of Open Music Europe there is plenty of experience for doing this for the purpose of harmonised surveying of music professionals.
+
+Another important classification is ISIC (UN) or NACE (EU) or SIC (UK). This is a taxonomy for the economic activities of enterprises. Some member states, like the Netherlands or Hungary, apply a national extension of NACE to sole proprietors, which overlaps with the ISCO/ESCO/SIC defined occupational activities, but only in the case of sole proprietors. For example, in the relevant taxonomy for Hungarian sole proprietors, those sole proprietors of music whose main economic activity is have a code of `900102`, derived from NACE `9000`. ISIC, NACE, or SIC is only suitable for the classification of some enterprises.
 
 ### Informal corporate bodies: orchestras, informal enterprises
 
@@ -369,18 +371,19 @@ The connection between the live music production (Amber Smith and Ambersmith Kft
 
 Concerts are very often organised by entities that are not for-profit businesses and do not have a NACE code. Non-profits use the *International Classification of Non-Profit Organizations (ICNPO)*, and the European Union uses various classification for pubic sector entities such as the municipality of the town of Nagymaros.
 
-## \#### ANNA
+The Statistical Classification of Economic Activities in the European Community, commonly referred to as NACE (for the French term "nomenclature statistique des activités économiques dans la Communauté européenne"). It is derived from the UN classification [ISIC](https://en.wikipedia.org/wiki/International_Standard_Industrial_Classification), revision 4.
 
-The Statistical Classification of Economic Activities in the European Community, commonly referred to as NACE (for the French term "nomenclature statistique des activités économiques dans la Communauté européenne"), is the [industry standard classification system](https://en.wikipedia.org/wiki/Industry_classification) used in the European Union. The current version is revision 2 [@nace_rev2] and was established by Regulation (EC) No 1893/2006.[\[1\]](https://en.wikipedia.org/wiki/Statistical_Classification_of_Economic_Activities_in_the_European_Community#cite_note-1) It is the European implementation of the UN classification [ISIC](https://en.wikipedia.org/wiki/International_Standard_Industrial_Classification), revision 4.\
-Since 2022 the 2.1 revision \[@nace_2.1] of NACE is available, it is to be used for European statistics from 2025 onwards.
+The Statistical Classification of Economic Activities in the European Community, commonly referred to as `NACE` (for the French term "nomenclature statistique des activités économiques dans la Communauté européenne"), is the [industry standard classification system](https://en.wikipedia.org/wiki/Industry_classification) used in the European Union. The United Kingdom has a slightly different version of NACE called
 
-The UK has a slightly different version of NACE called The United Kingdom Standard Industrial Classification of economic activities (UK SIC) [@uk_sic]. It is based entirely on NACE Rev. 2 up to the four-digit (class) level. However, where necessary, a fifth digit has been added forming subclasses of the four-digit classes in NACE Rev. 2. Hence, the UK SIC is a hierarchical five-digit classification framework.
+At the time of Brexit, the EU (and the UK) used the second revision of NACE [@nace_rev2], currently, the EU prepares for the rollout of the the revision 2.1 in 2025 [@nace_2.1], while the UK uses the United Kingdom Standard Industrial Classification of economic activities (UK SIC) [@uk_sic].
 
-<https://github.com/dataobservatory-eu/music-economy-register/issues/3>
+Just like with the occupation taxonomies, the economic activity taxonomies are hierarchical, so the EU, the UK and other regions will be aligned by ISIC to a certain point. The EU itself is aiming alignment at the level of four-digit precision; and member states (and the UK) often create five- or six-digit precision versions.
 
-<https://github.com/dataobservatory-eu/music-economy-register/issues/4>
+The use of NACE is particularly problematic for music because it does not provide a clear mapping for music corporate bodies that fall under the enterprise definition. (The same problem applies to some music occupations.) A bigger problem is that many music corporate bodies do not have a NACE code, for example, because they work as an "informal enterprise" or as a non-profit entity or a public body. NACE appears to be somewhat suitable to identify music publisher, but hardly suitable for music labels, and perhaps entire unsuitable for concert promoters and concert venues.
 
 ### Business-to-business users of music
+
+NACE is not absolutely useless, of course. Identifying some licensed user groups of music, such as radios, is rather good. Sole proprieators cannot operate radios in most member states, and the market share of community radios operated by small non-profits (who do not have a NACE code) is relatively low. The bulk of radio stations that pay a licensing fee for broadcasting music usually have a NACE code that is well mapped to their activities. The same can be said about television broadcasters and cable retransmission entities.
 
 Often, the research question in business or academia is not related to music creation, but the values the creations in their business use. This leads to registering a different set of agents, i.e., agents who use music in business-to-business relations. In cultural access and participation surveys, we also may ask natural persons as music users.
 
