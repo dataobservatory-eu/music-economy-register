@@ -62,6 +62,14 @@ In statistical terms, we are looking for incorporated business enterprises that 
 
 We record venues to experiment with the extension of the usability of our registers.
 
+::: callout-note
+## \#### ANNA
+
+2-3 paragraphs will precede this, it will explain what data is already available about people and companies.
+
+<https://github.com/dataobservatory-eu/music-economy-register/issues/6>
+:::
+
 ## Data description
 
 ::: callout-note
@@ -180,6 +188,14 @@ The general rules that we follow:
 -   Corporate Agent -\> Succession (Event) or Dissolution (Event) -\> Timespan is simplified to `successor` and `date of dissolution`.
 
 A very important aspect of human agents is their role or occupation in music. A role is a professional participation in music processes and activities, which, if habitual, becomes an occupation.
+
+::: callout-caution
+## \#### ANNA
+
+<https://github.com/dataobservatory-eu/music-economy-register/issues/2>
+
+<https://github.com/dataobservatory-eu/music-economy-register/issues/5>
+:::
 
 When we want to understand the relative economic, environmental or social weight of music activities and processes, we must be able to use a systematic taxonomy of such occupations and roles. The current international occupation taxonomy, ISCO and its European ESCO extension are not sufficiently detailed for understanding music.
 
@@ -348,6 +364,14 @@ A potential complication is that actually a non-profit company owned by the muni
 The connection between the live music production (Amber Smith and Ambersmith Kft) and the staging of the music (Nagymaros municipality and its non-profit cultural entity) are connected in space and time if Artisjus, the Hungarian collective rights management agency, licenses. In this case, the licensing database contains both important Agents, the time, space, and likely some other variables like maximum capacity of the location, if the event is ticketed or not, if ticketed, and what the ticket price is.
 
 Concerts are very often organised by entities that are not for-profit businesses and do not have a NACE code. Non-profits use the *International Classification of Non-Profit Organizations (ICNPO)*, and the European Union uses various classification for pubic sector entities such as the municipality of the town of Nagymaros.
+
+::: callout-warning
+## \#### ANNA
+
+<https://github.com/dataobservatory-eu/music-economy-register/issues/3>
+
+<https://github.com/dataobservatory-eu/music-economy-register/issues/4>
+:::
 
 ### Business-to-business users of music
 
