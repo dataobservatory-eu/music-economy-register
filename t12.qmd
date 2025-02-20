@@ -68,16 +68,6 @@ We must resolve two problems. First, we must be able to state who qualifies as a
 
 While this document focuses on the identification problem, we must consider the requirements of the possible data sources. When our agents are natural persons, access to their data will often be restricted and anonymised, leading to further complications. When we work with enterprise data, the data sources are likely to be a company house database, a database of tax returns (we will have only anonymised access to that), or a statistical source.
 
-::: callout-note
-## \#### ANNA
-
-2-3 paragraphs will precede this, it will explain what data is already available about people and companies.
-
-[@icaew_appendix]
-
-<https://github.com/dataobservatory-eu/music-economy-register/issues/6>
-:::
-
 ## Data description
 
 ::: callout-note
@@ -219,7 +209,7 @@ As human agents, in the ESCO definition: "musicians perform a vocal or musical p
 
 So, if we want to measure consistently the economic activities of music professionals (as natural persons agents), we should come up with a description of habitual occupations or roles within these occupations that are understood the same way in the United Kingdom or Slovakia. This is beyond the scope of this document, but in the background of Open Music Europe there is plenty of experience for doing this for the purpose of harmonised surveying of music professionals.
 
-Another important classification is ISIC (UN) or NACE (EU) or SIC (UK). This is a taxonomy for the economic activities of enterprises. Some member states, like the Netherlands or Hungary, apply a national extension of NACE to sole proprietors, which overlaps with the ISCO/ESCO/SIC defined occupational activities, but only in the case of sole proprietors. For example, in the relevant taxonomy for Hungarian sole proprietors, those sole proprietors of music whose main economic activity is have a code of `900102`, derived from NACE `9000`. ISIC, NACE, or SIC is only suitable for the classification of some enterprises.
+Another important classification is `ISIC` (UN) or `NACE` (EU) or SIC (UK). This is a taxonomy for the economic activities of enterprises. Some member states, like the Netherlands or Hungary, apply a national extension of NACE to sole proprietors, which overlaps with the ISCO/ESCO/SIC defined occupational activities, but only in the case of sole proprietors. For example, in the relevant taxonomy for Hungarian sole proprietors, those sole proprietors of music whose main economic activity is have a code of `900102`, derived from NACE `9000`. `ISIC`, `NACE`, or SIC is only suitable for the classification of some enterprises.
 
 ### Informal corporate bodies: orchestras, informal enterprises
 
@@ -299,7 +289,7 @@ For the purpose of the economy register, a work register is not necessary, but f
 
 ### Formal corporate bodies: municipalities, enterprises, foundations
 
-Concert promoters are usually easier to observe than orchestras, but their form varies. They can be enterprises with an economic activity (classified with a NACE code), NGOs, or public bodies, such as municipalities. Concert promoters are found in several state registers, and crucially, they should be found in the licensing database of author's societies. Only those concert promoters who put on stage out-of-copyright or exclusively liturgical music (in churches, synagogues, etc.) are exempted.
+Concert promoters are usually easier to observe than orchestras, but their form varies. They can be enterprises with an economic activity (classified with a `NACE` code), NGOs, or public bodies, such as municipalities. Concert promoters are found in several state registers, and crucially, they should be found in the licensing database of author's societies. Only those concert promoters who put on stage out-of-copyright or exclusively liturgical music (in churches, synagogues, etc.) are exempted.
 
 ![A formal corporation from the music publishers' register. \<<https://reprexbase.eu/demo/index.php?title=Item:Q201>\>](png/skcmdb/skcmdb_music_publishers_atempo_6x4.png){fig-align="center"}
 
@@ -369,17 +359,19 @@ A potential complication is that actually a non-profit company owned by the muni
 
 The connection between the live music production (Amber Smith and Ambersmith Kft) and the staging of the music (Nagymaros municipality and its non-profit cultural entity) are connected in space and time if Artisjus, the Hungarian collective rights management agency, licenses. In this case, the licensing database contains both important Agents, the time, space, and likely some other variables like maximum capacity of the location, if the event is ticketed or not, if ticketed, and what the ticket price is.
 
-Concerts are very often organised by entities that are not for-profit businesses and do not have a NACE code. Non-profits use the *International Classification of Non-Profit Organizations (ICNPO)*, and the European Union uses various classification for pubic sector entities such as the municipality of the town of Nagymaros.
+Concerts are very often organised by entities that are not for-profit businesses and do not have a `NACE` code. Non-profits use the *International Classification of Non-Profit Organizations (ICNPO)*, and the European Union uses various classification for pubic sector entities such as the municipality of the town of Nagymaros.
 
-The Statistical Classification of Economic Activities in the European Community, commonly referred to as NACE (for the French term "nomenclature statistique des activités économiques dans la Communauté européenne"). It is derived from the UN classification [ISIC](https://en.wikipedia.org/wiki/International_Standard_Industrial_Classification), revision 4.
+The Statistical Classification of Economic Activities in the European Community, commonly referred to as `NACE` (for the French term "nomenclature statistique des activités économiques dans la Communauté européenne"). It is derived from the UN classification [ISIC](https://en.wikipedia.org/wiki/International_Standard_Industrial_Classification), revision 4.
 
-The Statistical Classification of Economic Activities in the European Community, commonly referred to as `NACE` (for the French term "nomenclature statistique des activités économiques dans la Communauté européenne"), is the [industry standard classification system](https://en.wikipedia.org/wiki/Industry_classification) used in the European Union. The United Kingdom has a slightly different version of NACE called
+The Statistical Classification of Economic Activities in the European Community, commonly referred to as `NACE` (for the French term "*nomenclature statistique des activités économiques dans la Communauté européenne*"), is the industry standard classification system used in the European Union. The United Kingdom has a slightly different version of NACE called
 
 At the time of Brexit, the EU (and the UK) used the second revision of NACE [@nace_rev2], currently, the EU prepares for the rollout of the the revision 2.1 in 2025 [@nace_2.1], while the UK uses the United Kingdom Standard Industrial Classification of economic activities (UK SIC) [@uk_sic].
 
-Just like with the occupation taxonomies, the economic activity taxonomies are hierarchical, so the EU, the UK and other regions will be aligned by ISIC to a certain point. The EU itself is aiming alignment at the level of four-digit precision; and member states (and the UK) often create five- or six-digit precision versions.
+Just like with the occupation taxonomies, the economic activity taxonomies are hierarchical, so the EU, the UK and other regions will be aligned by `ISIC` to a certain point. The EU itself is aiming alignment at the level of four-digit precision; and member states (and the UK) often create five- or six-digit precision versions.
 
-The use of NACE is particularly problematic for music because it does not provide a clear mapping for music corporate bodies that fall under the enterprise definition. (The same problem applies to some music occupations.) A bigger problem is that many music corporate bodies do not have a NACE code, for example, because they work as an "informal enterprise" or as a non-profit entity or a public body. NACE appears to be somewhat suitable to identify music publisher, but hardly suitable for music labels, and perhaps entire unsuitable for concert promoters and concert venues.
+One problem with applying NACE is that it is designed for larger corporations and does not work very well with microenterprises that show some level of informality (and does not apply to informal enterprises.) Microenterprises often have an unclear economic activity profile, and their data is also lacking in detail. A larger company that applies the IFRS financial reporting standards (or its UK or any European national form) must report specific segments of its business separately. However, a company smaller than the "small" enterprise threshold falls under a simplified accounting (and tax reporting) scheme in perhaps every European country. Some countries must only report a net turnover and profit after tax. In the United Kingdom, four scenarios may apply to microenterprises, and in one case, it must not even report any flow variables (like net turnover or profit after tax.) [@icaew_appendix]
+
+The use of NACE is particularly problematic for music because it does not provide a clear mapping for music corporate bodies that fall under the enterprise definition. (The same problem applies to some music occupations), and even if it does, it will identify some data poor subjects. A bigger problem is that many music corporate bodies do not have a NACE code, for example, because they work as an "informal enterprise" or as a non-profit entity or a public body. NACE appears to be somewhat suitable to identify music publisher, but hardly suitable for music labels, and perhaps entire unsuitable for concert promoters and concert venues.
 
 ### Business-to-business users of music
 
@@ -534,7 +526,7 @@ We follow the dataspace concept in building SKCMDb. A dataspace is an emerging a
 
 To translate this to laymen terms, it is unlikely that SKCMDb will be allowed to have a permanent, live connection to national libraries, or the inventory systems of various archives and museums. But we hope that we can negotiate one-time or period, annual exchanges, supervised by both an interdisciplinary research team and data stewards. Applying the dataspace design allows that such one-time or regular synchronisation opportunities are well-planned, have no significant additional costs, and can be easily overseen by legal, data security and other experts. We build SKCMDb as a system that can, when permitted, receive larger data tables from various museum, library, and archive systems, or open science repositories.
 
-Dataspaces themselves can be connected with each other. Such connections are called data federations. SKCMDb , by design, aims to be federated with Wikidata (the largest open knowledge graph database of the world), the Europeana Data Space (that connects various digital heritage databases in Europe), and the European Cultural Heritage Cloud, which is an extension of EOSC to various digitised heritage collections. Data federations will allow us to import any new data from the Europeana Data Space into SKCMDb as soon as it appears there, and the music experts or SKCMDb will agree that the data is relevant for SKCMDb itself. We can send all well-documented heritage collection items via SKCMDb to Europeana and its more research-focused database.
+Dataspaces themselves can be connected with each other. Such connections are called data federations. SKCMDb , by design, aims to be federated with Wikidata (the largest open knowledge graph database of the world), the Europeana Data Space (that connects various digital heritage databases in Europe), and the [European Cultural Heritage Cloud](https://research-and-innovation.ec.europa.eu/research-area/social-sciences-and-humanities/cultural-heritage-and-cultural-and-creative-industries-ccis/cultural-heritage-cloud_en), which is an extension of the [European Open Science Cloud](https://eosc.eu/eosc-about/) (EOSC) to various digitised heritage collections. Data federations will allow us to import any new data from the Europeana Data Space into SKCMDb as soon as it appears there, and the music experts or SKCMDb will agree that the data is relevant for SKCMDb itself. We can send all well-documented heritage collection items via SKCMDb to Europeana and its more research-focused database.
 
 SKCMDb is technically stored in a MariaDB database extended for graph format with Wikibase. Wikibase, the software that powers Wikidata, the world's largest open graph database, has been successfully used in the past decade to create interoperable library services [@van_veen_wikidata_2019; @bianchini_beyond_2021; @sardo_wikidata_2022], museum services [@pfeiffer_representing_2021], and archives (references), and creating interoperability among the institutional silos of these three types of heritage collections [@alexiev_bulgarian_2020; @rossenova_wikidata_2022]. EU institutions themselves also use it [@semic_2020_providing_2020].
 
