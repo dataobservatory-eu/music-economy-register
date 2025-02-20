@@ -80,6 +80,8 @@ bibliography:
     - bib/privatelyhelddata.bib
     - bib/wikidata.bib
     - bib/esco_nace.bib
+    - bib/eosc.bib
+    - bib/eccch.bib
 
 format:
   html:
