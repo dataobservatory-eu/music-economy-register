@@ -189,28 +189,6 @@ A very important aspect of human agents is their role or occupation in music. A 
 
 The *International Standard Classification of Occupations* (ISCO) is a four-level classification of occupation groups managed by the International Labour Organisation (ILO). Its structure follows a grouping by education level. The two latest versions of ISCO are ISCO-88 (dating from 1988) and ISCO-08 (dating from 2008). ISCO is implemented in a largely harmonised way all over the world with relatively small differences. The ESCO (European Skills, Competences, Qualifications and Occupations) is the EU's definition [@esco_handbook] , while the SSC (Standard Skill Classification) which is adapted specifically for the UK job market. [@ssc_2023].
 
-The European Union recently published its ESCO taxonomy in an ontological form, [@papantoniou_esco_2023], which is already connected to two registers. We utilise this ontological form, because it can support any ISCO-originated taxonomy with a clear interoperability with registers. The ISCO (and its ESCO and SSC) implementations as taxonomies are hierarchical: on the top level, every UN member state applies them the same. Beyond a certain level of granularity, the EU and UK can diverge, or new applications can be built. We actually aim to build a divergent taxonomy that adds further granularity to the point where the EU and UK definitions are still aligned.
-
-When we want to understand the relative economic, environmental or social weight of music activities and processes, we must be able to use a systematic taxonomy of such occupations and roles. The current international occupation taxonomy, ISCO and its European ESCO extension are not sufficiently detailed for understanding music.
-
-In the creation of new musical work, we are talking about natural persons who have an occupation as a *composer*. In ESCO 2652.1 describes the *composer*, and 2652.1.1 describes the *music arranger*, and 2641.4.1 the *lyricist*. (Most composer do not make a living out of composing only, and this is not their only occupation; so one human agent usually has several parallel roles or occupations.)
-
-> Lyricists interpret the style of a music piece and write words to accompany the melody. They work together with the music composer.
-
-A note: in the current ESCO definition the composer *excludes sound artist, lyricist and music arranger.*; the exclusion of the lyricists is ambiguous. Lyrics can be registers as a literary work and as part of a musical work. It needs further validation if this ESCO taxonomical difference causes problems in our data model.
-
-In ESCO, `2654.3.1` *incorrectly* describes a music producer as
-
-> Music producers are responsible for acquiring music to be published. They listen to demos of songs and determine whether they are good enough to be published. Music producers oversee the production of records. They manage the technical aspects of recording and editing.
-
-In fact, music producers deal with the release of recordings, and not with the publishing of musical works.
-
-As human agents, in the ESCO definition: "musicians perform a vocal or musical part that can be recorded or played for an audience. They have know-how and practice of one or many instruments or using their voice. The musician can also write and transcribe music."
-
-So, if we want to measure consistently the economic activities of music professionals (as natural persons agents), we should come up with a description of habitual occupations or roles within these occupations that are understood the same way in the United Kingdom or Slovakia. This is beyond the scope of this document, but in the background of Open Music Europe there is plenty of experience for doing this for the purpose of harmonised surveying of music professionals.
-
-Another important classification is `ISIC` (UN) or `NACE` (EU) or SIC (UK). This is a taxonomy for the economic activities of enterprises. Some member states, like the Netherlands or Hungary, apply a national extension of NACE to sole proprietors, which overlaps with the ISCO/ESCO/SIC defined occupational activities, but only in the case of sole proprietors. For example, in the relevant taxonomy for Hungarian sole proprietors, those sole proprietors of music whose main economic activity is have a code of `900102`, derived from NACE `9000`. `ISIC`, `NACE`, or SIC is only suitable for the classification of some enterprises.
-
 ### Informal corporate bodies: orchestras, informal enterprises
 
 The modern definitions used by the OECD, ILO, or IMF recognise the importance of the informal economy, and do not see it as an anomaly, but see the informal economy as a core component of economies at every level of development:
@@ -387,7 +365,7 @@ A massive group of music enterprises are the agents that use music in public per
 -   [x] `Broadcasting and retransmission` of recorded music via radio, television, cable and satellite television, in which cases we deal with a relatively low number of well-established users who may have their registered, for example, because national authorities register and distribute access to the broadcasting wave spectrum. Informality should not be an issue; private persons very rarely operate private radios or TVs.
 -   [x] `Public performance` (background music) of recording music, such as restaurants, hotels, retail outlets, various public buildings like malls, health facilities, workplaces like warehouses. Informality is an issue in the restaurant subsector.
 
-## Experimental design, materials and methods
+## Experimental design, materials and methods {#sec-experimental}
 
 ::: callout-note
 Our connected registers are, to our knowledge, unique; they utilise recently novel statistical production and legal regulatory innovations to connect public and private registers. Our database's data governance and exchange are unique because of the serious data protection restrictions posed by the use of both public statistical and private registers.
@@ -398,6 +376,178 @@ A *statistical register* is a continuously or regularly updated set of objects f
 Our primary concern in Slovakia is the creation of a music business register, because this could provide indicators for the public policy-level and institutional/enterprise level implementation of the Slovak cultural strategy.
 
 The authoritative source on statistical business registers is the *United Nations Guidelines on Statistical Business Registers. Final draft prior to official editing* [@un_sbr_guidelines_2020] which is heavily based on the former UNECE *Guidelines on statistical business registers* [@unece_sbr_guidelines_2015]. The European guideline is the *European business statistics methodological manual for statistical business registers. 2021 edition* [@eurostat_sbr_manual_2021].
+
+Our register is designed to work with relational databases that are regularly used in rights management or GLAM organisations to manage membership lists and catalogues and, at the same time, work with graph databases that are increasingly replacing relational databases for supporting trustworthy, human-controlled AI.
+
+As a conceptual model, we use the Wikibase Data model, which is described on the ontological level. For the sake of interoperability, we created classes and relationship types that follow strict equivalence with the GLAM standard ontologies and, whenever possible, with Polifonia Music Match and the Music Ontology.
+
+For music economic research, further extensions are needed to the GSIM statistical information model (for surveying and processing answers, see @sec-surveying) and the ISIC-ESCO and ISIC-NACE-SIC classification systems.
+
+### Occupations
+
+The European Union recently published its ESCO taxonomy in an ontological form, [@papantoniou_esco_2023], which is already connected to two registers (the *Awarding Body* register for those European institutions that can award a qualification and *Work Context Awarding Bodies*.) Awarding bodies are not very important in music, because most musicians acquire skills by informal learning practices [@green_music_2017].
+
+The ISCO/ESCO systems have the following pillars:
+
+-   Occupation (these relate to habitual roles)
+
+-   Skill (and competences)
+
+-   Qualification
+
+We utilise the ESCO ontological form, because it can support any ISCO-originated taxonomy with a clear interoperability with registers. The ISCO (and its ESCO and SOC) implementations as taxonomies are hierarchical: on the top level, every UN member state applies them the same. Beyond a certain level of granularity, the EU and UK can diverge, or new applications can be built. We actually aim to build a divergent taxonomy that adds further granularity to the point where the EU and UK definitions are still aligned.
+
+When we want to understand the relative economic, environmental or social weight of music activities and processes, we must be able to use a systematic taxonomy of such occupations and roles. The current international occupation taxonomy, ISCO and its European ESCO extension are not sufficiently detailed for understanding music.
+
+In the creation of new musical work, we are talking about natural persons who have an occupation as a *composer*. In ESCO 2652.1 describes the *composer*, and 2652.1.1 describes the *music arranger*, and 2641.4.1 the *lyricist*. (Most composer do not make a living out of composing only, and this is not their only occupation; so one human agent usually has several parallel roles or occupations.)
+
+> Lyricists interpret the style of a music piece and write words to accompany the melody. They work together with the music composer.
+
+A note: in the current ESCO definition the composer *excludes sound artist, lyricist and music arranger.*; the exclusion of the lyricists is ambiguous. Lyrics can be registers as a literary work and as part of a musical work. It needs further validation if this ESCO taxonomical difference causes problems in our data model.
+
+In ESCO, `2654.3.1` *incorrectly* describes a music producer as
+
+> Music producers are responsible for acquiring music to be published. They listen to demos of songs and determine whether they are good enough to be published. Music producers oversee the production of records. They manage the technical aspects of recording and editing.
+
+In fact, music producers deal with the release of recordings, and not with the publishing of musical works.
+
+As human agents, in the ESCO definition: "musicians perform a vocal or musical part that can be recorded or played for an audience. They have know-how and practice of one or many instruments or using their voice. The musician can also write and transcribe music."
+
+So, if we want to measure consistently the economic activities of music professionals (as natural persons agents), we should come up with a description of habitual occupations or roles within these occupations that are understood the same way in the United Kingdom or Slovakia. This is beyond the scope of this document, but in the background of Open Music Europe there is plenty of experience for doing this for the purpose of harmonised surveying of music professionals.
+
+Our approach to understanding a music professionals occupation is a two-stage filtering, which starts with the Eurobarometer standardised, non-country-specific general occupation question.
+
+|  |  |
+|----|----|
+| English | Lithuanian |
+| What is your current occupation? Which statement best describes your current employment situation? | Kokia jūsų dabartinė profesija? Kuris teiginys geriausiai apibūdina dabartinę jūsų darbo situaciją? |
+| 1a - Musician, composer, songwriter, DJ ... can be selected in more detail on Question 4! | 1a - muzikantas, kompozitorius, DJ... daugiau detalių ketvirtame klausime |
+| 1b - Other independent artistic activities, choreographers, graphic artists, etc. | 1b - kiti nepriklausomi artistiniai užsiėmimai - choreografija, grafikos dizainas ir t.t. |
+| 1c - Music technician, eg sound engineer, light technician, supplier ... clarifies the next question Q4 | 1c - muzikos technikas, pvz. garso inžinierius, apšvietėjas, tiekėjas ir t.t. |
+| 1d - Music-related entrepreneur (label, publisher, booking, etc.) ... clarifies the next questions Q4 | 1d - su muzika susijęs verslas (leidėjas, booking agentas, įrašų kompanija) |
+| 1e - Employed manager of a music-related company | 1e - su muzika susijusios kompanijos vadybininkas |
+| 1f - A non-managerial employee of a music company | 1f - su muzika susijusios kompanijos "ne-vadybinis" darbuotojas |
+| 1g - Full-time student in music or music related education | 1g- Muzikos arba su ja susijusio dalyko studentas |
+| 2 - DOES NOT WORK in general, the more detailed the following | 2 - nedirba, daugiau detalių toliau |
+| 2a - Responsible for ordinary shopping and looking after the home, or without any current occupation, not working | 2a - atsakingas už apsipirkimą ir rūpinimąsi namais arba šiuo metu neturintis darbo |
+| 2b - Student | 2b - studentas |
+| 2c -Unemployed or temporarily not working | 2c - bedarbis arba laikinai nedirbantis |
+| 2d - Retired or unable to work through illness | 2d - pensininkas arba negalintis dirbti dėl ligos |
+| 3 - SELF EMPLOYED in general, more detailed below | 3 - dirbantis savo paties įmonėje, daugiau detalių toliau |
+| 3a - Farmer, fisherman | 3a - ūkininkas, žvejys |
+| 3b - Highly qualified professional (lawyer, medical practitioner, accountant, architect, etc.) | 3b - aukštos kvalifikacijos profesionalas (teisininkas, medikas, architektas ir t.t.) |
+| 3c - Owner of a shop, craftsmen, other self-employed person | 3c - parduotuvės savininkas, amatininkas arba kitas laisvai samdomas asmuo |
+| 3d - Business proprietors, owner (full or partner) of a company | 3d - verslo ar kompanijos savininkas |
+| 4 - EMPLOYED in general, more detailed below | 4 - dirbantis, daugiau detalių toliau |
+| 4a - Employed professional (employed doctor, lawyer, accountant, architect or similar) | 4a - įsidarbinęs profesionalas (įsidarbinęs daktaras, teisininkas, architektas ar pan.) |
+| 4b - General management, director or top management managing directors, director general, other director) | 4b - generalinis direktorius arba kitas direktorius |
+| 4c -Middle management, other management (department head, junior manager, teacher, technician) | 4c - vidurinės arba kitos grandies vadybininkas (departamento vadovas, jaunesnysis vadybininkas, mokytojas, technikas) |
+| 4d -Office Worker | 4d - ofiso darbuotojas |
+| 4e - Employed position, not at a desk but travelling (salesmen, driver, etc.) | 4e - darbas keliaujant (pardavėjas, vairuotojas ir t.t.) |
+| 4f -Service, public service (eg hospital, restaurant, police, fire department) | 4f - darbas viešų arba privačių paslaugų sektoriuje (ligoninė, gaisrinė, restoranas, policija ir t.t.) |
+| 4g - Group leader, foreman | 4g - grupės lyderis |
+| 4h - Specialist | 4h - specialistas |
+| 4i -Physical worker, home staff, baby sitter | 4i - fizinis darbas, vaikų auklė |
+| 5 - NEVER DID PAID JOB, and not student, not retired | 5 - niekada nedirbo apmokamo darbo, ne studentas, ne pensininkas |
+: Eurobarometer-equivalent general occupations {.striped .hover}
+
+As a second step we establish artistic roles which can be seen as extensions of the ISCO/ESCO `235` class. More formal mapping and extension could be carried out, but given that labour force statistics are usually not available with more granularity, the current level of mapping is sufficient for comparison with official statistics.
+
+As an example, we show the CEEMID survey codebook in English and Lithuanian. The codebook is also available in Bulgarian, Croatian, Czech, Estonian, German, English, Hungarian, Polish (needs editing), Romanian, Serbian, and Slovak.
+
+The following grouping works are harmonised ISCO, European ESCO, North American or UK occupation taxonomies, too. This means that a survey that is conducted among music professionals should result compatible results with labour force statistics in the same country at least on the granularity ISCO/ESCO 2 or 3 digit levels.
+
+|  |  |
+|----|----|
+| **musician and DJ roles** | **muzikantų ir DJ rolės** |
+| 11-L - performing musician, not author | 11-L pasirodymų muzikantas, ne autorius |
+| 12-L - performing DJ, no own music | 12-L - pasirodymų DJ, jokios savo muzikos |
+| 13-C - composer | 13-C kompozitorius |
+| 14-R - producer | 14-R prodiuseris |
+| 15-L - other artistic role | 15-L kita artistinė rolė |
+| 16-C - lyricist | 16-C žodžių autorius |
+| 17-L - author and composer | 17-L autorius ir kompozitorius |
+| 18-L - DJ producer with own music | 18-L DJ prodiuseris, su savo muzika |
+| 19-L - conductor | 19-L dirigentas |
+: ESCO 235 creative and performer occupations {.striped .hover}
+
+The following roles mainly provide more precise descriptions to [ESCO 3521](https://esco.ec.europa.eu/en/classification/occupation?uri=http://data.europa.eu/esco/isco/C3521#overlayspin) occupations.
+
+|  |  |
+|----|----|
+| **technical role** | **techninės rolės** |
+| 31-L - sound engineer and team (live music) | 31-L garso inžinierius ir komanda (gyva muzika) |
+| 32-R - sound engineer and team (studio) | 32-R garso inžinierius ir komanda (studija) |
+| 33-L - light engineer and team | 33-L šviesų inžinierius ir komanda |
+| 34-L - stage master and team | 34-L scenos prižiūrėtojas ir komanda |
+| 35-L - other technical (live) | 35-L kita (gyva muzika) |
+| 36-R - other technical (studio) | 36-R kita (studija) |
+
+: Technician roles, relate to ESCO 3521 subgroups {.striped .hover}
+
+The following codes relate to ESCO 12 managerial roles. They could be mapped more tightly to ISCO/ESCO.
+
+|  |  |
+|----|----|
+| **music management roles** | **muzikos vadybos rolės** |
+| 41-L - tour manager | 41-L turo vadybininkas |
+| 42-L - concert promoter in an institution | 42-L koncertų reklamuotojas institucijoje |
+| 43-L - independent concert of festival promoter | 43-L nepriklausomų koncertų ar festivalių reklamuotojas |
+| 44-L - booking agent | 44-L užsakymų (booking) agentas |
+| 45-C - work in a collective management society | 45-C darbas gretutinių teisių asociacijoje |
+| 46-R - work in a music publisher | 46-R darbas muzikos leidyboje |
+| 47-R - work at a record label | 47-R darbas įrašų leidybos firmoje |
+| 48-L - work at artist/talent manager | 48-L darbas atlikėjų vadybininku |
+| 49-L - work at music club or discotheque | 49-L darbas muzikos klube ar diskotekoje |
+| 50-L - other management roles (live music) | 50-L kitos vadybinės pareigos (gyva muzika) |
+| 51-R - other management roles (recordings) | 51-R kitos vadybinės pareigos (įrašai) |
+| 52-C - other management roles (compositions) | 52-C kitos vadybinės pareigos (kompozicija) |
+| 53-L - transporter for bands, orchestras | 53-L grupių/orkestrų vairuotojas |
+| 61-L - other workers (music events) | 61-L kitas darbuotojas (muzikos renginiai) |
+| 62-R - other workers (recordings) | 62-R kitas darbuotojas (įrašai) |
+| 63-C - other workers (compositions) | 63-C kitas darbuotojas (kompozicija) |
+| 64-O - other artist roles in live performances | 64-O kita rolė gyvuose pasirodymuose |
+
+: Managerial roles, relate to ESCO 12 roles {.striped .hover}
+
+Then we have the music educator roles which relate to ESCO [2354](https://esco.ec.europa.eu/en/classification/occupation?uri=http://data.europa.eu/esco/isco/C2354#overlayspin), and some other roles. 
+
+|  |  |
+|----|----|
+| **music education and journalism roles** | **muzikos edukacijos bei žurnalistinės pareigos** |
+| 80-E - music journalist | 80-E muzikos žurnalistas |
+| 81-E - music educator | 81-E muzikos mokytojas |
+| 82-E - work in a rehearsal studio | 82-E darbas repeticijų studijoje |
+
+: Various other roles in music education (ESCO 2354) and other {.striped .hover}
+
+
+In our surveys, we always ask for a primary and secondary role, and the secondary roles often relate to the broader music ecosystem.
+
+|  |  |
+|----|----|
+| **other roles and student** | **kitos rolės arba studentai** |
+| 91-M - work in a record shop | 91-M dirbu įrašų parduotuvėje |
+| 92-M - work in an instrument shop or repair shop | 92-M dirbu instrumentų arba jų taisymo parduotuvėje |
+| 98-M - full time student | 98-M studentas |
+| NA - not applicable or none above | NA - netinka nė vienas iš variantų |
+: Used for typical secondary roles  {.striped .hover}
+
+For compliance with the UK Music Surveys we used the following level of competenece questions:
+
+|  |  |
+|----|----|
+| **Would you describe yourself in this role...** | **Ar jūs apibūdintumėte save...** |
+| 1 - amateur | 1 - mėgėjas |
+| 2 - learning to be professional | 2 - mokausi būti profesionalu |
+| 3 -part-time professional | 3 - profesionalas ne visą laiką (part-time) |
+| 4 - full-time professional | 4 - profesionalas visą laiką (full-time) |
+| NA - cannot or prefer not to say | NA - nežinau arba renkuosi neatsakyti |
+: Self-assessed level of competence {.striped .hover}
+
+### Economic activities of corporations
+
+Another important classification is `ISIC` (UN) or `NACE` (EU) or `SIC` (UK). This is a taxonomy for the economic activities of enterprises. Some member states, like the Netherlands or Hungary, apply a national extension of NACE to sole proprietors, which overlaps with the ISCO/ESCO/SOC defined occupational activities, but only in the case of sole proprietors. For example, in the relevant taxonomy for Hungarian sole proprietors, those sole proprietors of music whose main economic activity is have a code of `900102`, derived from NACE `9000`. `ISIC`, `NACE`, or SIC is only suitable for the classification of some enterprises.
 
 ## Data Curation Policy for SKCMDb
 

@@ -61,7 +61,7 @@ book:
   appendices: 
     - appendix-how_to_use.qmd
 
-version: 0.1.2
+version: 0.1.3
 
 bibliography: 
     - bib/administrativedata.bib
@@ -74,6 +74,7 @@ bibliography:
     - bib/ILO.bib
     - bib/ISOdata.bib
     - bib/metadata.bib
+    - bib/musiceducation.bib
     - bib/musicidentifiers.bib
     - bib/nerd.bib
     - bib/OpenMusE.bib

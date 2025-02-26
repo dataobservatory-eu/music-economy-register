@@ -1,6 +1,6 @@
 # Surveying {#sec-surveying}
 
-Using our register to administer surveys requires an extension towards GSIM and DDI. This report focuses on identifying the universe (or target population) and coverage (or survey population). These need to be connected to the responses given to questions, which need to be then formed into measured variables.  We are ambitious to build an ex-ante and ex-post surveying harmonisation system, but we will present this in a separate paper. We aim to ensure that our surveys target a well-established universe and reach a reasonable and measurable coverage.
+Using our register to administer surveys requires an extension towards GSIM and DDI. This report focuses on identifying the universe (or target population) and coverage (or survey population). These need to be connected to the responses given to questions, which need to be then formed into measured variables. We are ambitious to build an ex-ante and ex-post surveying harmonisation system, but we will present this in a separate paper. We aim to ensure that our surveys target a well-established universe and reach a reasonable and measurable coverage.
 
 The statistical business register is an essential tool for creating survey frames or sample frames, in other words, to organise statistical data collection. In non-technical terms, this register is necessary to decide who should get a data request.
 
@@ -28,12 +28,11 @@ GSIM (Generic Statistical Information Model), SDMX (Statistical Data and Metadat
 
 The **Agent** classes relate to the data subjects in the target population. In administrative or enterprise surveys, we can connect the responses with a unique identifier of the **Agent**, if that exists, for example, a company registration code.
 
-In population surveys, we often work with anonymous responses, which requires extensive categorisation. We need the respondents' profiles to generalise their answers (e.g., which respondents were women, men, composers, or technicians). Unless we work with a large, expensive, genuinely random sample or a full-coverage census, we also need these categories to fill in response quotas (and ensure that not only men or composers answer). 
+In population surveys, we often work with anonymous responses, which requires extensive categorisation. We need the respondents' profiles to generalise their answers (e.g., which respondents were women, men, composers, or technicians). Unless we work with a large, expensive, genuinely random sample or a full-coverage census, we also need these categories to fill in response quotas (and ensure that not only men or composers answer).
 
 We must create categorical variables for anonymous surveys that put the Agent into a correct Agent category (for example, "Composers"). This problem overlaps with adding roles, economic activities or occupations to the survey data. These relate to the activities in our agent model; persons composing music receive royalties, or their work is visible (audible) on a stage.
 
 The Agent classes will be sorted into categorical variables used to group or slice the dataset; for example, separate income averages will be calculated for performers, composers, and producers.
-
 
 #### Occupational and economic results for music entities
 
@@ -44,7 +43,6 @@ The variable representation model here is usually some form of simple numeric re
 #### Ex-post processing
 
 The ex post-processing is reasonably simple if the ex ante variable representation is well-designed. Numerical variables go through well-established algorithms to report their median, average or somehow weighted average values; missing values are counted as categories in each missingness group (filtered, unknown and declined.) Population groups are used to group the calculation and later slice the resulting multi-dimensional output table. For example, if the grouping relates to the respondent replying from Slovakia or Hungary, these categories are added to the unprocessed microdata; separate mean and median values are reported for the two groups, and they are added to a single data table (called "datacube" in SDMX) where Slovak and Hungarian results can be subsetted (or "sliced" in the SDMX statistical language.)
-
 
 ## Surveying the music economy
 
@@ -76,9 +74,6 @@ On the recorded music side, music publishing is easier to register because the a
 
 For labels, there is a publicly observable register of labels that is large enough to reserve a range of identifiers for commercial releases in a national IFPI register. This registrar, which is similar to book registration (and music sheet registration, which grew out of book registration), allows larger labels to assign an ISRC code to their sound recording releases for commercial purposes. Sub-publishing and sub-labelling are commonplace in the music industry, but they are better handled by publishing; many small labels do not register their commercial sound recordings via a larger label enterprise but directly via a distributor. Some distributors, like TuneCore, have a right to manage recording registration at par with countries (it has a top-level International Standard Recording Code (ISRC) domain), and other distributors may have the right to register sound recording releases in their range. So, the registrant identifier in the ISRC code of a sound recording does not necessarily connect to a sound recording label.[@iso_isrc_2019]
 
-
-
-
 ## Surveying music diversity
 
 ### Open Music Europe WP2 Music Economy
@@ -93,10 +88,8 @@ Measuring diversity requires a very complex register because the diversity of re
 
 In either case, our registration needs overlap but far exceed the economic measurements. For corporate bodies such as musical groups, we may need the exact membership and gender, age, or ethnicity properties of the group; we are talking here about exceptionally sensitive data under GDPR. Access to such data is a prerequisite to monitoring KeyChange objectives with the percentage of non-male authors on stage or fulfilling French, Hungarian, and Slovak radio quota regulations.
 
-
 ### Registration of musical entities
 
 In this case, our data model requires a new Entity class type. This music entity superclass contains the **Musical work**, its **Sound recording** (recorded fixation of a performance) and its **Live performance** (a non-rehearsal performance meant for the public.) The musical work also has a print manifestation. Often, the music accompanies a Literary work, for example, a poem is arranged to be performed with music.
 
 **Musical works**, **Lyrics**, **Sound Recordings**, and **Print music** have different, usually non-public, registers. Access to such registers requires a very complex balancing of developing new business for music, increasing measurable diversity (or avoiding "pinkwashing", where for example, unsubstantiated claims are made for equal stage/broadcasting access for women or minorities), and the business interests of those organisations who have invested into the registers and use the registration process for rights management. The well-known conflict of interest among authors', producers' and performers' remuneration, for example, makes the connection of such registers complex even within the music industry, not to mention its opening up for diversity measurement and reporting purposes.
-

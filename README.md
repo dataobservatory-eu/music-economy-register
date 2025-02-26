@@ -6,6 +6,8 @@ Open Music Registers
 
 `bib`: The folder contains all the bibliography.
 
+-   `bib/musiceducation`: music education, including informal learning.
+
 ## Images
 
 We save visualisations in folders corresponding to the file format.
