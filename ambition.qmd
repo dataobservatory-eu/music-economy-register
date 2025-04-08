@@ -36,6 +36,39 @@ There are obvious benefits in harmonising registers, and it is a very current to
 
 One of the most important lessons from the last 20 years of data centralisation failure is that it is a dead-end. We do not aim to centralise registers; we want to make them work together. Therefore, we switched our attention from databases to dataspace. Data (sharing) spaces are complex and intelligent systems that help connect databases in a way that can cross-reference, cross-validate and enrich each other. If the library recorded wrong information about a music work, it is also the rights management's interest to transfer the correct information from the rights management database to the library database.
 
+## Harmoinsed registers for better research data collection and statistical production
+
+In statistical terms, a **register** is a structured list or database that systematically tracks units of interest — typically enterprises, individuals, or institutions — over time. Public statistical authorities often maintain **population registers** or **enterprise registers** that serve as the backbone for sampling, indicator production, and policy monitoring.
+
+However, in many industries, particularly cultural and creative ones, official registers are incomplete or too broad, grouping diverse sectors under umbrella codes like NACE `J58` or `R90`; partly, because the typical organisation size in these industries is smaller than the enterprise size that participates in the traditional, mandatory sample-survey statistical production, and partly because of the high level of informality in these sectors, as we have reported in `T1.1`, see [@antal_et_al_music_economy_2023; @antal_slovak-cult-stat-pilot].
+These classifications dilute the specificity needed for meaningful data analysis following appropriate data collection. A music enterprise might be lumped together with film postproduction, making the resulting statistics less actionable for business decision-making or targeted public policy.
+
+In contrast, private organisations often maintain richer, more detailed internal registers for their operations. These might include:
+
+-   Membership lists maintained by professional associations or unions, for example, on music publishing entities representing copyrightholders, or record labels representing music producers and performers. We created a Slovak register of music publishers (by virtue of the collective management directive [-@directive_2014_26] such registers must be made public, even if in a not well structured form.)
+
+-   Client databases used by CMOs or licensing agencies, for example, on restaurants that play music, on music publishing entities representing copyrightholders, or record labels representing music producers and performers. While client databases are properietary, from public business registers, or local registers of licensed venues (resturants, music clubs often need local permission because of the noise and traffic they create), we can create connected music user register. 
+
+-   CRMs (customer relationship management systems) used by businesses for managing partners and contractors.
+
+While these private registers are typically well-aligned with operational needs, they are not harmonised with national statistical systems — meaning identifiers (e.g. tax IDs, sector codes, geographic location data) may not match, formats vary, and there’s no common protocol for data structure or update frequency.
+
+**Harmonisation**, in this context, does not mean full integration but rather the voluntary alignment of **key reference variables** and **metadata**:
+
+-   Using public identifiers (e.g., business registry numbers),
+
+-   Mapping internal categories to standard classifications like NACE or ISIC,
+
+-   Agreeing on common reference periods and geographical codes.
+
+With minimal effort, private actors can enhance the *statistical usability* of their data while still serving their internal purposes. This opens the door for *interoperability*, *cross-validation*, and more efficient data sharing — all without relinquishing control over proprietary data. We wil show these efforts in the next section of this document.
+
+Efforts to harmonise registers across private and public actors also create the foundation for more advanced and resilient forms of **statistical production**. As previously noted, when data collection and processing can happen closer to the data source — whether through sampling, microdata preparation, or anonymised outputs — we reduce both privacy risks and operational burdens. This distributed model of statistical production reflects an important shift: the production of public value is no longer confined to the walls of official statistical offices, but extended into the data infrastructures of cooperating institutions.
+
+These changes are not happening in isolation. They are supported and legitimised by a growing ecosystem of **European data governance frameworks**, including the *Data Governance Act* [-@eu_data_governance_act_2021] and *Data Act* [-@eu_data_act_2023], which encourage secure and fair reuse of privately held data for public interest purposes. More ambitiously, the development of **European Common Data Spaces** — such as the *Cultural Heritage Data Space* and upcoming *Media and Creative Industries Data Space* — aims to build sector-specific environments where data can be shared, pooled, and reused under common rules and interoperable standards. In *Open Music Europe*, we aim at the creation of a small, extendible music data space in the form of the *Open Music Observatory* that can federate data with other parts of the European data spaces. For instance, the *European Health Data Space (EHDS)* aims to create a unified framework for health data across EU member states. By standardizing data formats and access protocols, the EHDS enhances the interoperability of health registers, ensuring seamless data sharing and improved healthcare outcomes.
+
+Together, these legal, technical, and institutional innovations represent a new chapter in the co-production of knowledge: one where governments, cultural institutions, and private sector actors jointly curate the evidence base needed to shape smarter, more responsive policy.
+
 ## Data subjects or agents
 
 A statistical or data subject is an individual or a corporate body to whom the personal data relates; but we will. In our registration processes, we will deal with the various data subjects.
@@ -54,27 +87,41 @@ Methodologically, our data models call these subjects "actors" or "**agents**". 
 
 Our subjects are always human actors or agents; they are natural persons, or they are deceased natural persons. (We do not collect information on fictional characters.) Natural persons are subject to the General Data Protection Regulation (GDPR). Deceased persons may have heirs who inherited rights and are natural persons, too. GDPR no longer protects deceased persons; other moral rights or data protection may apply to them.
 
-|   | Subject | What is their role? |
-|----|----|----|
-| author | Original authors of music and lyrics, and heirs of their rights. |  |
-| performer | Musicians, DJs and vocalists who interpret the compositions of authors. They may improvise in their performances. |  |
-| producer | Producers who organise the recorded fixation of interpreted music in a novel way that audiences can enjoy beyond a live performance. |  |
-| author about music | Music journalists, researchers, educators, whose work about musicians and their music is copyright protected. |  |
-|  |  |  |
-| others |  |  |
++--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
+|                    | Subject                                                                                                                              | What is their role? |
++====================+======================================================================================================================================+=====================+
+| author             | Original authors of music and lyrics, and heirs of their rights.                                                                     |                     |
++--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
+| performer          | Musicians, DJs and vocalists who interpret the compositions of authors. They may improvise in their performances.                    |                     |
++--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
+| producer           | Producers who organise the recorded fixation of interpreted music in a novel way that audiences can enjoy beyond a live performance. |                     |
++--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
+| author about music | Music journalists, researchers, educators, whose work about musicians and their music is copyright protected.                        |                     |
++--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
+|                    |                                                                                                                                      |                     |
++--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
+| others             |                                                                                                                                      |                     |
++--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
 
 : Subjects or human agents {tbl-colwidths="\[25,75\]"}
 
 Corporate bodies are groups of data subjects working together, often under a single name, like The Beatles or the Slovak Philharmonic. Managing corporate body data is challenging because membership in large bodies, like a philharmonic orchestra or a right collection agency, is changing almost daily.
 
-| Corporate bodies | What is their role? |
-|----|----|
-| publisher | Representatives of authors who publish copyright protected musical works, literary works, or other works about music. |
-| musical group | Ensembles, bands, orchestras, choirs and other groups of music performers who perform together in a studio or staged performance. |
-| labels | Music professionals who curate and release sound recordings of live and studio performances for the business-to-business (radio, streaming provider, film producer, etc.) and consumer end users (music audiences.) |
-| professional music users | Organisers of music events and festivals; radio and television broadcasters; filmmakers; theatres; operators of public spaces with music such as restaurants, hotels, or shops, etc. |
-|  |  |
-| others |  |
++--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Corporate bodies         | What is their role?                                                                                                                                                                                                 |
++==========================+=====================================================================================================================================================================================================================+
+| publisher                | Representatives of authors who publish copyright protected musical works, literary works, or other works about music.                                                                                               |
++--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| musical group            | Ensembles, bands, orchestras, choirs and other groups of music performers who perform together in a studio or staged performance.                                                                                   |
++--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| labels                   | Music professionals who curate and release sound recordings of live and studio performances for the business-to-business (radio, streaming provider, film producer, etc.) and consumer end users (music audiences.) |
++--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| professional music users | Organisers of music events and festivals; radio and television broadcasters; filmmakers; theatres; operators of public spaces with music such as restaurants, hotels, or shops, etc.                                |
++--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                          |                                                                                                                                                                                                                     |
++--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| others                   |                                                                                                                                                                                                                     |
++--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Corporate bodies as agents {tbl-colwidths="\[25,75\]"}
 
@@ -100,11 +147,30 @@ Our primary interest is not necessarily in the data subject but in their music, 
 
 We are particularly interested in a parallel registration of works and the recorded fixations of their studio and staged performances intended for the public. (For example, we do not want to provide interoperability for recording information about rehearsals or liturgical uses of music for spiritual or faith-based communities.)
 
-| Subject | What is their role? |
-|----|----|
-| musical work | Composed of a combination of sounds, with or without accompanying text [@iso_iswc_2022] |
-| performance |  |
-| live performance | The performance of music in front of a live audience. |
-| recorded performance | The performance of music, interpreted from a musical work or improvised, with the aim of creating a recording. |
-| sound recording | A recorded fixation, released for commercial or non-commercial use, an re-playable object from a recorded performance. |
-| music venue | A building, a publicly accessible site, a piece of infrastructure or built structure where music is played for the public. |
++----------------------+----------------------------------------------------------------------------------------------------------------------------+
+| Subject              | What is their role?                                                                                                        |
++======================+============================================================================================================================+
+| musical work         | Composed of a combination of sounds, with or without accompanying text [@iso_iswc_2022]                                    |
++----------------------+----------------------------------------------------------------------------------------------------------------------------+
+| performance          |                                                                                                                            |
++----------------------+----------------------------------------------------------------------------------------------------------------------------+
+| live performance     | The performance of music in front of a live audience.                                                                      |
++----------------------+----------------------------------------------------------------------------------------------------------------------------+
+| recorded performance | The performance of music, interpreted from a musical work or improvised, with the aim of creating a recording.             |
++----------------------+----------------------------------------------------------------------------------------------------------------------------+
+| sound recording      | A recorded fixation, released for commercial or non-commercial use, an re-playable object from a recorded performance.     |
++----------------------+----------------------------------------------------------------------------------------------------------------------------+
+| music venue          | A building, a publicly accessible site, a piece of infrastructure or built structure where music is played for the public. |
++----------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+
+## Technical harmonisation
+
+With relatively small effort, private actors can enhance the statistical usability of their data while still serving their internal purposes. This opens the door for interoperability, cross-validation, and more efficient data sharing — all without relinquishing control over proprietary data. The `Open Music Observatory` and the `Slovak Comprehensive Music Database` (SKCMDb) are showcasing the novel ways of semantic data integration for statistics and (mainly private) cultural data infrastructure.
+
+- We use Wikibase (a "private Wikidata"), well-harmonised with the world's most extensive knowledge graph, Wikidata gives very high level of visibility, reusability, and collaboration. It leverages a widely used, open, and multilingual knowledge graph, lowering entry barriers for integration and reuse by others — including statistical agencies and cultural researchers.
+
+Mapping CMO data and heritage data from SOZA, the Slovak Music Centre, the Statistical Office of the Slovak Republic, and the Slovak National Library to standard classifications like ESCO, SDMX, NACE, and ISCO creates valuable semantic bridges between internal data and international frameworks. This enhances not only statistical interoperability, but also AI-readiness, multilingual support, and the capacity for automated updates.
+
+
+- The `Open Music Observatory` is not only linking music industry business data, but also tying it to cultural, labour, and economic dimensions — exactly the type of integration the cultural satellite accounts and Common Data Spaces initiatives are aiming for. In this deliverable we show how measuring labour and cultural dimensions of music can be supported with the data infrastructure that rests on shared registration processes and registers.

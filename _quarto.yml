@@ -61,15 +61,17 @@ book:
   appendices: 
     - appendix-how_to_use.qmd
 
-version: 0.1.3
+version: 0.1.4
 
 bibliography: 
     - bib/administrativedata.bib
     - bib/cm.bib
     - bib/collections.bib
+    - bib/datagovernance.bib
     - bib/datamodels.bib
     - bib/dataspace.bib
     - bib/ddi.bib
+    - bib/eulaw.bib
     - bib/identifiers.bib
     - bib/ILO.bib
     - bib/ISOdata.bib
@@ -78,6 +80,7 @@ bibliography:
     - bib/musicidentifiers.bib
     - bib/nerd.bib
     - bib/OpenMusE.bib
+    - bib/ontologies.bib
     - bib/privatelyhelddata.bib
     - bib/wikidata.bib
     - bib/esco_nace.bib

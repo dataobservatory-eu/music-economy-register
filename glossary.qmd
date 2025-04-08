@@ -73,6 +73,6 @@ Note: The predefined set of rules governing the basis on which the data is struc
 
 ## Other abbreviations
 
-`ECCCH`: European Collaborative Cloud for Cultural Heritage. The ECCCH is a European Union initiative to create a shared digital infrastructure that connects cultural heritage institutions and professionals across the EU. It will provide specific digital collaboration tools for the sector while removing barriers for smaller and more remote institutions. [@eccch]
+`ECCCH`: European Collaborative Cloud for Cultural Heritage. The ECCCH is a European Union initiative to create a shared digital infrastructure that connects cultural heritage institutions and professionals across the EU. It will provide specific digital collaboration tools for the sector while removing barriers for smaller and more remote institutions. (See the Commission Recommendation (EU) 2021/1970 of 10 November 2021 on a common European data space for cultural heritage [-@commission_recommendation_2021_1970] for details.)
 
 `EOSC`: The European Open Science Cloud is an environment for hosting and processing research data to support EU science.[@eosc_2023]
