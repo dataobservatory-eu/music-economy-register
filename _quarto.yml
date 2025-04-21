@@ -60,11 +60,13 @@ book:
     - references.qmd
   appendices: 
     - appendix-how_to_use.qmd
+#    - appendix-register.qmd
 
-version: 0.1.4
+version: 0.1.5
 
 bibliography: 
     - bib/administrativedata.bib
+    - bib/antal.bib
     - bib/cm.bib
     - bib/collections.bib
     - bib/datagovernance.bib
@@ -75,6 +77,7 @@ bibliography:
     - bib/identifiers.bib
     - bib/ILO.bib
     - bib/ISOdata.bib
+    - bib/KULT.bib
     - bib/metadata.bib
     - bib/musiceducation.bib
     - bib/musicidentifiers.bib
@@ -86,6 +89,7 @@ bibliography:
     - bib/esco_nace.bib
     - bib/eosc.bib
     - bib/eccch.bib
+    - bib/thesauri.bib
 
 format:
   html:

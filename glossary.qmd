@@ -2,7 +2,7 @@
 
 ## Registers and their records
 
-`register`: A [register](#glossary) aims to be a complete list of the objects in a specific group of objects or population." [@anders_register-based_2007]
+`register`: A [register](#glossary) aims to be a complete list of the objects in a specific group of objects or population." [@anders_register-based_2007]; is a dataset or database that systematically maintains and updates information on a specific set of entities (e.g., individuals, organisations, or events), often with legal or statistical purpose. In statistics, a register supports repeated data use, continuous updates, and serves as a basis for survey frames. [@eurostat_methodological_sbr_2021]
 
 ## Standards & authority services
 
@@ -14,11 +14,21 @@
 
 `VIAF`: The Virtual International Authority File (VIAF) is an international service that consolidates multiple name authority files into a single database. Their primary goal is to enhance the efficiency and usability of library authority files by linking and merging widely used authority records and making them accessible online.
 
+## Statistical terms
+
+The **Statistical Business Register** (SBR) is a foundational tool for statistical production [@eurostat_methodological_sbr_2021]
+
+`universe`: the full set of units that are relevant for a particular statistical study — the theoretical population from which observations could be drawn.
+
+`coverage`: the subset of the universe that is actually included in the data collection (e.g., surveyed or recorded). It is used to assess completeness and representativeness of the data relative to the universe.
+
 ## Data protection
 
 `GDPR`: The General Data Protection Regulation (GDPR) is a legal framework made by the European Union that sets guidelines for the collection and processing of personal information from individuals who live in and outside of the European Union.
 
 ## Data science terms
+
+`agent`: a person, group, or organization capable of performing actions or making decisions within a system. In statistical and semantic models, agents are entities that generate, transform, or influence data. In our context, this includes natural persons (e.g., composers), corporate bodies (e.g., record labels), or informal collectives (e.g., bands). Adopted from [@wikibase_data_model_2025], in line with other event-based ontologies used in our work.
 
 `data`: reinterpretable representation of information in a formalized manner suitable for communication, interpretation, or processing Note 1 to entry: Data can be processed by humans or by automatic means. \[SOURCE: ISO/IEC 2382:2015, 2121272\] [@iso_20546_2019]
 
@@ -51,11 +61,13 @@ Note: The predefined set of rules governing the basis on which the data is struc
 
 ## Data name abbreviations
 
-`ISRC`: International Standard Recording Code [@iso_isrc_2019]
+`ISRC`: International Standard Recording Code [@iso_isrc_2019]: a globally recognized identifier for individual sound recordings and music videos, used for tracking usage, reporting royalties, and rights management. It includes a country code, registrant code, year of reference, and designation code.
+
+`ISWC`: International Standard Musical Work Code, a unique identifier assigned to a musical work. It allows rights management organizations to track the use and ownership of compositions across jurisdictions and platforms. Unlike ISRCs (which refer to recordings), ISWCs identify the underlying work regardless of performance.
 
 `ISNI`: International Standard Name Identifier [@camp_isni_2022]
 
-`DOI`: Digital Object Identifier
+`DOI`: Digital Object Identifier, an international metadata standard for describing statistical and social science data. It supports the full data lifecycle — from conceptual design to data archiving — and includes models for documenting surveys, variables, code lists, and responses. [@ddi_lifecycle_3-3]
 
 `CIDOC-CRM`: International Committee for Documentation–Conceptual Reference Model [@cidoc_2024]
 
@@ -67,7 +79,9 @@ Note: The predefined set of rules governing the basis on which the data is struc
 
 `EDM`: Europeana Data Model [@EDM_2017]
 
-`ESCO`: European Skills, Competences, Qualifications and Occupations [@papantoniou_esco_2023]
+`ESCO`: European Skills, Competences, Qualifications and Occupations [@papantoniou_esco_2023] is the multilingual classification system developed by the European Commission that identifies and categorises skills, competences, qualifications, and occupations across the EU. It complements ISCO and is available in both taxonomy and ontology form.
+
+`ISCO` a hierarchical classification developed by the International Labour Organization (ILO) for organising jobs and occupations by type of work and skill level. It is used in labour statistics and aligned with ESCO at the EU level.
 
 `PROV-O`: Provenance ontology [@prov-o_2013]
 
