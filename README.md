@@ -1,17 +1,81 @@
 # Open Music Registers
 
--   `ambition.qmd`: **Introduces the concept and rationale for open music registers**, emphasizing the benefits of harmonising registration processes to reduce duplication, increase data quality, and support policy, rights, and research applications across the music ecosystem.
 
--   `t12.qmd`: **Describes the structure and function of the Slovak Music Economy Register**, focusing on how it collects and models data about individuals and organisations (agents), and how it supports interoperability with national and international data systems for statistical and economic use.
+This project aims to establish open, structured, and interoperable registers that describe the economic activities and business entities in the music sector. It supports better policymaking, research, and innovation through shared data infrastructures and standards, particularly aligning with the European Data Strategy and sector-specific needs.
 
--   `surveying.qmd`: **Outlines the requirements for using the register as a survey frame**, particularly how to define populations and link survey responses to variables in line with GSIM and DDI standards. It sketches the foundation for an integrated system of harmonised administrative and sample surveys.
+📚 **Live Documentation:**
 
-## Bibliography
+-   [HTML Book](https://music.dataobservatory.eu/documents/open_music_europe/music-economy-register/)
+
+-   Download PDF or EPUB
+
+
+## Project Structure
+
+This repository uses [Quarto](https://quarto.org/) to generate a technical book. The key chapters include:
+
+-   `index.qmd`: Introduction and overview
+
+-   `glossary.qmd`: Key terminology
+
+-   `ambition.qmd`: Vision and goals
+
+-   `t12.qmd`: Technical Annex of the `D1.2` deliverable
+
+-   `surveying.qmd`: Surveying and building register datasets
+
+-   `references.qmd`: Bibliography and references
+
+-   `appendix-how_to_use.qmd`: Practical guidance for users
+
+The documentation is continuously updated to support the development of linked open datasets and practical register management tools.
 
 `bib`: The folder contains all the bibliography.
 
 -   `bib/ddex.bib`: Bibliography for the DDEX music metadata standards.
 -   `bib/ISOdata.bib`: Bibliography for the ISO music or publishing metadata standards.
+
+## How to Contribute
+
+We welcome contributions!\
+If you are working on administrative data, cultural data spaces, or open data for the music sector, please get in touch or submit an issue or pull request.
+
+### Ways to Contribute
+
+-   Correct or extend the glossary
+
+-   Suggest improvements to the registers and classifications
+
+-   Report or fix issues in the Quarto build
+
+
+
+📩 You can start by opening an [issue](https://github.com/dataobservatory-eu/music-economy-register/issues) or submitting a pull request.
+
+## Authors, Contributors and Acknowledgments
+
+-  *Daniel Antal, CFA** (Reprex)
+
+-   **Richard Demčák** (SOZA)
+
+-   **Matej Grochal** (Wikimedia Slovensko)
+
+-   **Asmah Frederico** (Reprex)
+
+-   **Marián Jankovič** (SOZA)
+
+-   **Anna Žilková** (Music Center Slovakia)
+
+-   **Anna Márta Mester** (Reprex)
+
+-   **Edite Punka** (Reprex)
+
+
+Special thanks to the many contributors from the [Open Music Europe](https://music.dataobservatory.eu) initiative and related projects.
+
+## License
+
+This documentation and its source code are shared under the Creative Commons Attribution 4.0 International (CC BY 4.0) license, unless otherwise noted.
 
 ## Images
 

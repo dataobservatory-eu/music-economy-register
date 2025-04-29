@@ -21,21 +21,20 @@ book:
        affiliations:
                - name: SOZA
                  url: https://soza.sk/
-     - name: "Marián Jankovič"
-     - orcid: 0009-0003-6326-226X
+     - name: "Asmah Frederico"
      - affiliations:
-               - name: SOZA
-               - url: https://soza.sk/
-     - name: "Anna Žilková"
-     - orcid: 0009-0007-5261-6930
-     - affiliations:
-               - name: Music Center Slovakia
-               - url: https://hc.sk/
+               - name: Reprex
+               - url: https://reprex.nl/
      - name: "Matej Grochal"
      - orcid:
      - affiliations:
                - name: Wikimedia Foundation
                - url:
+     - name: "Marián Jankovič"
+     - orcid: 0009-0003-6326-226X
+     - affiliations:
+               - name: SOZA
+               - url: https://soza.sk/
      - name: "Anna Márta Mester"
        orcid: 0009-0008-2274-8163
        affiliations:
@@ -46,6 +45,16 @@ book:
                  country: The Netherlands
                  postal-code: "2516 AH"
                  url: https://reprex.nl/
+     - name: "Edīte Punka"
+     - orcid: https://orcid.org/0009-0003-7184-4155
+     - affiliations:
+               - name: Reprex
+               - url: https://reprex.nl/
+     - name: "Anna Žilková"
+     - orcid: 0009-0007-5261-6930
+     - affiliations:
+               - name: Music Center Slovakia
+               - url: https://hc.sk/
   date: today
   doi: 10.5281/zenodo.14767717
   repo-url: https://github.com/dataobservatory-eu/music-economy-register
