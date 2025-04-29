@@ -10,8 +10,15 @@ This project aims to establish open, structured, and interoperable registers tha
 
 ## Project Structure
 
-This repository uses [Quarto](https://quarto.org/) to generate a technical book. Most of the book can be edited in any markdown editor, but it is recommended to use RStudio or Quarto for contribution that includes codes. 
-The key chapters include:
+This document has been prepared by OpenMusE project partners as an account of work carried out within the framework of the EC-GA contract no [101095295](https://cordis.europa.eu/project/id/101095295).
+
+*The Open Music Europe project has received funding from the European Union’s Horizon Europe, research and innovation programme, under Grant Agreement No.* [101095295](https://cordis.europa.eu/project/id/101095295)*. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Research Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.*
+
+Any dissemination of results must indicate that it reflects only the author’s view and that the Commission Agency is not responsible for any use that may be made of the information it contains.
+
+> This is a living document which provides an overview of `D1.2`, which is a linked open data database supported by applications. As a living document conforming to OPA, it can be found at <https://github.com/dataobservatory-eu/music-economy-register> with standardised folders and file names. Its current version can be read in multiple formats [here](https://music.dataobservatory.eu/documents/open_music_europe/music-economy-register/).
+
+This repository uses [Quarto](https://quarto.org/) to generate a technical book. Most of the book can be edited in any markdown editor, but it is recommended to use RStudio or Quarto for contribution that includes codes. The key chapters include:
 
 -   `index.qmd`: Introduction and overview
 
