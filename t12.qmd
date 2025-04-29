@@ -16,7 +16,6 @@ The `Slovak Music Economy Register`, developed under Task T1.2 of the Open Music
 
 The `Slovak Music Economy Register` is one component of the broader `Slovak Comprehensive Music Database` (SKCMDb). While the economy register focuses specifically on music-related economic actors — including natural persons (e.g. composers, performers) and legal entities (e.g. publishers, record labels, venues) — the full SKCMDb also includes complementary datasets on musical works, sound recordings, and physical venues. Together, these interoperable components form a multi-purpose, standards-aligned platform for supporting research, rights management, policy, and cultural documentation in the Slovak music sector.
 
-
 We strive to build a best policy practice in Slovakia within the context of the European Data Strategy [@european_data_strategy_2020], ensuring that this register supports both national implementation and broader European data governance goals.
 
 Two earlier deliverables of the Open Music Europe project helped define the strategy for addressing these issues:
@@ -109,7 +108,7 @@ Whenever possible, we use OpenCorporates IDs — derived directly from the Slova
 -   [ ] very record label that registered sound recordings in the SLOVGRAM database using non-`SK` ISRC codes, with a known location or seat in the Slovak Republic. This group overlaps with the target population of the **KULT 19 — Production and Distribution of Sound Recordings** survey.
 -   [ ] Every record label that was active in the SLOVGRAM database during the previous business year (*i.e.*, registered at least one recording). These are considered *currently active music labels*.
 
-The `Slovak Music Economy Register` includes and extends the frame of the KULT 19 survey. `KULT 19` is an annual statistical report collected by the Ministry of Culture from producers of musical sound recordings [@mksr_kult19_2022]. It gathers data on the number and type of published titles (by genre and author origin), distribution formats (physical and online), and associated business activity — including income from sales, grants, and rights, as well as operational and labour costs. Its target population includes legal entities formally engaged in the production and distribution of music recordings in the Slovak Republic​:contentReference[oaicite:0]{index="0"}.
+The `Slovak Music Economy Register` includes and extends the frame of the KULT 19 survey. `KULT 19` is an annual statistical report collected by the Ministry of Culture from producers of musical sound recordings [@mksr_kult19_2022]. It gathers data on the number and type of published titles (by genre and author origin), distribution formats (physical and online), and associated business activity — including income from sales, grants, and rights, as well as operational and labour costs. Its target population includes legal entities formally engaged in the production and distribution of music recordings in the Slovak Republic.
 
 While our register already includes all entities covered by KULT 19, it goes further by incorporating: - Labels that operate informally or without formal NACE classification, - Cross-border entities regularly distributing music in Slovakia, - Producers whose publishing activity is captured through rights systems (like ISRC and SLOVGRAM), not just surveys.
 
@@ -123,7 +122,7 @@ By integrating multiple sources and maintaining persistent identifiers, the `Slo
 
 At present, there is no authoritative or comprehensive register of music performers in Slovakia. The `Slovak Music Economy Register` incorporates performers only through indirect or partial sources.
 
-One foundation is the `KULT 05` statistical survey of musical ensembles and artistic groups, which provides a structured and repeated sample of formally recognized performing entities[@mksr_kult5_2022]. Beyond this, we attempt to expand the coverage using metadata from Slovak record labels and from recordings featuring works by Slovak composers. These entries are typically inferred via performance credits in commercial catalogues or rights databases, which may include ensemble or individual-level information.
+One foundation is the `KULT 05` statistical survey of musical ensembles and artistic groups, which provides a structured and repeated sample of formally recognized performing entities [@mksr_kult5_2022]. Beyond this, we attempt to expand the coverage using metadata from Slovak record labels and from recordings featuring works by Slovak composers. These entries are typically inferred via performance credits in commercial catalogues or rights databases, which may include ensemble or individual-level information.
 
 Within the `Open Music Europe` project, we developed and tested **big data sampling methods** to identify performers across public platforms and streaming services, linking them to works, recordings, and labels. However, these approaches remain experimental and fragmentary. As of now, the register does not provide a complete or verified performer population.
 
@@ -148,11 +147,8 @@ Looking forward, we aim to enhance venue identification using authoritative geos
 ## Data description
 
 ::: callout-note
-
 The `Slovak Music Economy Register` builds on well-established data models used by music agencies and rights management organisations to represent both natural persons and corporate bodies — including formal enterprises, sole proprietors, informal groups, and dissolved entities. To ensure accuracy and legal traceability, the model incorporates time and location attributes critical for capturing life events such as birth, death, inheritance, and organisational transitions like succession or dissolution. The register is partly event-based, enabling longitudinal tracking of identities, roles, and affiliations over time.
-
 :::
-
 
 ### General concepts of surveying
 
@@ -709,12 +705,12 @@ Another important classification is `ISIC` (UN) or `NACE` (EU) or `SIC` (UK). Th
 
 **1. Introduction** The creators of `Slovak Music Economy Register` are committed to maintaining high-quality, accurate, and reliable data for research and analysis. This policy outlines the principles and processes governing the curation, management, and dissemination of data within the database.
 
-**2. Data Scope and Coverage**  
+**2. Data Scope and Coverage**\
 The database curates and maintains data relevant to the economic activities of musicians, composers, their corporate bodies, and music businesses operating in the territory of the Slovak Republic. We include agents who work as music performers or composers and who were either born in the Slovak Republic, use Slovak-language lyrics, or identify with Slovak or minority ethnic groups from the Slovak Republic — even if they are active abroad. For natural persons, inclusion in the register is subject to compliance with data protection regulations, including the General Data Protection Regulation (GDPR), which governs how personal data may be stored, processed, and shared.
 
 The dataset consists of observations of music agents (rows) and their attributes (columns). Categorical information, such as the classification of the agent’s activity or role, is organised using a modified version of the classification system developed by the Slovak Music Centre. This system has been collaboratively adapted by Anna Žilková, Anna Márta Mester, and Dániel Antal.
 
-SKCMDb — the Slovak Comprehensive Music Database — is the technical platform used to implement the `Slovak Music Economy Register`. It is built on a MariaDB relational backend extended with graph capabilities via Wikibase, the same open-source platform that powers Wikidata. Wikidata, the world's largest open graph database, has been successfully used in the past decade to create interoperable library services [@van_veen_wikidata_2019; @bianchini_beyond_2021; @sardo_wikidata_2022], museum services [@pfeiffer_representing_2021], and archives (references), and creating interoperability among the institutional silos of these three types of heritage collections [@alexiev_bulgarian_2020; @rossenova_wikidata_2022]. EU institutions themselves also use it [@semic_2020_providing_2020].
+SKCMDb — the Slovak Comprehensive Music Database — is the technical platform used to implement the `Slovak Music Economy Register`. It is built on a MariaDB relational backend extended with graph capabilities via Wikibase, the same open-source platform that powers Wikidata. Wikidata, the world's largest open graph database, has been successfully used in the past decade to create interoperable library services [@van_veen_wikidata_2019; @bianchini_beyond_2021; @sardo_wikidata_2022], museum services [@pfeiffer_representing_2021], and archives (references), and creating interoperability among the institutional silos of these three types of heritage collections [@alexiev_bulgarian_2020; @rossenova_wikidata_2022]. EU institutions themselves also use it [@fischer_providing_2020].
 
 ### Data Collection and Ingestion
 
@@ -841,7 +837,7 @@ To translate this to laymen terms, it is unlikely that `Slovak Music Economy Reg
 
 Dataspaces themselves can be connected with each other. Such connections are called data federations. `Slovak Music Economy Register` , by design, aims to be federated with Wikidata (the largest open knowledge graph database of the world), the Europeana Data Space (that connects various digital heritage databases in Europe), and the [European Cultural Heritage Cloud](https://research-and-innovation.ec.europa.eu/research-area/social-sciences-and-humanities/cultural-heritage-and-cultural-and-creative-industries-ccis/cultural-heritage-cloud_en), which will be an extension of the [European Open Science Cloud](https://eosc.eu/eosc-about/) (EOSC) to various digitised heritage collections [@eccch_ex_ante_2022]. Data federations will allow us to import any new data from the Europeana Data Space into `Slovak Music Economy Register` as soon as it appears there, and the music experts or `Slovak Music Economy Register` will agree that the data is relevant for `Slovak Music Economy Register` itself. We can send all well-documented heritage collection items via `Slovak Music Economy Register` to Europeana and its more research-focused database.
 
-`Slovak Music Economy Register` is technically stored in a MariaDB database extended for graph format with Wikibase. Wikibase, the software that powers Wikidata, the world's largest open graph database, has been successfully used in the past decade to create interoperable library services [@van_veen_wikidata_2019; @bianchini_beyond_2021; @sardo_wikidata_2022], museum services [@pfeiffer_representing_2021], and archives (references), and creating interoperability among the institutional silos of these three types of heritage collections [@alexiev_bulgarian_2020; @rossenova_wikidata_2022]. EU institutions themselves also use it [@semic_2020_providing_2020].
+`Slovak Music Economy Register` is technically stored in a MariaDB database extended for graph format with Wikibase. Wikibase, the software that powers Wikidata, the world's largest open graph database, has been successfully used in the past decade to create interoperable library services [@van_veen_wikidata_2019; @bianchini_beyond_2021; @sardo_wikidata_2022], museum services [@pfeiffer_representing_2021], and archives (references), and creating interoperability among the institutional silos of these three types of heritage collections [@alexiev_bulgarian_2020; @rossenova_wikidata_2022]. EU institutions themselves also use it [@fischer_providing_2020].
 
 -   The author and the data stewards mentioned above oversees data curation activities. We are open to, and inviting co-creators with adequate knowledge about textile and fashion history expertise or data stewardship knowledge.
 

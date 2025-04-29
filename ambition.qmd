@@ -8,7 +8,7 @@ This shared process would support data needs across: - collecting societies - cu
 
 The artist remains the source of truth. With proper consent and traceability, each registration contributes to a connected ecosystem.
 
-![The composer Iris Szeghy was one of the first persons who allowed her data to be used in our shared register. With her example we show how the coordination or registration processes can lead to better music services for music users and researchers. See our presentation for the International Association of Music Information Centers.](png/skcmdb/iris_szeghy_identity.png){fig-align="center"}
+![The composer Iris Szeghy was one of the first persons who allowed her data to be used in our shared register. With her example we show how the coordination or registration processes can lead to better music services for music users and researchers. See [our presentation](https://reprex.nl/event/2024-11-21_iamic/) for the International Association of Music Information Centers.](png/skcmdb/iris_szeghy_identity.png){fig-align="center"}
 
 This illustrates how a harmonised registration process can support both cultural recognition and reuse.
 
@@ -23,6 +23,27 @@ This system should not only save time for both artists and service providers, bu
 ![We use the European Interoperability Framework as a general conceptual guideline to create a multi-purpose, interoperable registration process.](png/eif/eif_4_layers_en_2x1.png)
 
 This ambition builds on earlier research and practical experience, which we summarise in the next section.
+
+## Identification and Attribution Strategy in Open Music Registers
+
+The `Open Music Registers` initiative is grounded in a pragmatic approach to managing the balance between identification and attribution of entities within the music economy. We recognize that both processes are essential but costly and potentially error-prone. Therefore, our strategy is to minimize duplication, maximize reuse, and support reliable identification processes wherever feasible.
+
+Identification refers to recognizing and linking entities—such as musical works, rightsholders, and recordings—to existing, trustworthy identifiers. Where reliable identification services are in place (e.g., ISNI for persons, VIAF for authority control, ISWC for musical works managed locally by SOZA), we prioritize integration and reuse. We aim to support identification efforts, for example, by assisting SOZA in reducing the costs of work identification and helping the Slovak National Library verify manifestations through structured metadata contributions.
+
+Attribution involves actively assigning identifiers, typically when no existing trusted identifier is available. When necessary, the `Open Music Registers` facilitate attribution processes, but always with care to follow international best practices and to avoid unnecessary parallel identification efforts.
+
+In practice, metadata management costs in the music sector are often disproportionately high relative to the economic value of the assets. Many musical works generate only a few cents in royalties per month—or even less—while the costs of accurate identification, attribution, and metadata maintenance can easily exceed these earnings. The music ecosystem is exceptionally complex: hundreds of millions of assets are connected to millions of rightsholders, whose circumstances (names, publishers, labels, heirs) frequently change.
+
+This complexity contributes to systemic problems in royalty distribution, rights management, and cultural visibility. Without cost-effective metadata solutions, the economic viability of accurate rights management becomes unsustainable, especially for small rightsholders and emerging artists. Left unchecked, this creates a vicious circle: assets remain under-identified, royalties are misdirected or delayed, trust in the system erodes, and the overall cultural economy suffers.
+
+The `Open Music Registers` project is designed to break this cycle by:
+
+-   Trusting and reusing validated attribution results from authoritative registrars.
+-   Undertaking new identification only when necessary and justified.
+-   Avoiding duplication and parallel registration processes.
+-   Lowering the burden on artists and registrars alike through interoperability and shared infrastructure.
+
+By strategically balancing identification and attribution, and by building efficient, scalable metadata solutions, we aim to ensure that music assets can be properly valued, fairly remunerated, and sustainably managed—even when the economic value per asset is modest.
 
 ## Preceding results from Open Music Europe WP1
 
@@ -44,11 +65,11 @@ However, in many industries, particularly cultural and creative ones, official r
 
 In contrast, private organisations often maintain richer, more detailed internal registers for their operations. These might include::
 
--   **Membership lists** maintained by professional associations or unions, such as those representing music publishing entities or record labels. For example, we created a Slovak register of music publishers; under the collective management directive\[@directive_2014_26\], such registers must be made public, even if not well-structured.
+-   *Membership lists* maintained by professional associations or unions, such as those representing music publishing entities or record labels. For example, we created a Slovak register of music publishers; under the collective management directive[@eu_directive_2014_26], such registers must be made public, even if not well-structured.
 
--   **Client databases** used by CMOs or licensing agencies, detailing entities like restaurants that play music. While these databases are proprietary, public business registers or local registers of licensed venues (e.g., restaurants, music clubs requiring local permission due to noise and traffic considerations) can help create connected music user registers.
+-   *Client databases* used by CMOs or licensing agencies, detailing entities like restaurants that play music. While these databases are proprietary, public business registers or local registers of licensed venues (e.g., restaurants, music clubs requiring local permission due to noise and traffic considerations) can help create connected music user registers.
 
--   **CRMs** (Customer Relationship Management systems) used by businesses for managing partners and contractors.
+-   *CRMs* (Customer Relationship Management systems) used by businesses for managing partners and contractors.
 
 While these private registers are typically well-aligned with operational needs, they are not harmonised with national statistical systems—meaning identifiers (e.g., tax IDs, sector codes, geographic location data) may not match, formats vary, and there’s no common protocol for data structure or update frequency.
 
@@ -68,79 +89,97 @@ These changes are supported and legitimised by a growing ecosystem of **European
 
 Together, these legal, technical, and institutional innovations represent a new chapter in the co-production of knowledge: one where governments, cultural institutions, and private sector actors jointly curate the evidence base needed to shape smarter, more responsive policy.
 
-## Data subjects or agents
+## Why a Dataspace?
 
-In legal and statistical contexts, the term *data subject* refers to an individual or organization about whom data is collected. This framing emphasizes protection, privacy, and accountability—particularly in regulations such as the GDPR or frameworks for official statistics.
+In building the `Open Music Registers`, we deliberately avoided merging different data sources into a single centralised database. This decision reflects the lessons learned and best practices laid out in the *UN Guidelines on Statistical Business Registers* [@un_sbr_guidelines_2024], and the microdata coordination of the Dutch statistical authority, CBS [@sun_cbs_knowledge_graph_2021].
 
-In our data model, we refer to these entities as *agents*. In ontology-based systems, agents are not just entities being measured—they are persons, groups, or organizations with the capacity to act. They can complete registration forms, report on past activities (like the number of performances), or update metadata about their professional roles.
+A register aims to be a complete list of the objects in a specific group or population [@anders_register-based_2007]. Norway created statistical registers to tap into governmental data stores in 1990 and into municipal ones in 1995; by 2019, it utilised about 100 records and drew data from 30 public institutional sources [@saebo_new_data_sources_2023, p. 1]. Like most countries, such "administrative data" was retrieved from other governmental entities, not the private sector, and at the same time replaced almost all sample surveys which had inferior data qualities.
 
-This distinction is significant. Artists, ensembles, and institutions are not merely passive records in a database—they actively participate in creating, shaping, and maintaining information. Our register model supports this agency, ensuring that contributors are not just documented but empowered to influence how the ecosystem evolves.
+A statistical business register (SBR) is a regularly updated, structured database of economic units in a territorial area, maintained by a national statistical office, and used for statistical purposes.
 
-Our primary data subjects possess copyrights or neighboring rights; our secondary focus includes other roles—often the same individuals in different capacities—who help commercialize and protect such rights.
+In official statistics, the Statistical Business Register (SBR) is the foundational frame for producing core statistical products: enterprise statistics, labour market statistics, and ultimately, derived indicators like the GDP. As the Guidelines emphasise:
 
--   **Natural persons**: Individuals involved in creating musical works (authors), recording musical works (producers and performers), or live performances (performers). We also consider roles such as music educators, publishers, distributors, and various managers within the music industry.
+> "High-quality business statistics depend on a high-quality SBR. A high-quality SBR fulfils the user needs in an optimal way, and is based on international concepts, definitions and classifications. Thus, it serves as the basis for international harmonisation of economic statistics in terms of coverage, statistical units and frame methodology." [@un_sbrguidelines_2024, p2]
 
--   **Corporate bodies**: Groups formed by natural persons working together, such as musical ensembles, studios, publishers, labels, distributors, rights management agencies, archivists, librarians, and venues (both permanent like clubs and temporary like festivals).
+Building a statistical business register is not a mechanical task of merging administrative sources.
 
-Corporate bodies may incorporate and gain legal personality, allowing them to act as legal persons. However, the music and creative sectors often operate informally, with many corporate bodies unincorporated. Rights are frequently exercised by natural persons or their ever-changing groups, such as bands with fluctuating membership.
+> "Even if the SBR is based on information from administrative registers, the concepts, characteristics, methods of maintenance, and other aspects of the SBR need to be based on statistical concepts." [@un_sbrguidelines_2024, p4]
 
-Methodologically, our data models refer to these subjects as "actors" or **agents**. While "actor" is a general term encompassing individuals and groups, including non-human entities like animals or software agents, our focus is on human agents, their groups, and corporations. We also record software agents that handle data for quality assurance and validation.
+Official statisticians must carefully construct statistical units from diverse administrative sources — such as tax records, company registries, and social security data — which differ in legal basis, workflows, update cycles, and semantic structures.
 
-Our subjects are always human actors or agents—either living natural persons or deceased individuals. We do not collect information on fictional characters. Natural persons are subject to the General Data Protection Regulation (GDPR). Deceased persons may have heirs who inherit rights; while GDPR no longer protects deceased individuals, other moral rights or data protection laws may apply.
+Similarly, in `Open Music Registers`, our sources include copyright registration systems, library authority files, repertoire asset lists, and royalty accounting databases. These sources have different legal status, different operational goals, and different metadata models. Therefore, just as statistical agencies cannot simply merge administrative registers, we cannot simply merge these music-sector registers.
 
-+--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-|                    | Subject                                                                                                                              | What is their role? |
-+====================+======================================================================================================================================+=====================+
-| author             | Original authors of music and lyrics, and heirs of their rights.                                                                     |                     |
-+--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-| performer          | Musicians, DJs and vocalists who interpret the compositions of authors. They may improvise in their performances.                    |                     |
-+--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-| producer           | Producers who organise the recorded fixation of interpreted music in a novel way that audiences can enjoy beyond a live performance. |                     |
-+--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-| author about music | Music journalists, researchers, educators, whose work about musicians and their music is copyright protected.                        |                     |
-+--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-|                    |                                                                                                                                      |                     |
-+--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-| others             |                                                                                                                                      |                     |
-+--------------------+--------------------------------------------------------------------------------------------------------------------------------------+---------------------+
+Instead, our approach mirrors that of official statisticians: harmonisation through shared semantics and carefully coordinated data linkage.
 
-: Subjects or human agents {tbl-colwidths="\[25,75\]"}
+In official SBRs, the statistical office typically has legal authority to impose common taxonomies, data standards, and reporting obligations. This greatly simplifies harmonisation, but even then, good cooperation is required by statistical authorities, too.
 
-Corporate bodies are groups of data subjects working together, often under a single name, like The Beatles or the Slovak Philharmonic. Managing corporate body data is challenging because membership in large bodies, like a philharmonic orchestra or a right collection agency, is changing almost daily.
+> "Technical and organisational issues hampering access by national statistical offices to administrative databases can be addressed by establishing good cooperation with administrative bodies, ideally formalised in memoranda of understanding." [@un_sbrguidelines_2024, p6]
 
-+--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Corporate bodies         | What is their role?                                                                                                                                                                                                 |
-+==========================+=====================================================================================================================================================================================================================+
-| publisher                | Representatives of authors who publish copyright protected musical works, literary works, or other works about music.                                                                                               |
-+--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| musical group            | Ensembles, bands, orchestras, choirs and other groups of music performers who perform together in a studio or staged performance.                                                                                   |
-+--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| labels                   | Music professionals who curate and release sound recordings of live and studio performances for the business-to-business (radio, streaming provider, film producer, etc.) and consumer end users (music audiences.) |
-+--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| professional music users | Organisers of music events and festivals; radio and television broadcasters; filmmakers; theatres; operators of public spaces with music such as restaurants, hotels, or shops, etc.                                |
-+--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-|                          |                                                                                                                                                                                                                     |
-+--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| others                   |                                                                                                                                                                                                                     |
-+--------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+In contrast, a data sharing space like `Open Music Registers` cannot rely on hierarchical authority. Instead, we operate under the voluntary, consensus-based model typical of data spaces:
 
-: Corporate bodies as agents {tbl-colwidths="\[25,75\]"}
+-   Metadata semantics (the definitions of terms and structures) are pre-agreed among participants.
 
-It is easier to work with corporate bodies if they are incorporated and gain legal personhood or similar legal recognition in the jurisdiction of a state. Data protection is still applicable, but not GDPR. Transparency laws make some of their data public. What is challenging in a highly informal sector like music is that corporate bodies and legal persons do not overlap in most cases.
+-   Actual data exchange happens only on an as-needed, as-permitted basis, respecting data licences, contractual rights, and privacy regulations.
 
-+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Legal persons                | What is their role?                                                                                                                                                                       |
-+==============================+===========================================================================================================================================================================================+
-| Corporations                 | | Incorporated social and business enterprises that provide long-term continuity and legal personality to music corporate bodies, such as music publishers, or operators of music venues. |
-+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| | Public sector institutions | | Municipal, regional, or state institutions that do not follow a company form, such as a granting agency.                                                                                |
-+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| | Associations               | | Associations of rightsholders, musicians, that perform a joint activity, for example, collecting royalties.                                                                             |
-+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| | Foundations                | | define                                                                                                                                                                                  |
-+------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+-   Differences in workflows and purposes — for example between a rights management organisation and a national library — must be reconciled collaboratively through decentralised negotiation, not imposed centrally.
 
-: Legal persons as agents {tbl-colwidths="\[25,75\]"}
+This makes data harmonisation slower, but it also ensures higher resilience, broader participation, and stronger trust among stakeholders — goals very much aligned with the emerging standards for European data spaces and FAIR data principles.
+
+> *Dataspaces: Fundamentals, Principles, and Technique*: "A dataspace is an emerging approach to data management which recognises that in large-scale integration scenarios, involving thousands of data sources, it is difficult and expensive to obtain an upfront unifying schema across all sources. Data is integrated on an \`as-needed' basis with the labour-intensive aspects of data integration postponed until they are required. Dataspaces reduce the initial effort required to set up data integration by relying on automatic matching and mapping generation techniques." [@curry_dataspaces_2020]
+
+> *Dataspace for Cultural and Creative Industries* (Position paper): "A data space is an ecosystem of exchange, processing, sharing and provision of data between trusted partners, for a fee or not. It is not about copying or repatriating data centrally, but about ensuring that each data holder has full control over the conditions (e.g., who, when, and under what condition) of access to their data." [@dataspace_for_cci_2022, p16]
+
+As we developed the `Open Music Registers`, we recognised that traditional database architectures would be insufficient for our goals. Our challenge resembled those faced by national statistical offices: the metadata about music agents, works, and performances is dispersed across many organisations, collected under different legal mandates, maintained with diverse standards, and updated for different operational needs. Following emerging best practices in official statistics, particularly those demonstrated by Statistics Netherlands (CBS), we chose to create a knowledge graph-based infrastructure [@sun_cbs_knowledge_graph_2021]; by doing so, the CBS has de facto implemented a data sharing space structure.
+
+Instead of imposing centralised control over the sources, we harmonise their metadata using shared ontologies (such as DCTERMS, CIDOC-CRM, and music-specific standards like ISWC, ISNI, ISRC) and link the underlying datasets through interoperable, semantic structures. This approach enables flexible, incremental integration across the music sector, while preserving the autonomy and legal rights of each data contributor.
+
+The CBS Microdata project offers a clear parallel to our ambition. Faced with fragmented, departmentally managed microdata collections, CBS built a knowledge graph to unify metadata across its research datasets, using standard vocabularies such as DCAT and Dublin Core Terms. They extracted key information from separate PDF documents, mapped variables to standard ontologies, and created an RDF-based knowledge graph to support researchers seeking to combine and explore disparate datasets. Like CBS, we aim not merely to connect databases, but to create an integrated semantic environment where different registration workflows—rights management, public libraries, music asset lists—can be understood and cross-referenced. Just as CBS facilitates high-quality, FAIR-compliant research across domains like health, education, and employment, Open Music Registers will support rights management, cultural research, policy evaluation, and statistical production across the music economy.
+
+Our ambition does not stop here. Statistical authorities increasingly realise that cooperation with data-rich private sector organisations can improve the quality of official statistics. Why ask imprecise and boring consumer purchase diaries about household holding when credit-card companies have exact data about more than 95% of all purchases? Statistics Norway realised that instead of asking 7,000 households what they were buying in the supermarket, it is far more accurate and potentially cheaper to acquire the data directly from the sales logs of the supermarkets or the payment transaction records of the credit card companies. Ask indirectly household energy use when the electricity trading and distribution system has the energy use data of every building and household? French statisticians prefer this data source.
+
+As explained in our preceding T1.1 [@antal_slovak-cult-stat-pilot], the data space aproach, and the utilisation of the same metadata standards, allow a potential cooperation with Slovakia's cultural satellite accounts. For this, we needed to follow recent international guidelines on using privately held data for official statistics [@unece_sbr_guidelines_2015; @un_sbr_guidelines_2020; @eurostat_sbr_manual_2021], and more broadly from the policy and research literature on business-to-government data sharing [@ess_position_privately_held_2017; @hleg_towards_b2g_data_2020; @vigorito_privately_held_2022; @susha_b2g_data_2022]. Such complex legal, security and organisational requirements also help design similarly high-quality processes when sharing data among private partners.
+
+## Why Wikibase?
+
+> Wikibase is the open-source software platform that powers Wikidata — the largest open knowledge graph on the internet. It enables organizations to create their own structured, linked, multilingual databases, while remaining interoperable with global ecosystems like Wikidata. By using Wikibase, `Open Music Registers` can build an independent but connected knowledge base that integrates identifiers, metadata, and factual information from many sources, while retaining control over the quality, governance, and authority of the data.
+
+We are building a **knowledge base** that enables the combination of data, information, and knowledge about music in novel and valuable ways. This requires us to integrate resources that were traditionally managed separately, each within different professional, commercial, or cultural workflows. As a result, we must work with identifiers developed by various stakeholders concerned with the production, commercialisation, documentation, and preservation of manifestations of music, or knowledge about music — whether it concerns printed scores, MIDI files, sound recordings, audiovisual content, or books about music.
+
+Every domain — whether music, publishing, research, business, or cultural heritage — has developed its own identification systems, each optimised for the specific needs of that sector. Following the evolution outlined by Laura Manzoni, the development of modern identifiers reflects a growing need for persistent, stable, and interoperable ways to *identify resources*, not only online, but across the entire information infrastructure [@manzoni_identifiers_2022].
+
+-   **ISBN (International Standard Book Number)** was introduced in 1967–1970 to uniquely identify books and other monographic publications. It ensures that each edition of a book can be cited and tracked across publishers, libraries, and sales platform.
+
+-   **ISMN (International Standard Music Number)** followed to identify printed music (sheet music scores) across publishers and distributors. It originally started a numeric range of ISBN, but by now printed sheet music has its own registration system [@iso_ismn_2021]. We work with print music diversity and circulation in WP2. 
+
+-   **ISRC (International Standard Recording Code)** was created in 1986 to uniquely identify individual sound recordings and music video recordings, independent of their format (CD, vinyl, digital download). It tracks usage and royalties across rights management systems [@iso_isrc_2019; @camp_isni_2022]. We work with recorded music diversity and circulation in WP2. 
+
+-   **ISWC (International Standard Musical Work Code)**, introduced in the 1990s, identifies musical works (i.e., the underlying composition or lyrics) rather than any particular recording or performance. It is used by collective management organisations (CMOs) to track royalties and rights across performances, broadcasts, and reproductions [@iso_iswc_2022].
+
+-   **DOI (Digital Object Identifier)**, established in the late 1990s, providing persistent identification of digital objects (articles, datasets, reports, etc.) independently from where they are hosted. Unlike a URL, the DOI remains stable even if the resource moves.
+
+-   **ISNI** identifies individual creators, performers, and contributors.
+
+-   **ISBN** identifies books and printed editions (including music books) .
+
+-   **OpenCorporatesID** identifies legal corporate bodies and music business organisations.
+
+These different identifiers capture different aspects of musical and cultural reality. They serve different workflows — such as royalty collection, publishing, research citation, market transparency — and operate under different legal and technical frameworks. If we want to *increase the interoperability* of services and systems that use music metadata — including rights management, cultural heritage, statistical analysis, or AI-driven discovery — we must ensure that *the identification of the same thing or person across contexts is connected*.
+
+This is why we are not building a "single system" of identification, but rather a hub of connections between identifiers, anchored by careful mappings between authoritative registers, and supported by persistent, machine-readable links.
+
+In this model, Wikidata functions as an **identity broker** — a global open knowledge graph that aggregates and connects identifiers from many domains, linking them to structured factual data.
+
+By following this approach, `Open Music Registers` does not replace existing authority systems, but connects them intelligently, allowing music agents, works, performances, recordings, and organisations to be discovered, verified, linked, and reused across multiple platforms and sectors.
+
+In recent years, Wikidata’s role as an identity broker has been recognised and increasingly trusted by major institutions in cultural heritage, education, and research.
+
+Studies have shown that UNESCO, Creative Commons, national libraries, research funders, and large-scale digital humanities projects actively integrate Wikidata identifiers to improve metadata quality, enable multilingual access, and facilitate cross-domain interoperability [@van_veen_wikidata_2019; @bianchini_beyond_2021; @bianchini_sardo_2022; @fagerving_wikidata_2023]. This growing trust stems from Wikidata’s capacity to link persistent identifiers from different authoritative systems — such as VIAF, ISNI, DOI, ISBN, and institutional databases — into a public, machine-readable knowledge graph that supports both human discovery and automated services at a global scale.
+
+In fact, it shows that there is no need for one standardization of practices for establishing the headings and structure of authority records in one international form; instead, users’ convenience can be achieved by a technological infrastructure capable to present to each user the information about an entity in its own language and script. Additionally, Wikidata is the most evident example of the distributed and diffused approach of the semantic web to the issue of the universal identification of the entities. Also, Wikidata identification and description show that authority and bibliograp
+
+This approach is now also reflected in major European policy initiatives. The EU Knowledge Graph, developed as part of the European Commission’s linked data strategy, is building a cross-domain graph that explicitly integrates references from Wikidata, authority files, open registries, and official databases, recognising the need for semantic mediation across scientific, cultural, economic, and administrative domains [@diefenbach_wikibase_2021]. Rather than replacing local or domain-specific authority files, Wikidata — and projects modelled on it — connect them, acting as a semantic bridge across fragmented information ecosystems.
+
+This strategy is particularly powerful for cultural and creative domains like music, where different aspects of the same reality (creative works, recordings, performances, corporate actors) are registered in specialised, non-overlapping systems.
 
 ## Forms of music or music entities
 
@@ -148,21 +187,14 @@ Our primary interest is not necessarily in the data subject but in their music, 
 
 We are particularly interested in a parallel registration of works and the recorded fixations of their studio and staged performances intended for the public. (For example, we do not want to provide interoperability for recording information about rehearsals or liturgical uses of music for spiritual or faith-based communities.)
 
-+----------------------+----------------------------------------------------------------------------------------------------------------------------+
-| Subject              | What is their role?                                                                                                        |
-+======================+============================================================================================================================+
-| musical work         | Composed of a combination of sounds, with or without accompanying text [@iso_iswc_2022]                                    |
-+----------------------+----------------------------------------------------------------------------------------------------------------------------+
-| performance          |                                                                                                                            |
-+----------------------+----------------------------------------------------------------------------------------------------------------------------+
-| live performance     | The performance of music in front of a live audience.                                                                      |
-+----------------------+----------------------------------------------------------------------------------------------------------------------------+
-| recorded performance | The performance of music, interpreted from a musical work or improvised, with the aim of creating a recording.             |
-+----------------------+----------------------------------------------------------------------------------------------------------------------------+
-| sound recording      | A recorded fixation, released for commercial or non-commercial use, an re-playable object from a recorded performance.     |
-+----------------------+----------------------------------------------------------------------------------------------------------------------------+
-| music venue          | A building, a publicly accessible site, a piece of infrastructure or built structure where music is played for the public. |
-+----------------------+----------------------------------------------------------------------------------------------------------------------------+
+| Subject | What is their role? |
+|------------------|------------------------------------------------------|
+| musical work | Composed of a combination of sounds, with or without accompanying text [@iso_iswc_2022] |
+| performance |  |
+| live performance | The performance of music in front of a live audience. |
+| recorded performance | The performance of music, interpreted from a musical work or improvised, with the aim of creating a recording. |
+| sound recording | A recorded fixation, released for commercial or non-commercial use, an re-playable object from a recorded performance. |
+| music venue | A building, a publicly accessible site, a piece of infrastructure or built structure where music is played for the public. |
 
 ## Technical harmonisation
 
@@ -172,4 +204,4 @@ We employ Wikibase, an open-source platform underpinning Wikidata, to create a "
 
 Mapping data from organizations such as SOZA, the Slovak Music Centre, the Statistical Office of the Slovak Republic, and the Slovak National Library to standard classifications like ESCO, SDMX, NACE, and ISCO establishes semantic connections between internal datasets and international frameworks. This strategy enhances statistical interoperability, supports multilingual capabilities, and facilitates automated updates, making the data more accessible and AI-ready.
 
-The `Open Music Observatory` not only links music industry business data but also integrates cultural, labor, and economic dimensions. This comprehensive approach aligns with the objectives of cultural satellite accounts and Common Data Spaces initiatives. In this deliverable, we demonstrate how measuring the labor and cultural aspects of music can be supported through data infrastructures based on shared registration processes and harmonized registers.
+The `Open Music Observatory` not only links music industry business data but also integrates cultural, labour, and economic dimensions. This comprehensive approach aligns with the objectives of cultural satellite accounts and Common Data Spaces initiatives. In this deliverable, we demonstrate how measuring the labour and cultural aspects of music can be supported through data infrastructures based on shared registration processes and harmonized registers.

@@ -1,0 +1,139 @@
+# Overview of the Currently Working Registers {#sec-working}
+
+The `Open Music Registers` initiative is not just a theoretical proposal. We have already implemented key components of a working system, notably the `Slovak Music Economy Register` and its broader context within the *Slovak Comprehensive Music Database* (`SKCMDb`).
+
+The `Slovak Music Economy Register` is designed as a live, updateable register of music agents active in the Slovak Republic. It currently covers more than 3,000 agents, including natural persons (such as composers, performers, producers) and corporate bodies (such as music publishers, record labels, music groups, and venues). Each agent is connected, where possible, to persistent identifiers (such as ISNI, VIAF, or OpenCorporates IDs) to ensure interoperability and traceability across systems.
+
+These entities are captured through an event-based, multilingual, semantically harmonised knowledge graph structure, with technical foundations in Wikibase (the same platform underlying Wikidata). This approach allows not only cross-validation of records, but also dynamic, machine-readable connections between creators, their works, the recordings of those works, and the venues where they are performed.
+
+## Registering Data Subjects and Their Work
+
+One of the core functions of any **register** — whether it's a business register, a music economy register, a library authority file, or a rights management database — is to identify entities (people, works, companies, recordings, events, etc.) in a stable, unique, and reusable way.
+
+Modern registers are based around permanent identifiers, which are designed to be stable, unique, long-lasting — it identifies a thing even if the location changes. It is often just a unique string.
+
+- `ISNI` identifies individual creators, performers, and contributors [@camp_isni_2022].
+-   `OpenCorporatesID` was introduced as part of the OpenCorporates project (founded 2010) to uniquely identify companies and corporate entities worldwide. It assigns a machine-readable URI to each registered company, enabling better transparency, traceability, and interoperability of business data.
+
+
+Manzoni notes that the shift from identifying physical objects to identifying intellectual and legal entities — and later to assigning persistent identifiers to digital metadata and real-world organisations — reflects the expansion of the semantic web and the linked data ecosystem. Today, good data management practice across cultural, academic, and business domains depends on using *PIDs expressed as URIs* to ensure *long-term discoverability, interoperability, and trust*.
+
+In the 2020s, modern permanent identifiers usually take the form of an URI, which is a technical format that is based on the identification infrastructure of the world wide web. An URI is a more general form of an URL; a web browser or a web application can work with it. Unlike an URL, that is a unique identifier for a digital document, an URI can identify a physical object, a living or deceased person; like the Library of Congress URI <https://id.loc.gov/authorities/names/n79070061> for "Igor Stravinsky".
+
+## Music Publishers
+
+![The entry of [ISTA spol. s.r.o](https://reprexbase.eu/skcmdb/index.php?title=Item:Q91). includes its registration number in the official Slovak business register and in OpenCorporates](png/skcmdb/skcmdb_music_publisher_Q91_2x1.png){fig-align="center"}
+
+You can query the register of all orchestras and ensembles:
+
+```{r sparql, eval=FALSE}
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wd: <https://reprexbase.eu/entity/>
+PREFIX wdt: <https://reprexbase.eu/prop/direct/>
+SELECT ?item ?itemLabel
+WHERE {
+  # Find the class entity by label (e.g., "music group")
+  ?class rdfs:label "music publishing organisation"@en .
+  # Find all items that are instance of that class
+  ?item wdt:P5 ?class .  # P2 = instance of (adjust this if different in your setup)
+  OPTIONAL { ?item rdfs:label ?itemLabel . FILTER (lang(?itemLabel) = "en") }
+}
+LIMIT 100
+
+
+```
+
+[Try it out⇗](http://135.181.91.51:3030/#/dataset/skcmdb/query?query=PREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX%20wd%3A%20%3Chttps%3A%2F%2Freprexbase.eu%2Fentity%2F%3E%0APREFIX%20wdt%3A%20%3Chttps%3A%2F%2Freprexbase.eu%2Fprop%2Fdirect%2F%3E%0A%0ASELECT%20%3Fitem%20%3FitemLabel%0AWHERE%20%7B%0A%20%20%23%20Find%20the%20class%20entity%20by%20label%20%28e.g.%2C%20%22music%20group%22%29%0A%20%20%3Fclass%20rdfs%3Alabel%20%22music%20publishing%20organisation%22%40en%20.%0A%0A%20%20%23%20Find%20all%20items%20that%20are%20instance%20of%20that%20class%0A%20%20%3Fitem%20wdt%3AP5%20%3Fclass%20.%20%20%23%20P2%20%3D%20instance%20of%20%28adjust%20this%20if%20different%20in%20your%20setup%29%0A%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3FitemLabel%20.%20FILTER%20%28lang%28%3FitemLabel%29%20%3D%20%22en%22%29%20%7D%0A%7D%0ALIMIT%20100)
+
+```         
+Here will be a working link to our database with a screenshot
+and filter only ensembles that are part of the KULT 5-01 register.
+```
+
+```         
+And filter only ensembles that are part of the KULT 5-01 register.
+```
+
+## KULT 5-01
+
+The `KULT-5-01` survey is an official statistical instrument mandated by the Ministry of Culture of the Slovak Republic and registered by the Slovak Statistical Office [@mksr_kult5_2022]. It is conducted annually under the legal framework of the State Statistics Act No. 540/2001 Coll [@slovakia_statistics_act_2001]. The survey collects detailed data on musical ensembles and performing arts groups, focusing on their activities, audiences, financial performance, and human resources. Typical questions cover the number and genre of concerts performed (in Slovakia and abroad), repertoire composition (works by Slovak and foreign authors), visitor statistics (including performances for children and youth), economic data on income and expenditure (broken down by grants, sponsorships, ticket sales, and other sources), and workforce composition by employment status, education level, and gender.
+
+In previous work — notably the *Feasibility Study on Promoting Slovak Music in Slovakia & Abroad*, on which `WP1` and `WP2` are partly based [@antal_promoting_slovak_2020], and the subsequent D1.1 deliverable of `WP1` *European-wide methodological assessment* [@antal_et_al_music_economy_2023] — we highlighted the extreme difficulty of surveying the *informal economy* in cultural sectors. Many creators operate without formal business structures, and traditional sampling frames (like business registers) exclude them entirely.
+
+Most music is performed by a group of performers, a musical group, which can take many forms: a duo, a trio, a music ensemble, orchestra, a rock band. Sometimes membership in these corporate bodies is long-standing, sometimes members change frequently. Musical groups and orchestras of professional musicians perform both economic and artistic activities; however, it is rare that the members of the orchestra also from a completely overlapping, membership based enterprise form, too. We say that muisical groups are often part of the informal economy because their economic performance often cannot be connected to a well-defined business entity.
+
+![The Slovak Radio's Children's and Girls' Choir does have a Slovak IČO identifier, but that is the identifier in the business register of the entire public broadcaster. The VIAF ID (managed by the Slovak National Library as control authority) is a far more suitable identifier for this choir. In this case, we also have to mention that the choir is made of minors, further complicating linking the artistic performance to the results of its economic dimension.](png/skcmdb/Q143_6x4.png){fig-align="center"}
+
+Through the Open Music Registers, we have registered all musical ensembles that submit `KULT 5-01` forms, allowing researchers to easily identify which groups are officially surveyed and which are not. In cooperation with the Ministry of Culture, we have also received several years of historical microdata from the `KULT 5-01` survey. This enables the creation of new statistical collections where, by clearly filtering ensembles already registered through `KULT 5-01` and using our broader, harmonised register, researchers can construct retrospectively consistent indicators for audience development, performance measurement, and cultural policy analysis. It also makes it possible to generate improved, partly backcasted statistics on a larger, more representative survey frame.
+
+> Two related services, connected to our Open Music Register will ensure that more and more musical groups are properly identified. With our cooperation with the Slovak National Library, we are informing them about entities with curated metadatafields that should have a VIAF ID. Our UNLABEL service, developed in Open Music Europe by ALOADED and REPREX aims to give better data representation to self-releasing artists and provide them with an ISNI identifier.
+
+Additionally, based on our harmonised metadata model, we are able to provide targeted recommendations for improving future editions of the `KULT 5-01` survey, such as better classification of informal and semi-professional groups, capturing underreported repertoire, and collecting more detailed and structured data on financial flows and employment patterns.
+
+## KULT 16-01
+
+he `KULT 16-01` survey is an official statistical instrument mandated by the Ministry of Culture of the Slovak Republic and registered by the Slovak Statistical Office [@@mksr_kult16_2022]. It is conducted annually under the legal framework of the State Statistics Act No. 540/2001 Coll. The survey collects detailed data on public music events organised professionally across Slovakia. It focuses on concert activities, audience attendance, event types, financial performance, and human resources. Typical questions cover the number of concerts by genre (classical, jazz, rock, folk, etc.), their regional distribution, visitor statistics (including paid and unpaid entry), and the organisation of periodical and non-periodical music events such as festivals, concert series, and competitions. It also collects detailed financial data on revenues and costs associated with event organisation and information on the human resources involved.
+
+Through the Open Music Registers, we have registered music event organisers relevant to the `KULT 16-01` framework, enabling researchers to distinguish which public events and venues are already statistically monitored and which are not. In cooperation with the Ministry of Culture, we have access to several years of historical microdata from the `KULT 16-01` survey. This allows for building expanded statistical collections that, by combining the existing `KULT 16-01` register with broader datasets from the Open Music Registers, can generate more complete, retrospectively harmonised indicators for audience development, geographic coverage of music events, and the economic structure of the live music sector. It also enables the construction of corrected, backcasted time series based on an enriched and more representative survey frame.
+
+In addition, based on our harmonised metadata model, we can offer targeted suggestions for improving future editions of the `KULT 16-01` survey, such as better distinguishing between small and large event organisers, tracking informal or semi-professional events, and improving the granularity of financial and workforce data collection.
+
+## KULT 19-01
+
+The `KULT 19-01` survey is an official statistical instrument mandated by the Ministry of Culture of the Slovak Republic and registered by the Slovak Statistical Office [@mksr_kult19_2022]. It is conducted annually under the legal framework of the State Statistics Act No. 540/2001 Coll. The survey collects detailed data on the production and distribution of sound recordings of musical works. It focuses on the volume and structure of published recordings, the economic performance of producers and distributors, and the associated human resources. Typical questions include the number of published sound recording titles, the musical genres and types of authors involved (Slovak or foreign, soloists or ensembles), the form of distribution (physical media versus online), sales figures, revenue sources (including grants and sponsorships), and detailed costs related to production and distribution.
+
+![The [G. A. Records](https://reprexbase.eu/skcmdb/index.php?title=Item:Q251) is one of the few entries in the `KULT 16-01` register that we found to be certain to have an ongoing presence in releasing sound recordings.](png/skcmdb/Q251.png){fig-align="center"}
+
+Through the `Open Music Registers`, we have registered numerous music publishers, recording companies, and independent producers active in the Slovak music market. This enables researchers to distinguish which entities are formally covered by `KULT 19-01` and which operate outside the current statistical monitoring. Thanks to our cooperation with the Ministry of Culture, we also have access to historical microdata from the `KULT 19-01` survey. By combining the `KULT 19-01` sample frame with the broader, semantically harmonised register of music economic actors from Open Music Registers, it becomes possible to produce improved statistical collections, consistent indicators of music production and distribution over time, and corrected, retrospectively harmonised economic measurements for the recorded music sector.
+
+However, the `KULT 19-01` framework has several structural problems:
+
+First, it blurs two distinct activities: the work of sound recording studios and record labels. Today, recording costs are dramatically lower than in the 20th century, and many bands own and operate their own recording equipment. With open European borders, sound recording often happens in a different country from where the artists reside.
+
+More critically, Slovakia lacks a dedicated sound recording registrar. The management of ISO-standard sound recording identifiers (ISRC codes) remains anchored in Czechia, within the same organisation that historically served Czechoslovakia. Unlike Hungary, where Mahasz acts as both a collective rights management organisation and national ISRC agency, Slovakia operates a fragmented system:
+
+-   One body registers sound recordings for commercial release (ČNS IFPI, in Czehcia.)
+
+-   Another body, SLOVGRAM, handles rights collections — requiring separate registration.
+
+This results in significant gaps.The majority of Slovak repertoire is not registered under the SK domain of ISRC at all. Consequently, the **identification of sound recordings** and the correct **attribution of neighbouring rights** to Slovak composers and performers is an **ongoing problem**.
+
+Our analysis—comparing an extensive collection of Slovak sound recordings, their ISRC codes, registrant domains, and the `KULT 19-01` survey data—shows **minimal overlap** between these datasets.
+
+To address this, **Open Music Registers** proposes a strategic solution:
+
+-   **Identify all sound recordings** associated with every known Slovak musical work.
+
+-   **Reconstruct a missing register** of labels and distributors connected to the Slovak repertoire.
+
+This work is introduced here, but it will be detailed in full in **WP2**.
+
+## Composers
+
+The `Slovak Music Economy Register` includes composers based on two complementary criteria: their _cultural-historical significance_ and their _economic activity_. Our aim is to capture not only the heritage of Slovak musical creation but also the contemporary economic realities of active composers.
+
+First, we include in our SKCMDb database _every composer who was born within the modern territory of the Slovak Republic_ and worked here for a significant period. This anchors the register in a culturally grounded definition of Slovak music authorship. This is an important dataset for our musical work and sound recording register, but it is not directly useful for the measuring the economic activities of Slovak authors; many of these authors had long deceased and even their heirs do not receive royalties. Or some of them have left the country and they receive royalties abroad.
+
+For the purposes of economic measurement, we include _every composer who received royalties in the previous calendar year_. This dynamic group—what we call the "active composers"—reflects the living, economically significant body of creators currently generating musical works and revenues.
+
+One of the most authoritative sources for identifying active composers is the membership register of the Slovak collective management organisation **SOZA**. This register includes all living composers who have registered at least one musical work in Slovakia and received rights payments for at least one work during the preceding year.
+
+Due to GDPR constraints, we cannot directly incorporate personal-level data from SOZA into the Slovak Music Economy Register. However, we carefully describe the metadata model used, and we rely on **aggregate, anonymised distributions** to guide research designs and sampling strategies.
+
+The SOZA register is particularly valuable for constructing a **survey frame** when studying either the creation of new musical works or the revenues they generate. It captures both:
+
+-   **Composers represented by music publishers**, whose royalties often flow through business entities, and
+
+-   **Self-publishing composers**, whose incomes are collected directly and are not mediated by third-party enterprises.
+
+In previous studies—including the *Feasibility Study on Promoting Slovak Music in Slovakia & Abroad* [@antal_promoting_slovak_2020] and the D1.1 deliverable *European-wide Methodological Assessment* [@antal_et_al_music_economy_2023]—we highlighted the severe difficulty of surveying the *informal economy* in the cultural sector. Many creators operate outside formal business structures, meaning that conventional sampling frames, like business registers, systematically exclude them. This makes the SOZA dataset a uniquely crucial foundation for research, policy development, and rights administration.
+
+To ensure that our survey samples accurately reflect income patterns—not just demographic or occupational characteristics—we employ an *iterative sampling strategy*. New respondents are sampled until the *empirical distribution of self-reported royalties* matches the *anonymised true royalty payout curve* derived from SOZA data. This method, developed in our earlier **CEEMID** and **Open Music Europe** projects, significantly improves the reliability of income distribution analyses within creative labour markets.
+
+By including composers in the Slovak Music Economy Register—even if only at the metadata level—we build a critical bridge between *cultural identity*, *economic activity*, and *legal representation*. This integrated approach strengthens statistical validity and enhances the policy relevance of research on the Slovak music economy.
+
+## Performers
+
+The broader `SKCMDb` extends beyond economic measurement to include cultural and artistic dimensions, supporting both statistical use cases (such as constructing a music satellite account for GDP calculations) and broader research and policy objectives (such as cultural diversity monitoring and repertoire promotion). `SKCMDb` connects datasets from rights management organisations, public archives, statistical offices, and libraries, applying a harmonised metadata model based on standards such as CIDOC-CRM, Dublin Core, and ESCO/NACE classifications.
+
+By combining flexible, decentralised data integration with high standards of semantic interoperability, the Slovak Music Economy Register and `SKCMDb` represent a unique example of a sector-specific "micro data space" for the creative industries — one that is both ready for immediate use and designed for future expansion across Europe.

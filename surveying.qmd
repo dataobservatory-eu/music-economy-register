@@ -1,99 +1,144 @@
 # Surveying {#sec-surveying}
 
-Using our register to administer surveys requires an extension towards GSIM and DDI. This report focuses on identifying the universe (or target population) and coverage (or survey population). These need to be connected to the responses given to questions, which need to be then formed into measured variables. We are ambitious to build an ex-ante and ex-post surveying harmonisation system, but we will present this in a separate paper. We aim to ensure that our surveys target a well-established universe and reach a reasonable and measurable coverage.
+Using our register to support surveys requires integration with two important frameworks: the *Generic Statistical Information Model* (GSIM) and the *Data Documentation Initiative* (DDI). This section focuses on identifying the *universe* (the full target population) and the *coverage* (the portion of the population actually surveyed). These elements must be clearly linked to survey responses, which are then transformed into measurable variables.
 
-The statistical business register is an essential tool for creating survey frames or sample frames, in other words, to organise statistical data collection. In non-technical terms, this register is necessary to decide who should get a data request.
+Our goal is to build a harmonised approach that supports both ex-ante and ex-post survey design. A more complete technical discussion will be presented in a separate report. Here, we concentrate on ensuring that survey designs start from a well-defined universe and achieve measurable coverage.
 
--   For a *sample survey*, the register is used to draw a lottery of those members of the population who will be invited to provide data.
+The **Statistical Business Register (SBR)** is a foundational tool for statistical production [@eurostat_methodological_sbr_2021]. It provides the basis for constructing survey frames—deciding who is included in a data collection effort. SBRs are used to identify target populations for both sample-based and census-style surveys. Our music economy register operates in parallel to these structures, adapted to cultural sector specifics, and remains interoperable with national and European statistical systems.
 
--   In a *census*-type survey, all registered members of the population, for example, all music labels, will receive an invitation to an interview or form.
+Depending on the survey method, the register can support three main approaches:
 
--   In the case of *a register-based survey*, all members of the register, for example, all collective management societies in the territory, will be requested to send data directly from their databases.
+- **Sample surveys**: The register serves as the sampling frame from which a representative subset of the population is randomly selected for questionnaire or interview requests.
+- **Census-style surveys**: Every unit listed in the register—such as all active music publishers or labels—is contacted to supply data. The goal is full population coverage.
+- **Register-based surveys**: Data is not collected through questionnaires but retrieved directly from systems of data holders (e.g., collective management organisations or tax authorities). The register ensures the completeness and traceability of linked data sources.
 
-![Comparison of three types of statistical surveys. Based on A. Wallgren and B. Wallgren: Register-based Statistics---Administrative Data for Statistical Purposes](png/three-types-of-surveys.png){alt="Comparison of three types of statistical surveys. Based on A. Wallgren and B. Wallgren: Register-based Statistics---Administrative Data for Statistical Purposes"}.
+![Comparison of three types of statistical surveys. Based on A. Wallgren and B. Wallgren: Register-based Statistics.](png/three-types-of-surveys.png){fig-align="center"}
 
 ## Extending with GSIM
 
-To make this register usable for surveying, we must make some connections between ex-ante and ex-post survey harmonisation with our data model. In the ex-ante harmonisation task, we need to connect questions on a survey to representations of the question and then the representations to the computational algorithm of the desired output variable, which already leads to retrospective data processing. This requires using some well-defined DDI term in the process of planning the survey. After the fieldwork, some SDMX statistical terms are needed to process the answers from the survey. The DDI representation model class connects the planned processing of the answers with the programmed questionnaire in the fieldwork data collection application.
+To make the register usable for survey-based statistical production, it must be extended in line with the Generic Statistical Information Model (GSIM). In particular, we need to connect the identification of agents and activities to each phase of the survey lifecycle, from question design to data analysis.
 
-GSIM (Generic Statistical Information Model), SDMX (Statistical Data and Metadata eXchange), and DDI (Data Documentation Initiative) are three complementary standards used in official statistics and research data management. Their relationship can be summarized as follows:
+In an *ex-ante* context, this means linking survey questions to structured representations: concepts, variables, classifications, and permissible value domains. This ensures that each question is grounded in the register’s metadata and semantic model.
 
--   [x] `GSIM`: A conceptual framework that provides a standardized way to describe the information needed to produce official statistics. It defines objects, attributes, and relationships to support metadata management [@GSIM_v20_2014].
+In an *ex-post* context, responses must be linked back to these same representations, so that results can be analysed in relation to registered attributes, such as legal status, sector classification, or professional role.
 
--   [x] `SDMX`: A technical standard primarily used for exchanging statistical data and metadata between organizations. It includes data structures, classification systems, and protocols for efficient data sharing. SDMX is supported with a published ontology. See our data model in a different paper.
+This alignment allows us to treat surveys and registers as components of a shared, interoperable statistical infrastructure. It enhances transparency and reusability by ensuring that both inputs (questions) and outputs (variables) are traceable to their conceptual basis and population frame.
 
--   [x] `DDI` A metadata standard focused on survey and research data, covering data collection, management, and archiving [@sdmx_information_model_v3]. It supports metadata documentation throughout the data lifecycle. Only a small part of DDI is supported with a published and evolving ontology, but that is sufficient for our purposes.
+GSIM, SDMX, and DDI are complementary standards that support this interoperability across statistical and research systems:
+
+- *GSIM* provides the conceptual framework for describing information objects used in the production of official statistics, including surveys, registers, and outputs [@GSIM_v20_2025].
+- *SDMX* defines data structures and exchange formats for sharing statistical data and metadata between organisations [@sdmx_information_model_v3].
+- *DDI* offers metadata structures for documenting survey processes—covering concepts, questions, response formats, coding schemes, and derived variables [@ddi_codebook_2020].
+
+Together, these standards enable us to harmonise metadata across systems and ensure semantic consistency from data collection through to analysis.
 
 ### Identifying the subjects
 
-The **Agent** classes relate to the data subjects in the target population. In administrative or enterprise surveys, we can connect the responses with a unique identifier of the **Agent**, if that exists, for example, a company registration code.
+The *Agent* classes in our model correspond to the data subjects within the target population. In administrative or enterprise surveys, we can directly link responses to agents via unique identifiers—such as a company registration number.
 
-In population surveys, we often work with anonymous responses, which requires extensive categorisation. We need the respondents' profiles to generalise their answers (e.g., which respondents were women, men, composers, or technicians). Unless we work with a large, expensive, genuinely random sample or a full-coverage census, we also need these categories to fill in response quotas (and ensure that not only men or composers answer).
+In population-based surveys, responses are often anonymous. In these cases, we rely on well-structured categorical variables to interpret and generalise results. These categories help profile respondents (e.g., gender, role, occupation) and ensure that response quotas are met—for example, to avoid surveys completed only by men or only by composers.
 
-We must create categorical variables for anonymous surveys that put the Agent into a correct Agent category (for example, "Composers"). This problem overlaps with adding roles, economic activities or occupations to the survey data. These relate to the activities in our agent model; persons composing music receive royalties, or their work is visible (audible) on a stage.
+Assigning respondents to groups such as *Composers* or *Performers* relies on these pre-defined categorical variables. This structure corresponds directly to the roles and occupations recorded in the register.
 
-The Agent classes will be sorted into categorical variables used to group or slice the dataset; for example, separate income averages will be calculated for performers, composers, and producers.
+Such groupings allow us to calculate indicators like the average income or number of works composed separately for performers, composers, and producers.
 
-#### Occupational and economic results for music entities
+#### Occupational and economic outcomes
 
-We are often interested in quantifying the results of such activities in terms of natural numbers (number of works composed or registered in the survey time frame) or royalties received after already existing compositions in a time frame. Royalties received in 2025 can only relate to compositions registered in 2024 or before.
+Often, we aim to measure the outcomes of creative and economic activities as numerical variables—for example, the number of works composed during the reference period, or the royalties received.
 
-The variable representation model here is usually some form of simple numeric representation with an unambiguous unit of measure; for example, in Slovakia, composers give answers about income in euros, while in Hungary, they answer in Hungarian forints. The numerical representation must code unambiguously logically missing values (the subject was filtered out and could not answer), declined answers (the subject knows the answer but is unwilling to share it) and unknown answers (subjects claiming that they cannot answer the question.) The different units of measure and the different categories of missing answers will be processed ex-ante the survey, but they must be well designed beforehand.
+Temporal logic is important: royalties reported in, say, 2025 typically relate to works composed or registered earlier.
+
+To ensure reliable measurement, numerical variables must be paired with well-defined units of measure (such as euros or forints) and logically coded missing value types:
+
+- *Filtered*: the respondent was not asked the question.
+- *Declined*: the respondent refused to answer.
+- *Unknown*: the respondent did not know the answer.
+
+These codes must be designed *ex-ante* and consistently applied in the data model.
 
 #### Ex-post processing
 
-The ex post-processing is reasonably simple if the ex ante variable representation is well-designed. Numerical variables go through well-established algorithms to report their median, average or somehow weighted average values; missing values are counted as categories in each missingness group (filtered, unknown and declined.) Population groups are used to group the calculation and later slice the resulting multi-dimensional output table. For example, if the grouping relates to the respondent replying from Slovakia or Hungary, these categories are added to the unprocessed microdata; separate mean and median values are reported for the two groups, and they are added to a single data table (called "datacube" in SDMX) where Slovak and Hungarian results can be subsetted (or "sliced" in the SDMX statistical language.)
+When variables and categories are well-defined *ex-ante*, *ex-post* processing becomes straightforward.
+
+Numerical variables can be aggregated using standard statistical measures (e.g., mean, median, weighted mean), while missing value categories are preserved and counted separately.
+
+Groupings such as respondent country can support stratified analysis. For example, we can calculate separate income estimates for Slovakia and Hungary, and place them into an SDMX-compliant data cube, where each dimension (role, geography, year) can be subsetted or sliced for detailed analysis.
+
 
 ## Surveying the music economy
 
-In @sec-t12 we already extended our conceptual model with two important DDI concepts: the **Universe** and **Coverage**.
+As described in Appendix A, our register is built around *agents*—human or corporate—whose activities are recorded for economic, cultural, or statistical purposes. For survey purposes, we extend this model with two key concepts from the Data Documentation Initiative (DDI): the *universe* (the target population) and *coverage* (the actual surveyed population).
 
-### Open Music Europe WP1 Music Economy
+### Open Music Europe WP1: Music Economy
 
-These are the Task 1.2 and related tasks to collect better and more comprehensive data about the Slovak, Hungarian and Polish music economies.
+In Task 1.2 and related activities, we aimed to collect more complete data about the Slovak, Hungarian, and Polish music economies. In this context, we are interested in surveying economic activity—what music business actors do, earn, and contribute.
 
-In this case, we want to survey what music business actors do. By music business actors, we mean people, groups of people in a corporate body, potentially incorporating legal persons having an agency in some economic activities, particularly receiving a net turnover from royalties, live performances or other activities; employing people; and creating gross value added after deducting their costs. Their gross value added is a component of their regional or national GDP.
+We define *music business actors* as individuals, groups, or legal entities engaged in economically meaningful activities: earning royalties, employing others, or generating gross value added. This gross value added contributes to regional or national GDP.
 
-Agents engage in economic activities or economic processes whose results are our primary interests. They organise concerts and festivals and sell tickets, hoping for a net turnover and high enough value added to remain economically sustainable. They release sound recordings for commercial use via the sale of mechanical copies and their use in licensed public performances. They also license musical works to create sound recordings, stage theatrical works, or synchronise music with feature, documentary, or advertising films.
+These actors organise performances, sell tickets, release recordings, and license music for various uses such as recordings, film, or theatre. Their activities are classified according to:
 
-Corporate body agents' economic activities are usually described with an ISIC/NACE classification and human agents' activities with ISCO/ESCO. Sole proprietors, who are frequent agents in music, have an ISCO/ESCO classification that they may not be aware of and an extended 5-digit NACE code, which connects the economic occupation of a sole proprietor to the NACE system. Unfortunately, the 5-digit extension is not harmonised on the EU level.
+- NACE/ISIC codes for corporate bodies (in the United States and United Kingdom: SIC), and
+- ISCO/ESCO codes for individual occupations (in the United Kingdom: SOC).
 
-#### Performing arts agents
+Sole proprietors are a key category in music. They often have national-level five-digit NACE codes (beyond the harmonised four-digit level), reflecting their specific business activities, although these are not harmonised EU-wide. They may also be assigned ISCO/ESCO occupation codes—even if they are unaware of these classifications themselves.
 
-On the performing side, the main actor or **agent** class is an individual in a role of a `musician` or its narrower `instrumentalist` or `vocalist`role; the corporate body of the `music group`. Music groups have different sizes and compositions in each genre, they are often called a a band, a (symphony) orchestra, an ensemble, a duo, a trio, or a choir in the case of strictly vocal music[^surveying-1].
+### Performing arts agents
 
-[^surveying-1]: For data modelling purposes, a solo performer can be seen as a group of one, even though we would perhaps not call them a group.
+On the performance side, the primary agents are:
 
-Some orchestras with stable membership have a related entity, a formal business incorporated as a form of partnership or a limited liability company. It is also customary that public broadcasting organisations, opera houses and music theatres maintain orchestras, therefore connecting the orchestra to a registered, usually public institution. And in popular music, the musical group often forms an informal enterprise, without running their performance fees and expenses through a formal accounting system.
+- Individuals in roles such as musician, instrumentalist, or vocalist
+- Corporate bodies such as music groups (bands, orchestras, ensembles, duos, trios, choirs)
 
-Mapping these performing agents to companies is possible but requires work; currently, we aim to register the corporate body of the musical group, with the possibility of linking a business entity to the corporate body. For example, on streaming services, it is always the musical group that is observable, not the limited company of the group members.
+These groups take diverse organisational forms. Some orchestras are formally incorporated as partnerships or limited liability companies. Others are embedded within public institutions, such as broadcasters or theatres. Many popular music groups function informally, without a registered legal entity.
 
-#### Music publishing and sound recording agents
+While linking performing groups to business entities is possible, our register focuses on capturing the *corporate body* identity of the music group, irrespective of its legal form. On public platforms such as streaming services, the group name is usually the observable identity, not the underlying business registration.
 
-The agents on the recording side of the music business are licensing the work of composers (musical works) and lyricists (that may be literary works) for the recording of their performances (sound recordings), which may be sold in mechanical copies, used in public performance or music streaming, or can be bundled with theatrical staged performances or various feature, documentary or advertising film.
+### Music publishing and sound recording agents
 
-The corporate bodies dealing with these activities are the music publishers and the record labels, who are helped by distributors.
+On the recording side, agents include those who:
 
-On the recorded music side, music publishing is easier to register because the agents are almost always incorporated enterprises. The Collective Rights Management Directive [@directive_2014_26] ensures that those agents that use collective management to receive their royalties should be made public. Regarding author's rights management, publishers are almost always legal persons, and we can add them to our public register without a problem. However, labels are less well-defined; they are usually corporate bodies operating within all kinds of business entities. Only larger recording labels have a primary or exclusive economic activity in releasing sound recordings as a main economic activity.
+- License works for sound recording
+- Produce and distribute recordings commercially
+- Facilitate public performance or synchronisation with audiovisual content
 
-For labels, there is a publicly observable register of labels that is large enough to reserve a range of identifiers for commercial releases in a national IFPI register. This registrar, which is similar to book registration (and music sheet registration, which grew out of book registration), allows larger labels to assign an ISRC code to their sound recording releases for commercial purposes. Sub-publishing and sub-labelling are commonplace in the music industry, but they are better handled by publishing; many small labels do not register their commercial sound recordings via a larger label enterprise but directly via a distributor. Some distributors, like TuneCore, have a right to manage recording registration at par with countries (it has a top-level International Standard Recording Code (ISRC) domain), and other distributors may have the right to register sound recording releases in their range. So, the registrant identifier in the ISRC code of a sound recording does not necessarily connect to a sound recording label.[@iso_isrc_2019]
+These agents include music publishers, record labels, and distributors.
+
+Music publishers are relatively easy to register, as they are usually incorporated legal persons. Under the *Collective Rights Management Directive* [@eu_directive_2014_26], their identities must be made public if they rely on collective management. This allows direct inclusion in the register.
+
+Record labels, by contrast, are more loosely defined. While many are legal entities, some operate informally or as subsidiaries within larger businesses. Only large, formalised labels typically have music publishing or releasing as their primary NACE-classified activity.
+
+The national IFPI register provides a partially public resource: it reserves ISRC registrant identifiers for commercial releases. These identifiers operate similarly to ISBNs for books, enabling tracking of commercial recordings. However, ISRC registrants are not always labels:
+
+- Sub-publishing and sub-labelling are common
+- Small labels may release recordings via external distributors
+- Global distributors (such as TuneCore) often act as direct ISRC registrants [@iso_isrc_2019]
+
+This complexity means that while ISRC codes help trace sound recordings, they do not always resolve cleanly to a label or economic agent. Our register accommodates this by recording the observable entity—such as the name under which a recording is released—and linking it, where possible, to a business or legal identity.
 
 ## Surveying music diversity
 
-### Open Music Europe WP2 Music Economy
+### Open Music Europe WP2: Music Diversity
 
-These are the Task 2.2 and T23. to collect better and more comprehensive data about the Slovak, Hungarian and Polish music diversity.
+Tasks `T2.2` and `T2.3` of the *Open Music Europe* project focus on developing better tools to measure music diversity in Slovakia, Hungary, and Poland.
 
-Surveying music for diversity relates to various aspects of diversity. It may relate to the diversity of music performers or creators. For example, the KeyChange initiative wants to ensure a higher and measurable presence for women and gender minority performers on stages. Many concert halls and funding agencies want to ensure a higher visibility for women composers. The visibility of the culture of ethnic minorities is also an important cultural and diversity policy goal.
+*Diversity in music* can refer to several dimensions: the identity of creators and performers, the musical works themselves, or how works are programmed and distributed. Initiatives such as KeyChange seek measurable gender balance on stages, while funding bodies increasingly promote the visibility of women composers and ethnic minority cultures.
 
-Another important aspect of diversity is access to diverse musical programming, in which case we measure the diversity of musical works and their recorded manifestations that are used in public performance or even education. Various local content regulations mandate radios, televisions or other user agents to use a pre-defined minimum percentage of locally produced music or music produced by young people, women, etc. Often, there are genre-based music diversity goals present.
+Another dimension of diversity is access to a broad repertoire, monitored through tools such as broadcast quotas or public performance regulations. These often include requirements for minimum percentages of local music, youth-created content, or works by women and underrepresented groups. Some diversity objectives are also genre-specific.
 
-Measuring diversity requires a very complex register because the diversity of recorded music is almost always connected to the diversity of its creators. Slovak music in the local content regulation is defined as music with Slovak-language lyrics (which is a property of the musical work and its recorded manifestation, the recording) or by the residence or seat of the agent (it was written or performed by people in Slovakia; it was released by a Slovak label.) Local content regulations in Europe that want to provide visibility for ethnic minorities, young artists or women also connect the properties of an agent (the composer or the performer) to a musical work or its recorded fixation.
+Capturing this range of diversity requires a register that connects people to works, and works to their manifestations. For example, Slovak local content regulations define "Slovak music" by linking Slovak-language lyrics or performer/composer residence to a work or recording. Other rules, such as French or Hungarian radio quotas, similarly link agent properties—such as age, gender, or ethnicity—to musical outputs.
 
-In either case, our registration needs overlap but far exceed the economic measurements. For corporate bodies such as musical groups, we may need the exact membership and gender, age, or ethnicity properties of the group; we are talking here about exceptionally sensitive data under GDPR. Access to such data is a prerequisite to monitoring KeyChange objectives with the percentage of non-male authors on stage or fulfilling French, Hungarian, and Slovak radio quota regulations.
+These requirements overlap with economic measurement but also introduce greater complexity. For corporate bodies such as music groups, diversity analysis may require details on group composition (e.g., gender, age, ethnicity)—categories considered sensitive personal data under GDPR. Capturing such data is essential for monitoring benchmarks like [KeyChange](https://www.keychange.eu/) but must be managed with strong safeguards.
 
 ### Registration of musical entities
 
-In this case, our data model requires a new Entity class type. This music entity superclass contains the **Musical work**, its **Sound recording** (recorded fixation of a performance) and its **Live performance** (a non-rehearsal performance meant for the public.) The musical work also has a print manifestation. Often, the music accompanies a Literary work, for example, a poem is arranged to be performed with music.
+To support this kind of measurement, our data model introduces a distinct class of *musical entities*, including:
 
-**Musical works**, **Lyrics**, **Sound Recordings**, and **Print music** have different, usually non-public, registers. Access to such registers requires a very complex balancing of developing new business for music, increasing measurable diversity (or avoiding "pinkwashing", where for example, unsubstantiated claims are made for equal stage/broadcasting access for women or minorities), and the business interests of those organisations who have invested into the registers and use the registration process for rights management. The well-known conflict of interest among authors', producers' and performers' remuneration, for example, makes the connection of such registers complex even within the music industry, not to mention its opening up for diversity measurement and reporting purposes.
+- *Musical works*
+- *Sound recordings* (fixations of performances)
+- *Live performances* (public-facing, non-rehearsal events)
+- *Print music* (sheet music, scores)
+- *Lyrics* (often literary works linked to compositions)
+
+These entities are currently spread across fragmented, often non-public registers maintained by various rights organisations. Connecting them requires careful negotiation between transparency and proprietary control. In many cases, registration is tied to commercial incentives—such as rights management and royalty tracking—which creates tensions when such data is reused for policy evaluation or diversity monitoring.
+
+For example, linking performer demographics to a sound recording may reveal important insights about representation on streaming platforms, but it also raises questions about data access, consent, and equitable visibility. Navigating this space requires both legal interoperability and a trust framework between data holders.

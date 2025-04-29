@@ -55,14 +55,15 @@ book:
     - index.qmd
     - glossary.qmd
     - ambition.qmd
-    - t12.qmd
+    - working.qmd
     - surveying.qmd
     - references.qmd
   appendices: 
+    - t12.qmd
     - appendix-how_to_use.qmd
 #    - appendix-register.qmd
 
-version: 0.1.5
+version: 0.2.0
 
 bibliography: 
     - bib/administrativedata.bib
@@ -73,6 +74,7 @@ bibliography:
     - bib/datamodels.bib
     - bib/dataspace.bib
     - bib/ddi.bib
+    - bib/ddex.bib
     - bib/eulaw.bib
     - bib/identifiers.bib
     - bib/ILO.bib
@@ -85,6 +87,7 @@ bibliography:
     - bib/OpenMusE.bib
     - bib/ontologies.bib
     - bib/privatelyhelddata.bib
+    - bib/registers.bib
     - bib/wikidata.bib
     - bib/esco_nace.bib
     - bib/eosc.bib
