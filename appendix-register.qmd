@@ -1,0 +1,110 @@
+# Appendix: Registered organisations {#sec-registered .unnnumbered}
+
+```{r printpropertytable, echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+logtable <- readxl::read_excel(
+  here::here("data-raw", "skcmdb_jekyll_log_grouped.xlsx")
+) %>%
+  mutate ( description = ifelse(group=="music publisher", 
+                                "music publishing organisation in Slovakia", 
+                                description)) %>%
+  mutate(group = forcats::fct_relevel(
+    group,
+    "data model properties" )) %>%
+  arrange(group) %>%
+  mutate(url = ifelse(
+    test = grepl("wbi:P", id_on_target),
+    yes = gsub("wbi:P", "https://reprexbase.eu/jekyll/index.php?title=Property:P", id_on_target),
+    no = ""
+  )) %>%
+  mutate(url = ifelse(
+    test = grepl("wbi:Q", id_on_target),
+    yes = gsub("wbi:Q", "https://reprexbase.eu/jekyll/index.php?title=Item:Q", id_on_target),
+    no = url
+  )) %>%
+  distinct(label, id_on_target, .keep_all = TRUE)
+
+if (is_html_output()) {
+  # For the HTML/EPUB version, add the links to the individual
+  # items on the instance.
+  logtable$id_on_target <- vapply(
+    seq_along(logtable$url),
+    function(x) {
+      cell_spec(logtable$id_on_target[x],
+        format = "html",
+        link = logtable$url[x]
+      )
+    },
+    character(1)
+  )
+}
+
+if (is_latex_output()) {
+  # For the LaTeX/PDF version, add the links to the individual
+  # items on the instance, and change the $ sign to
+  # \textdollar for LaTeX/PDF output because $ is a
+  # formatting character in LaTeX.
+  logtable <- logtable %>%
+    mutate(description = gsub(
+      "[:$:]",
+      "\textdollar",
+      description
+    )) %>%
+    mutate(description = gsub(
+      "[:&:]",
+      "\textampersand",
+      description
+    )) %>%
+    mutate(label = gsub(
+      "[:&:]",
+      "\textampersand",
+      label
+    )) %>%
+    mutate(id_on_target = paste0("\\href{", url, "}{", id_on_target, "}"))
+}
+
+print_property_table <- function(logtable, property_group) {
+  if (!property_group %in% logtable$group) {
+    stop("No such group in the logtable.")
+  }
+
+  this_table <- logtable %>%
+    select(group,
+      ID = id_on_target,
+      label, description, datatype
+    ) %>%
+    filter(group == property_group) %>%
+    select(-group)
+
+  this_table |>
+    kbl(
+      booktabs = T,
+      linesep = "",
+      escape = F, longtable = TRUE,
+      align = c("l", "l", "l", "l")
+    ) |>
+    kable_paper(full_width = F) |>
+    column_spec(1, width = "1.7cm") |>
+    column_spec(2, width = "3cm") |>
+    column_spec(3, width = "7.5cm") |>
+    column_spec(4, width = "1.7cm") |>
+    kable_styling(
+      font_size = 10,
+      bootstrap_options = c("striped", "hover", "condensed"),
+      latex_options = c("repeat_header"),
+      fixed_thead = TRUE,
+    ) %>%
+    pack_rows(
+      group_label = property_group,
+      start_row = 1,
+      end_row = nrow(this_table)
+    )
+}
+```
+
+```{r musicpublishers, echo=FALSE, results='asis'}
+print_property_table(logtable, "music publisher")
+```
+

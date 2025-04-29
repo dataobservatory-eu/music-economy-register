@@ -1,4 +1,4 @@
-# Appendix: SKCMDb Share Register {.unnnumbered}
+# SKCMDb Shared Register {#sec-skcmdb .unnnumbered}
 
 ## SKCMDb music publishers {#sec-appendix-music-publishers .unnnumbered}
 
@@ -7,7 +7,7 @@ The [music publishers in Slovakia](https://reprexbase.eu/demo/index.php?title=It
 Data collected about them:
 
 |  |  |
-|----|----|
+|------------------------------------|------------------------------------|
 | type of the business entity | e.g. v.o.s. - verejná obchodná spoločnosť a.k.a. public trading company |
 | Slovak Registration ID | identifier for an organization in Slovakia assigned by the Statistical Office of the Slovak Republic |
 | OpenCorporates ID | identifier for a corporation, in the OpenCorporates database |
@@ -17,13 +17,86 @@ Data collected about them:
 A short description of how we identified the music labels, where we placed them, and how this register can be used.
 
 |  |  |
-|----|----|
+|------------------------------------|------------------------------------|
 | type of the entity | here: record label |
 | official webpage | URL of the website |
 | Wikidata QID | identifier on Wikidata |
 | MusicBrainz label ID | identifier for a label in the MusicBrainz open music encyclopedia |
 
 : Data collected about music publishers {tbl-colwidths="\[25,75\]"}
+
+The following query returns of *music publishing organisations*, including those that are belonging to the subclass of music publishing corporations. (Not all music publishers are registered companies.)
+
+```{r eval=FALSE, echo=TRUE}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX wd: <https://reprexbase.eu/entity/>
+PREFIX wdt: <https://reprexbase.eu/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?item ?itemLabel
+WHERE {
+  # Find the base class
+  ?baseClass rdfs:label "music publishing organisation"@en .
+
+  # Now find items that are instances of either:
+  {
+    # Instance of the base class
+    ?item wdt:P5 ?baseClass .
+  }
+  UNION
+  {
+    # Or instance of a subclass of the base class
+    ?subClass wdt:P6 ?baseClass .
+    ?item wdt:P5 ?subClass .
+  }
+
+  OPTIONAL { ?item rdfs:label ?itemLabel . FILTER (lang(?itemLabel) = "en") }
+}
+LIMIT 100
+
+```
+
+To receive the data of a particular music publisher in the register:
+
+```{r eval=FALSE, echo=TRUE}
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?item
+WHERE {
+  ?item rdfs:label "A-Tempo Verlag s.r.o. Slovakia"@en .
+}
+```
+
+```{r eval=FALSE, echo=TRUE}
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?item
+WHERE {
+  ?item rdfs:label "A-Tempo Verlag s.r.o. Slovakia"@en .
+}
+```
+
+You can retrieve the results as a HTML, CSV, TSV table, XML or JSON file. 
+
+```{r xmlexample, eval=FALSE, echo=TRUE}
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="item"/>
+  </head>
+  <results>
+    <result>
+      <binding name="item">
+        <uri>https://reprexbase.eu/entity/Q76</uri>
+      </binding>
+    </result>
+  </results>
+</sparql>
+```
+
+
 
 ## SKCMDb musicians in author, performer, producer roles
 
@@ -32,7 +105,7 @@ A short description of how we identified the musicians, where we placed them, an
 Data collected about the persons; the ones with an asterisk are are confidential information:
 
 |  |  |
-|----|----|
+|------------------------------------|------------------------------------|
 | full name |  |
 | aliases | artistic name etc. |
 | given name(s) | a name chosen for a person at birth that identifies and differentiates that person from others in the same family. Depending on the culture a person is born into, the given name can precede or follow a surname (i.e. family name). A given name may also be known as a forename, first name, or personal name. |
@@ -62,7 +135,7 @@ A short description of how we started the identification of the music groups, wh
 Data collected about the musical groups:
 
 |  |  |
-|----|----|
+|------------------------------------|------------------------------------|
 | name of music group | official name of the musical group |
 | work location | location where the musical group is seated (if known) |
 | official webpage | official website of the musical group |
@@ -73,3 +146,36 @@ Data collected about the musical groups:
 | musical group IDs | VIAF, ISNI, Spotify artist ID |
 
 : Data collected about musical groups {tbl-colwidths="\[25,75\]"}
+
+## WP1: Musical works
+
+![The [Slovak Comprehensive Music Database](https://reprexbase.eu/skcmdb/index.php) contains data of musical works, which may have printed sheet or sound recording manifestations. We only publish a few ISWC identifiers as examples, otherwise we identify works with the SKCMDb QID. The QID of *Zvonky, zvoňte* is [Q276](https://reprexbase.eu/skcmdb/index.php?title=Item:Q276),](png/skcmdb/skcmdb_Q276_2x1.png){fig-align="center"}
+
+We identify works according to the needs of the Slovak Music Centre and SOZA, with prioritising data conforming the ISWC and ISMN standards [@iso_iswc_2022, @iso_ismn_2021].
+
+## WP2: Sound recordings
+
+![Sound recordings are manifestations of muiscal works, and popular compositions liek *Zvonky, zvoňte* have many manifestations, for example [Q275](https://reprexbase.eu/skcmdb/index.php?title=Item:Q275) and [Q276](https://reprexbase.eu/skcmdb/index.php?title=Item:Q277).](png/skcmdb/Q275_2x1.png){fig-align="center"}
+
+We prioritise the collection of metadata as needed for the UNLABEL exploitation pathway in WP5, which helps self-releasing musicians and non-commercial releasers, like music archives, to release music on commercial platforms. For this purpose, we prioritise the collection and presentation of metadata according to the ISRC standard and handbook, and certain elements of DDEX standards that help the transfer of existing catalogues and the release of recordings [@iso_isrc_2019; @ifpi_isrc_handbook_2021; @ddex_ern_2023; @ddex_cataloguetransfer_2023].
+
+The following code provides API access to our metadata in JSON, XML, CSV or TSV files. 
+
+```{r, eval=FALSE, echo=TRUE}
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX wd: <https://reprexbase.eu/entity/>
+PREFIX wdt: <https://reprexbase.eu/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?item ?itemLabel
+WHERE {
+  # Find the class entity by label (e.g., "sound recording")
+  ?class rdfs:label "sound recording"@en .
+
+  # Find all items that are instance of that class
+  ?item wdt:P5 ?class .  # P5 = instance of (adjust this if different in your setup)
+
+  OPTIONAL { ?item rdfs:label ?itemLabel . FILTER (lang(?itemLabel) = "en") }
+}
+LIMIT 100
+```

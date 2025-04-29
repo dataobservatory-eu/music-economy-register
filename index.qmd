@@ -13,7 +13,7 @@ This document has been prepared by OpenMusE project partners as an account of wo
 
 Any dissemination of results must indicate that it reflects only the author’s view and that the Commission Agency is not responsible for any use that may be made of the information it contains.
 
-**This is a living document which provides an overview of `D1.2`, which is a linked open data database supported by applications.**
+**This is a living document which provides an overview of `D1.2`, which is a linked open data database supported by applications. As a living document conforming to OPA, it can be found at <https://github.com/dataobservatory-eu/music-economy-register> with standardised folders and file names. Its current version can be read in multiple formats [here](https://music.dataobservatory.eu/documents/open_music_europe/music-economy-register/).**
 
 :::
 
