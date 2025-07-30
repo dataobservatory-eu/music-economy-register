@@ -1,18 +1,40 @@
 # Glossary {#glossary .unnumbered}
 
-## Registers and their records
+## Collections, Registers
+
+`authority file`: 
 
 `register`: A [register](#glossary) aims to be a complete list of the objects in a specific group of objects or population." [@anders_register-based_2007]; is a dataset or database that systematically maintains and updates information on a specific set of entities (e.g., individuals, organisations, or events), often with legal or statistical purpose. In statistics, a register supports repeated data use, continuous updates, and serves as a basis for survey frames. [@eurostat_methodological_sbr_2021]
 
-## Standards & authority services
+`collection`: 
+
+## Activities:
+
+`curation`:
+
+`registration`:
+
+`collection`:
+
+`data collection`: 
+
+`serialisation`: 
+
+## Standards & Authority Services
+
+`CISAC`: [CISAC and ISWC]
 
 `IČO`: The organisation identification number (IČO) is an identifier assigned to all types of legal entities, entrepreneurs and public authorities by the Statistical Office of the Slovak Republic. The Czech Republic's organisation identifier is also called IČO.
+
+`ISRC`: [IFPI and ISRC]
 
 `ISNI`: an ISO certified global standard number for identifying the millions of contributors to creative works and those active in their distribution.
 
 `OpenCorporates`: a public corporation database which sources data from national business registries.
 
 `VIAF`: The Virtual International Authority File (VIAF) is an international service that consolidates multiple name authority files into a single database. Their primary goal is to enhance the efficiency and usability of library authority files by linking and merging widely used authority records and making them accessible online.
+
+
 
 ## Statistical terms
 
@@ -46,7 +68,7 @@ The **Statistical Business Register** (SBR) is a foundational tool for statistic
 
 `knowledge graph`: a knowledge representation that uses a graph-structured data model to represent and operate on data.
 
-`persistent identifier (PID)`: unique identifier that ensures permanent access for a digital object by providing access to it independently of its physical location or current ownership. \[SOURCE: ISO 24619:2011, definition 3.2.4\] [@iso_5127_2017]
+`persistent identifier (PID)`: unique identifier that ensures permanent access for a digital object by providing access to it independently of its physical location or current ownership. \[SOURCE: ISO 24619:2011, definition 3.2.4\] [@iso_5127_2017]
 
 `structured data`: data which are organized based on a pre-defined (applicable) set of rules\
 Note: The predefined set of rules governing the basis on which the data is structured needs to be clearly stated and made known. \[[@iso_20546_2019]\]
@@ -58,6 +80,12 @@ Note: The predefined set of rules governing the basis on which the data is struc
 `Hudobné Centrum`: Music Centre Slovakia is a music organisation with a mission to promote Slovak contemporaly music.
 
 `CISAC`: the International Confederation of Societies of Authors and Composers is the world’s leading network of authors’ societies. It protects the rights and promotes the interests of creators worldwide.
+
+`IFPI`:
+
+`IAML`:
+
+`IAMIC`:
 
 ## Data name abbreviations
 
@@ -85,8 +113,11 @@ Note: The predefined set of rules governing the basis on which the data is struc
 
 `PROV-O`: Provenance ontology [@prov-o_2013]
 
-## Other abbreviations
+## Data Infrastructure
 
 `ECCCH`: European Collaborative Cloud for Cultural Heritage. The ECCCH is a European Union initiative to create a shared digital infrastructure that connects cultural heritage institutions and professionals across the EU. It will provide specific digital collaboration tools for the sector while removing barriers for smaller and more remote institutions. (See the Commission Recommendation (EU) 2021/1970 of 10 November 2021 on a common European data space for cultural heritage [-@commission_recommendation_2021_1970] for details.)
 
 `EOSC`: The European Open Science Cloud is an environment for hosting and processing research data to support EU science.[@eosc_2023]
+
+
+`Europeana`:
