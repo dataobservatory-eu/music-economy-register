@@ -4,11 +4,17 @@ When someone registers a new person or entity in a system, they are identifying 
 
 Our vision is a **shared registration process**: a unified platform where an artist can fill out a single form to submit the necessary data and documents, grant GDPR-compliant consent, and manage their information over time. Through this interface, they could register and maintain data for multiple purposes — including rights management, public funding, and broader visibility through open knowledge platforms.
 
-This shared process would support data needs across: - collecting societies - cultural ministries - national statistical institutes - international databases like Wikidata or MusicBrainz - streaming and discovery services
+This shared process would support data needs across:
+
+- collecting societies\
+- cultural ministries\
+- national statistical institutes\
+- international databases like Wikidata or MusicBrainz\
+- streaming and discovery services
 
 The artist remains the source of truth. With proper consent and traceability, each registration contributes to a connected ecosystem.
 
-![The composer Iris Szeghy was one of the first persons who allowed her data to be used in our shared register. With her example we show how the coordination or registration processes can lead to better music services for music users and researchers. See [our presentation](https://reprex.nl/event/2024-11-21_iamic/) for the International Association of Music Information Centers.](png/skcmdb/iris_szeghy_identity.png){fig-align="center"}
+![The composer Iris Szeghy was one of the first persons who allowed her data to be used in our shared register. With her example we show how the coordination or registration processes can lead to better music services for music users and researchers. See [our presentation](https://reprex.nl/event/2024-11-21_iamic/) for the International Association of Music Information Centers. The graph represents connections between data nodes (e.g. database tables or fields) mediated by the Open Music Observatory. Solid lines indicate bidirectional or mutually maintained data exchange between systems (e.g. where both sides can update and synchronise information). Dotted lines indicate unidirectional or restricted data flows (e.g. platform-specific access such as streaming data provided by services like Spotify or Deezer without reciprocal data integration).](png/skcmdb/iris_szeghy_identity.png){fig-align="center"}
 
 This illustrates how a harmonised registration process can support both cultural recognition and reuse.
 
@@ -28,6 +34,8 @@ This ambition builds on earlier research and practical experience, which we summ
 
 The `Open Music Registers` initiative is grounded in a pragmatic approach to managing the balance between identification and attribution of entities within the music economy. We recognize that both processes are essential but costly and potentially error-prone. Therefore, our strategy is to minimize duplication, maximize reuse, and support reliable identification processes wherever feasible.
 
+Open Music Registers **do not constitute a centralised registry**. The approach is based on interoperability between existing registers within a federated data environment. This distinction is essential to avoid misinterpretation of the proposed architecture as a form of centralised data integration.
+
 Identification refers to recognizing and linking entities—such as musical works, rightsholders, and recordings—to existing, trustworthy identifiers. Where reliable identification services are in place (e.g., ISNI for persons, VIAF for authority control, ISWC for musical works managed locally by SOZA), we prioritize integration and reuse. We aim to support identification efforts, for example, by assisting SOZA in reducing the costs of work identification and helping the Slovak National Library verify manifestations through structured metadata contributions.
 
 Attribution involves actively assigning identifiers, typically when no existing trusted identifier is available. When necessary, the `Open Music Registers` facilitate attribution processes, but always with care to follow international best practices and to avoid unnecessary parallel identification efforts.
@@ -38,10 +46,10 @@ This complexity contributes to systemic problems in royalty distribution, rights
 
 The `Open Music Registers` project is designed to break this cycle by:
 
--   Trusting and reusing validated attribution results from authoritative registrars.
--   Undertaking new identification only when necessary and justified.
--   Avoiding duplication and parallel registration processes.
--   Lowering the burden on artists and registrars alike through interoperability and shared infrastructure.
+- Trusting and reusing validated attribution results from authoritative registrars.
+- Undertaking new identification only when necessary and justified.
+- Avoiding duplication and parallel registration processes.
+- Lowering the burden on artists and registrars alike through interoperability and shared infrastructure.
 
 By strategically balancing identification and attribution, and by building efficient, scalable metadata solutions, we aim to ensure that music assets can be properly valued, fairly remunerated, and sustainably managed—even when the economic value per asset is modest.
 
@@ -65,21 +73,21 @@ However, in many industries, particularly cultural and creative ones, official r
 
 In contrast, private organisations often maintain richer, more detailed internal registers for their operations. These might include::
 
--   *Membership lists* maintained by professional associations or unions, such as those representing music publishing entities or record labels. For example, we created a Slovak register of music publishers; under the collective management directive[@eu_directive_2014_26], such registers must be made public, even if not well-structured.
+- *Membership lists* maintained by professional associations or unions, such as those representing music publishing entities or record labels. For example, we created a Slovak register of music publishers; under the collective management directive[@eu_directive_2014_26], such registers must be made public, even if not well-structured.
 
--   *Client databases* used by CMOs or licensing agencies, detailing entities like restaurants that play music. While these databases are proprietary, public business registers or local registers of licensed venues (e.g., restaurants, music clubs requiring local permission due to noise and traffic considerations) can help create connected music user registers.
+- *Client databases* used by CMOs or licensing agencies, detailing entities like restaurants that play music. While these databases are proprietary, public business registers or local registers of licensed venues (e.g., restaurants, music clubs requiring local permission due to noise and traffic considerations) can help create connected music user registers.
 
--   *CRMs* (Customer Relationship Management systems) used by businesses for managing partners and contractors.
+- *CRMs* (Customer Relationship Management systems) used by businesses for managing partners and contractors.
 
 While these private registers are typically well-aligned with operational needs, they are not harmonised with national statistical systems—meaning identifiers (e.g., tax IDs, sector codes, geographic location data) may not match, formats vary, and there’s no common protocol for data structure or update frequency.
 
 **Harmonisation**, in this context, does not mean full integration but rather the voluntary alignment of **key reference variables** and **metadata**:
 
--   Using public identifiers (e.g., business registry numbers),
+- Using public identifiers (e.g., business registry numbers),
 
--   Mapping internal categories to standard classifications like NACE or ISIC,
+- Mapping internal categories to standard classifications like NACE or ISIC,
 
--   Agreeing on common reference periods and geographical codes.
+- Agreeing on common reference periods and geographical codes.
 
 With minimal effort, private actors can enhance the *statistical usability* of their data while still serving their internal purposes. This opens the door for *interoperability*, *cross-validation*, and more efficient data sharing—all without relinquishing control over proprietary data. We will illustrate these efforts in the next section of this document.
 
@@ -117,11 +125,11 @@ In official SBRs, the statistical office typically has legal authority to impose
 
 In contrast, a data sharing space like `Open Music Registers` cannot rely on hierarchical authority. Instead, we operate under the voluntary, consensus-based model typical of data spaces:
 
--   Metadata semantics (the definitions of terms and structures) are pre-agreed among participants.
+- Metadata semantics (the definitions of terms and structures) are pre-agreed among participants.
 
--   Actual data exchange happens only on an as-needed, as-permitted basis, respecting data licences, contractual rights, and privacy regulations.
+- Actual data exchange happens only on an as-needed, as-permitted basis, respecting data licences, contractual rights, and privacy regulations.
 
--   Differences in workflows and purposes — for example between a rights management organisation and a national library — must be reconciled collaboratively through decentralised negotiation, not imposed centrally.
+- Differences in workflows and purposes — for example between a rights management organisation and a national library — must be reconciled collaboratively through decentralised negotiation, not imposed centrally.
 
 This makes data harmonisation slower, but it also ensures higher resilience, broader participation, and stronger trust among stakeholders — goals very much aligned with the emerging standards for European data spaces and FAIR data principles.
 
@@ -147,21 +155,21 @@ We are building a **knowledge base** that enables the combination of data, infor
 
 Every domain — whether music, publishing, research, business, or cultural heritage — has developed its own identification systems, each optimised for the specific needs of that sector. Following the evolution outlined by Laura Manzoni, the development of modern identifiers reflects a growing need for persistent, stable, and interoperable ways to *identify resources*, not only online, but across the entire information infrastructure [@manzoni_identifiers_2022].
 
--   **ISBN (International Standard Book Number)** was introduced in 1967–1970 to uniquely identify books and other monographic publications. It ensures that each edition of a book can be cited and tracked across publishers, libraries, and sales platform.
+- **ISBN (International Standard Book Number)** was introduced in 1967–1970 to uniquely identify books and other monographic publications. It ensures that each edition of a book can be cited and tracked across publishers, libraries, and sales platform.
 
--   **ISMN (International Standard Music Number)** followed to identify printed music (sheet music scores) across publishers and distributors. It originally started a numeric range of ISBN, but by now printed sheet music has its own registration system [@iso_ismn_2021]. We work with print music diversity and circulation in WP2. 
+- **ISMN (International Standard Music Number)** followed to identify printed music (sheet music scores) across publishers and distributors. It originally started a numeric range of ISBN, but by now printed sheet music has its own registration system [@iso_ismn_2021]. We work with print music diversity and circulation in WP2.
 
--   **ISRC (International Standard Recording Code)** was created in 1986 to uniquely identify individual sound recordings and music video recordings, independent of their format (CD, vinyl, digital download). It tracks usage and royalties across rights management systems [@iso_isrc_2019; @camp_isni_2022]. We work with recorded music diversity and circulation in WP2. 
+- **ISRC (International Standard Recording Code)** was created in 1986 to uniquely identify individual sound recordings and music video recordings, independent of their format (CD, vinyl, digital download). It tracks usage and royalties across rights management systems [@iso_isrc_2019; @camp_isni_2022]. We work with recorded music diversity and circulation in WP2.
 
--   **ISWC (International Standard Musical Work Code)**, introduced in the 1990s, identifies musical works (i.e., the underlying composition or lyrics) rather than any particular recording or performance. It is used by collective management organisations (CMOs) to track royalties and rights across performances, broadcasts, and reproductions [@iso_iswc_2022].
+- **ISWC (International Standard Musical Work Code)**, introduced in the 1990s, identifies musical works (i.e., the underlying composition or lyrics) rather than any particular recording or performance. It is used by collective management organisations (CMOs) to track royalties and rights across performances, broadcasts, and reproductions [@iso_iswc_2022].
 
--   **DOI (Digital Object Identifier)**, established in the late 1990s, providing persistent identification of digital objects (articles, datasets, reports, etc.) independently from where they are hosted. Unlike a URL, the DOI remains stable even if the resource moves.
+- **DOI (Digital Object Identifier)**, established in the late 1990s, providing persistent identification of digital objects (articles, datasets, reports, etc.) independently from where they are hosted. Unlike a URL, the DOI remains stable even if the resource moves.
 
--   **ISNI** identifies individual creators, performers, and contributors.
+- **ISNI** identifies individual creators, performers, and contributors.
 
--   **ISBN** identifies books and printed editions (including music books) .
+- **ISBN** identifies books and printed editions (including music books) .
 
--   **OpenCorporatesID** identifies legal corporate bodies and music business organisations.
+- **OpenCorporatesID** identifies legal corporate bodies and music business organisations.
 
 These different identifiers capture different aspects of musical and cultural reality. They serve different workflows — such as royalty collection, publishing, research citation, market transparency — and operate under different legal and technical frameworks. If we want to *increase the interoperability* of services and systems that use music metadata — including rights management, cultural heritage, statistical analysis, or AI-driven discovery — we must ensure that *the identification of the same thing or person across contexts is connected*.
 
@@ -188,7 +196,7 @@ Our primary interest is not necessarily in the data subject but in their music, 
 We are particularly interested in a parallel registration of works and the recorded fixations of their studio and staged performances intended for the public. (For example, we do not want to provide interoperability for recording information about rehearsals or liturgical uses of music for spiritual or faith-based communities.)
 
 | Subject | What is their role? |
-|------------------|------------------------------------------------------|
+|---------------------|---------------------------------------------------|
 | musical work | Composed of a combination of sounds, with or without accompanying text [@iso_iswc_2022] |
 | performance |  |
 | live performance | The performance of music in front of a live audience. |

@@ -1,3 +1,33 @@
+# Executive Summary {.unnumbered}
+
+The European music ecosystem operates through fragmented, inconsistent, and often low-quality registration processes across rights management, cultural heritage, and statistical systems. This fragmentation increases administrative costs, reduces data reliability, and constrains the consistent measurement of the economic contribution of music. While large volumes of data are generated across these domains, they remain difficult to reconcile, validate, and reuse due to the lack of coordinated identifiers and interoperable structures.
+
+D1.4 defines Open Music Registers as a coordinated, interoperable framework for identifying and maintaining information about music-related agents (authors, performers, producers, organisations) and their economic activities. The approach does not introduce centralisation or replace existing systems; instead, it establishes interoperability across existing registers, enabling shared use of data while preserving institutional autonomy and existing governance structures. In this sense, Open Music Registers function as a linkage and coordination layer rather than a unified database.
+
+The deliverable presents:
+
+- A conceptual model of agents, activities, and registers aligned with international statistical standards, including GSIM, SDMX, and DDI
+
+- A data architecture for linking private and public data sources, including collective management organisations, business registers, and cultural heritage databases
+
+- A definition of registers as the core infrastructure for economic measurement, including their role in statistical production, survey design, and indicator construction
+
+- An interoperability-oriented approach aligned with European data space principles, enabling federated data use without requiring structural integration of source systems
+
+The analysis demonstrates that current limitations in music sector statistics are primarily infrastructural rather than conceptual: relevant data exists across multiple domains but remains fragmented, inconsistently structured, and difficult to combine. By introducing shared identifiers, harmonised data models, and reproducible linkage mechanisms, Open Music Registers provide the conditions for improving data quality and comparability without imposing additional reporting burdens.
+
+The implementation of Open Music Registers establishes:
+
+1.  Reduced duplication in registration processes through shared identifiers and coordinated data maintenance
+
+2.  Improved data consistency and interoperability across institutional domains
+
+3.  A stable foundation for producing comparable, timely, and methodologically consistent economic statistics
+
+4.  D1.4 provides the statistical and data-infrastructural foundation of the Open Music Observatory framework. Legal and policy considerations are addressed in D5.6, while D5.7 situates these components within a broader operational framework and elaborates their role in federated data infrastructures.
+
+{{pagebreak}}
+
 # Introduction {.unnumbered}
 
 ![](png/skcmdb/banner_open_music_registers.png){fig-align="center"}
@@ -13,13 +43,13 @@ This document has been prepared by OpenMusE project partners as an account of wo
 
 Any dissemination of results must indicate that it reflects only the author’s view and that the Commission Agency is not responsible for any use that may be made of the information it contains.
 
-This is a living document which provides an overview of `D1.2`, a linked open data database supported by applications. As a living document conforming to OPA, it can be found at <https://github.com/dataobservatory-eu/music-economy-register> with standardised folders and file names.
+This is a living document which provides an overview of `D1.4`, a linked open data database supported by applications. As a living document conforming to OPA, it can be found at <https://github.com/dataobservatory-eu/music-economy-register> with standardised folders and file names.
 
 📚 Live Documentation:
 
--   [HTML Book](https://music.dataobservatory.eu/documents/open_music_europe/music-economy-register/)
+- [HTML Book](https://music.dataobservatory.eu/documents/open_music_europe/music-economy-register/)
 
--   Download [PDF](https://music.dataobservatory.eu/documents/open_music_europe/music-economy-register/Open-Music-Registers--Economy---Business.pdf) or [EPUB](https://music.dataobservatory.eu/documents/open_music_europe/music-economy-register/Open-Music-Registers--Economy---Business.epub)
+- Download [PDF](https://music.dataobservatory.eu/documents/open_music_europe/music-economy-register/Open-Music-Registers--Economy---Business.pdf) or [EPUB](https://music.dataobservatory.eu/documents/open_music_europe/music-economy-register/Open-Music-Registers--Economy---Business.epub)
 :::
 
 A **register**, in IT terms, is a dataset that supports structured workflows. For example, a membership register should reflect new and departing members; a rights register should update when a composer dies and an heir inherits. Registers underpin specific applications: artists register with distributors to publish music, with CMOs to collect royalties, or with researchers to take part in surveys.
@@ -40,9 +70,9 @@ Building on the foundations of the *Open Music Europe* project [@openmuse_2023],
 
 Our work focuses initially on Slovakia, where we have developed a live, updateable **Slovak Music Economy Register** that covers:
 
--   Composers, publishers, performers, and producers,
--   In an exploratory phase, venues and events,
--   Business entities linked to cultural and economic activities.
+- Composers, publishers, performers, and producers,
+- In an exploratory phase, venues and events,
+- Business entities linked to cultural and economic activities.
 
 *Within `WP2` we are building a comprehensive database of sound recordings and musical works connected to composers, performers, publishers, and record labels.*
 
@@ -58,18 +88,18 @@ The ultimate goal is to reduce the burden on artists, improve the quality and vi
 
 The following team members have contributed to the creation and maintainance of `Open Music Registers`.
 
--   **Daniel Antal, CFA** (Reprex) - main author, developer
+- **Daniel Antal, CFA** (Reprex) - main author, developer
 
--   **Richard Demčák** (SOZA) - collective management interoperability
+- **Richard Demčák** (SOZA) - collective management interoperability
 
--   **Matej Grochal** (Wikimedia Slovensko) - Wikipedian in residence
+- **Matej Grochal** (Wikimedia Slovensko) - Wikipedian in residence
 
--   **Asmah Frederico** (Reprex) - data modelling and data management support
+- **Asmah Frederico** (Reprex) - data modelling and data management support
 
--   **Marián Jankovič** (SOZA) - legal interoperability
+- **Marián Jankovič** (SOZA) - legal interoperability
 
--   **Anna Márta Mester** (Reprex) - data modelling and data stewardship
+- **Anna Márta Mester** (Reprex) - data modelling and data stewardship
 
--   **Edite Punka** (Reprex) - metadata support
+- **Edite Punka** (Reprex) - metadata support
 
--   **Anna Žilková** (Music Center Slovakia) - library interoperability
+- **Anna Žilková** (Music Center Slovakia) - library interoperability

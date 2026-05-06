@@ -1,0 +1,19 @@
+# Conclustion {#sec-conclusion}
+
+This deliverable demonstrates that improving the economic measurement of music is not primarily a question of collecting more data, but of coordinating existing data through interoperable registers. The current fragmentation of registration processes results in duplicated effort, inconsistent identifiers, and limited statistical usability, even where relevant data is already available.
+
+By introducing the concept of `Open Music Registers`, this report establishes a feasible and scalable alternative to centralised data integration. The approach builds on existing institutional data assets and enables their coordinated use through shared identifiers, harmonised classifications, and incremental alignment of data structures. Rather than requiring full standardisation or system replacement, it supports interoperability across heterogeneous data sources while preserving institutional autonomy.
+
+The analysis identifies three core conditions for improving measurement capacity: 
+
+- consistent identification of agents and activities, 
+- reliable linkage between data sources, and 
+- sufficient semantic alignment across domains. 
+
+These conditions are currently only partially met, which explains the limited comparability and usability of music sector statistics across Europe.
+
+At the same time, the implementation of interoperable registers depends on addressing several structural constraints. These include aligning incentives among stakeholders with differing economic and institutional interests, ensuring compliance with legal and data protection requirements, and maintaining sufficient semantic consistency across domains such as rights management, cultural heritage, and official statistics. These are not conceptual obstacles, but coordination challenges that must be managed within existing governance frameworks.
+
+The _Open Music Registers_ (D1.4 report) establishes the statistical and data-structural foundation required to address these issues. It clarifies how registers can function as the core infrastructure for economic measurement and how interoperability can be achieved without centralisation. The operational and system-level implications of this approach are further specified in D5.7, which complements this deliverable by detailing implementation pathways and integration mechanisms.
+
+Overall, _Open Music Registers_ provide a pragmatic framework for improving data quality, reducing administrative duplication, and enabling more reliable and comparable economic analysis of the European music sector.
