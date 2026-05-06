@@ -2,7 +2,7 @@
 
 ## SKCMDb music publishers {#sec-appendix-music-publishers .unnnumbered}
 
-The [music publishers in Slovakia](https://reprexbase.eu/demo/index.php?title=Item:Q201 "Item:Q201"): [music pubilshing organisations](https://reprexbase.eu/demo/index.php?title=Item:Q97 "Item:Q97") (for example [Hudobný Fond](https://reprexbase.eu/demo/index.php?title=Item:Q97 "Item:Q97")) and [music publishing companies](https://reprexbase.eu/demo/index.php?title=Item:Q69 "Item:Q69") (for example [A-Tempo Verlag s.r.o. Slovakia](https://reprexbase.eu/demo/index.php?title=Item:Q83 "Item:Q83")) that are registered with SOZA to collect royalties from Slovakia. The creation of the register of publishers is essential to monitor the market and create reliable statistics on the music industry.
+The [music publishers in Slovakia](https://reprexbase.eu/demo/index.php?title=Item:Q201 "Item:Q201"): [music publishing organisations](https://reprexbase.eu/demo/index.php?title=Item:Q97 "Item:Q97") (for example [Hudobný Fond](https://reprexbase.eu/demo/index.php?title=Item:Q97 "Item:Q97")) and [music publishing companies](https://reprexbase.eu/demo/index.php?title=Item:Q69 "Item:Q69") (for example [A-Tempo Verlag s.r.o. Slovakia](https://reprexbase.eu/demo/index.php?title=Item:Q83 "Item:Q83")) that are registered with SOZA to collect royalties from Slovakia. The creation of the register of publishers is essential to monitor the market and create reliable statistics on the music industry.
 
 Data collected about them:
 

@@ -64,7 +64,6 @@ Numerical variables can be aggregated using standard statistical measures (e.g.,
 
 Groupings such as respondent country can support stratified analysis. For example, we can calculate separate income estimates for Slovakia and Hungary, and place them into an SDMX-compliant data cube, where each dimension (role, geography, year) can be subsetted or sliced for detailed analysis.
 
-
 ## Surveying the music economy
 
 As described in Appendix A, our register is built around *agents*—human or corporate—whose activities are recorded for economic, cultural, or statistical purposes. For survey purposes, we extend this model with two key concepts from the Data Documentation Initiative (DDI): the *universe* (the target population) and *coverage* (the actual surveyed population).
